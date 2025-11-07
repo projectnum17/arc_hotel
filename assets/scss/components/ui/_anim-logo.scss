@@ -1,0 +1,56 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.animated-logo {
+    position: relative;
+    width: 218px;
+    height: 218px;
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--wht {
+        .animated-logo__deco {
+            span {
+                color: var(--wht-color);
+            }
+        }
+    }
+
+    &__deco-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: textRotation 16s linear infinite;
+    }
+
+    &__ico {
+        position: absolute;
+        width: 63px;
+        height: 87px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__deco {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        span {
+            font: 300 32px / 100% var(--ff-base);
+            text-transform: uppercase;
+            position: absolute;
+            left: 50%;
+            transform-origin: 0 109px;
+        }
+    }
+}
+
+@keyframes textRotation {
+    to {
+        transform: rotate(360deg);
+    }
+}

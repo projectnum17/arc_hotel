@@ -1,2 +1,238 @@
 @use '../base/media' as *;
 @use '../base/mixins' as *;
+
+.footer {
+    max-width: 2440px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 72px;
+    position: relative;
+    background: var(--dark-color);
+    color: var(--wht-color);
+
+    &__bg {
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0.04;
+    }
+
+    &__row {
+        &:first-child {
+            margin-bottom: 43px;
+            gap: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &:last-child {
+            margin-bottom: 79px;
+            max-width: 1159px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 457px;
+        width: 100%;
+        margin-left: 150px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__social {
+        display: flex;
+        gap: 30px;
+
+        a {
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--accent-color);
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__nav {
+        max-width: 611px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            li {
+                list-style-type: none;
+            }
+
+            a {
+                font: 400 16px / 100% var(--ff-base);
+                @include transitions(0.3s, ease-in);
+                @include hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+
+    &__copy {
+        padding-block: 18px;
+        max-width: 1720px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.04);
+
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            div:last-child {
+                max-width: 593px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+
+                p {
+                    margin-right: 35px;
+                }
+            }
+        }
+
+        p,
+        a {
+            font: 400 12px / 140% var(--ff-base);
+            margin: 0;
+            opacity: 0.4;
+        }
+    }
+
+    &__title {
+        font: 400 16px / 100% var(--ff-base);
+        opacity: 0.6;
+    }
+
+    &__logo {
+        max-width: 182px;
+        width: 100%;
+        min-width: 120px;
+        margin-bottom: 36px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__phone {
+        a {
+            font: 300 24px / 110% var(--ff-accent);
+            @include transitions(0.3s, ease-in);
+            @include hover {
+                color: var(--accent-color);
+            }
+        }
+
+        &--lg {
+            a {
+                font: 300 32px / 110% var(--ff-accent);
+            }
+        }
+    }
+
+    &__reserv {
+        font: 500 14px / 100% var(--ff-base);
+        text-transform: uppercase;
+        padding: 16px 31px;
+        border-radius: 48px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--accent-color);
+        background: var(--accent-color);
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            inset: 0;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
+            @include transitions(0.3s, ease-in);
+        }
+
+        @include transitions(0.3s, ease-in);
+        @include hover {
+            color: var(--wht-color);
+            border: 1px solid var(--accent-color);
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__location,
+    &__route {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        @include hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        span {
+            font: 400 18px / 100% var(--ff-base);
+            @include transitions(0.3s, ease-in);
+        }
+    }
+
+    &__route {
+        span {
+            text-transform: uppercase;
+        }
+    }
+}

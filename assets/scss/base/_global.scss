@@ -49,6 +49,16 @@ section {
     margin-bottom: var(--section-mb);
 }
 
+body:not(:has(.main--home)) {
+    .header {
+        &__burger {
+            span {
+                background: var(--accent-color);
+            }
+        }
+    }
+}
+
 .js-animation {
     opacity: 0;
     transform: translate3d(0, 60px, 0) scale3d(0.96, 0.96, 1);
