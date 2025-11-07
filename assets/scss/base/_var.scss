@@ -1,0 +1,28 @@
+:root {
+    --container-width: 1520px;
+    --container-padding: 20px;
+
+    --vh: 1vh;
+    --section-mb: 180px;
+    --section-pdd: 180px;
+    --scrl-mt: 130px;
+
+    --bg-color: #fffbf1;
+    --text-color: #161616;
+    --wht-color: #fff;
+    --accent-color: #6aafa3;
+    --accent-gradient: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
+
+    --ff-accent: 'Akzidenz-Grotesk Pro', sans-serif;
+    --ff-base: 'Montseratt', sans-serif;
+}
+
+@media (max-width: 991px) {
+    :root {
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+    }
+}

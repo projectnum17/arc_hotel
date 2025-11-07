@@ -1,0 +1,53 @@
+@use 'mixins' as *;
+@use 'media' as *;
+
+.container--right {
+    padding-left: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+}
+
+.container--left {
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+}
+
+.desktop--hidden {
+    @include media('desktop') {
+        display: none;
+    }
+}
+
+.desktop--visible {
+    display: none;
+    @include media('desktop') {
+        display: block;
+    }
+}
+
+.tablet--hidden {
+    @include media('tablet') {
+        display: none;
+    }
+}
+
+.tablet--visible {
+    display: none;
+    @include media('tablet') {
+        display: block;
+    }
+}
+
+.mobile--hidden {
+    @include media('mobile') {
+        display: none;
+    }
+}
+
+.mobile--visible {
+    display: none;
+    @include media('mobile') {
+        display: block;
+    }
+}
