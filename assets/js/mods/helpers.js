@@ -29,51 +29,6 @@ const helpers = () => {
         });
     };
 
-    animationLogo();
-    // const animationLogo = () => {
-    //     const topTextEl = document.querySelector('.js-logo-deco-top');
-    //     if (topTextEl) {
-    //         const text = topTextEl.dataset.text.trim();
-
-    //         const chars = text.split('');
-    //         const charCount = chars.length;
-    //         const spacing = 25;
-
-    //         const totalArc = (charCount - 1) * spacing;
-    //         const startAngle = -90 - totalArc / 2;
-
-    //         topTextEl.innerHTML = chars
-    //             .map(
-    //                 (char, i) =>
-    //                     `<span style="transform:rotate(${
-    //                         startAngle + i * spacing
-    //                     }deg)">${char}</span>`
-    //             )
-    //             .join('');
-    //     }
-
-    //     const bottomTextEl = document.querySelector('.js-logo-deco-bottom');
-    //     if (bottomTextEl) {
-    //         const text = bottomTextEl.dataset.text.trim();
-
-    //         const chars = text.split('');
-    //         const charCount = chars.length;
-    //         const spacing = 25;
-
-    //         const totalArc = (charCount - 1) * spacing;
-    //         const startAngle = 90 - totalArc / 2;
-
-    //         bottomTextEl.innerHTML = chars
-    //             .map(
-    //                 (char, i) =>
-    //                     `<span style="transform:rotate(${
-    //                         startAngle + i * spacing
-    //                     }deg)">${char}</span>`
-    //             )
-    //             .join('');
-    //     }
-    // };
-
     const parallaxHandler = () => {
         const parallaxElements = document.querySelectorAll('[data-parallax]');
 
@@ -86,6 +41,40 @@ const helpers = () => {
         });
     };
 
+    const moreSEOTextHandler = () => {
+        const parent = document.querySelector('.js-text-more');
+        if (!parent) return;
+
+        const dElements = parent.querySelectorAll('div');
+        const pElements = parent.querySelectorAll('.about__paragraph');
+        const showMore = document.querySelector('.js-about-more');
+
+        if (!pElements.length || !showMore) return;
+
+        dElements.forEach((div, index) => {
+            div.classList.toggle('is-active', index < 1);
+        });
+
+        if (pElements.length <= 1) {
+            showMore.style.display = 'none';
+            return;
+        }
+
+        showMore.addEventListener('click', () => {
+            const isShown = parent.classList.toggle('is-shown');
+
+            dElements.forEach((div, index) => {
+                if (index > 0) {
+                    div.classList.toggle('is-active', isShown);
+                    div.classList.toggle('is-mtb', isShown);
+                }
+            });
+
+            showMore.classList.toggle('is-hide', isShown);
+        });
+    };
+
+    moreSEOTextHandler();
     animationLogo();
     parallaxHandler();
 };

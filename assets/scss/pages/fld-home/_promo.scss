@@ -1,0 +1,19 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .promo {
+        position: relative;
+        padding-block: var(--section-pdd);
+        background: var(--bg-color);
+
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .link-more {
+            margin: 0 auto 40px;
+        }
+    }
+}

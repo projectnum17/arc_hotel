@@ -1,0 +1,36 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.promo-boxes {
+    display: grid;
+    gap: 68px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .promo-box {
+        width: 100%;
+
+        &__thumb {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__date {
+            font: 500 18px / 100% var(--ff-base);
+            margin-bottom: 16px;
+            display: inline-flex;
+            color: var(--accent-color);
+        }
+
+        &__name {
+            font: 300 24px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+        }
+    }
+}
