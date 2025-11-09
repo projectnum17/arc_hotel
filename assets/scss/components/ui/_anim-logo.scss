@@ -18,6 +18,14 @@
         }
     }
 
+    &--drk {
+        .animated-logo__deco {
+            span {
+                color: inherit;
+            }
+        }
+    }
+
     &__deco-wrapper {
         position: absolute;
         width: 100%;

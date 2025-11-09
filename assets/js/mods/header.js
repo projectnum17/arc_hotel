@@ -11,6 +11,7 @@ const header = () => {
             document.body.classList.add('is-locked');
             menuButton.classList.add('is-active');
             header.classList.add('is-mutate');
+            header.classList.remove('is-scroll');
         };
 
         const isCloseMenu = () => {
@@ -18,6 +19,9 @@ const header = () => {
             document.body.classList.remove('is-locked');
             menuButton.classList.remove('is-active');
             header.classList.remove('is-mutate');
+            if (window.scrollY > 1) {
+                header.classList.add('is-scroll');
+            }
         };
 
         const toggleState = () => {
@@ -31,7 +35,35 @@ const header = () => {
         menuButton.addEventListener('click', toggleState);
     };
 
+    const headerHandler = () => {
+        const header = document.querySelector('.js-header');
+        if (!header) return;
+
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 1) {
+                header.classList.add('is-scroll');
+            } else {
+                header.classList.remove('is-scroll');
+            }
+        });
+    };
+
     asideMenuHandler();
+    headerHandler();
 };
 
 export default header;

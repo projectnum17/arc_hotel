@@ -46,7 +46,7 @@ section,
 }
 
 section {
-    margin-bottom: var(--section-mb);
+    // margin-bottom: var(--section-mb);
 }
 
 body:not(:has(.main--home)) {
@@ -56,6 +56,12 @@ body:not(:has(.main--home)) {
                 background: var(--accent-color);
             }
         }
+    }
+}
+
+.swiper-wrapper {
+    &.is-centered {
+        justify-content: center;
     }
 }
 

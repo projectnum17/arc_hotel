@@ -1,0 +1,48 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.link-accent {
+    font: 500 14px / 100% var(--ff-base);
+    text-transform: uppercase;
+    border-radius: 48px;
+    padding: 16px 31px;
+    position: relative;
+    overflow: hidden;
+    min-width: max-content;
+    color: var(--wht-color);
+    background: var(--accent-color);
+    @include transitions(0.3s, ease-in);
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        inset: 0;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
+        @include transitions(0.3s, ease-in);
+    }
+
+    @include hover {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &--transparent {
+        color: var(--dark-color);
+        background: transparent;
+        border: 1px solid var(--accent-color);
+
+        @include hover {
+            color: var(--wht-color);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.content-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 982px;
+    margin: 0 auto;
+
+    &__stars {
+        margin-bottom: 48px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font: 400 18px / 140% var(--ff-base);
+    }
+}

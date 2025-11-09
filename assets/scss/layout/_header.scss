@@ -7,6 +7,51 @@
     position: fixed;
     top: 0;
     width: 100%;
+    @include transitions(0.3s, ease-in);
+
+    &.is-scroll {
+        background: var(--dark-color);
+
+        .header__burger {
+            span {
+                background: var(--wht-color);
+
+                &::after,
+                &::before {
+                    background: var(--wht-color);
+                }
+            }
+        }
+
+        .header__lang a {
+            color: var(--wht-color);
+        }
+
+        .header__phone {
+            border-color: var(--wht-color);
+            @include hover {
+                border-color: transparent;
+            }
+
+            svg {
+                color: var(--wht-color);
+            }
+        }
+
+        .header__reserv {
+            border-color: var(--wht-color);
+            color: var(--wht-color);
+            @include hover {
+                border-color: transparent;
+            }
+        }
+
+        .header__logo {
+            svg {
+                color: var(--wht-color);
+            }
+        }
+    }
 
     &--drk {
         .header__phone {
@@ -56,8 +101,9 @@
         flex-shrink: 0;
         @include transitions(0.3s, ease-in);
 
-        img {
+        svg {
             width: 100%;
+            @include transitions(0.3s, ease-in);
         }
     }
 

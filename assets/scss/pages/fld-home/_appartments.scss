@@ -1,0 +1,32 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .appartments {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: var(--section-pdd);
+        background: var(--bg-color);
+
+        &__head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        &__title {
+            max-width: 729px;
+        }
+
+        &__info {
+            max-width: 558px;
+        }
+
+        &__descr {
+            font: 400 18px / 140% var(--ff-base);
+            margin-bottom: 24px;
+        }
+    }
+}
