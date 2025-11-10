@@ -74,9 +74,33 @@ const helpers = () => {
         });
     };
 
+    const filtersHandler = () => {
+        const typesFilters = document.querySelectorAll('.js-type-btn');
+        const sizesFilters = document.querySelectorAll('.js-size-btn');
+
+        if (!typesFilters.length || !sizesFilters.length) return;
+
+        const handleFilterGroup = (buttons) => {
+            buttons.forEach((btn, index) => {
+                if (index === 0) btn.classList.add('is-active');
+
+                btn.addEventListener('click', () => {
+                    buttons.forEach((b) => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+                });
+            });
+        };
+
+        handleFilterGroup(typesFilters);
+        handleFilterGroup(sizesFilters);
+    };
+
+    filtersHandler();
+
     moreSEOTextHandler();
     animationLogo();
     parallaxHandler();
+    filtersHandler();
 };
 
 export default helpers;

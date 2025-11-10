@@ -54,6 +54,11 @@ body:not(:has(.main--home)) {
         &__burger {
             span {
                 background: var(--accent-color);
+
+                &::after,
+                &::before {
+                    background: var(--accent-color);
+                }
             }
         }
     }

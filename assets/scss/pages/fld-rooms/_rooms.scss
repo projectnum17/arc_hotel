@@ -1,0 +1,224 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--rooms {
+    padding-top: 196px;
+    .rooms {
+        overflow: hidden;
+        margin-bottom: 144px;
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        &__descr {
+            font: 400 18px / 140% var(--ff-base);
+            max-width: 979px;
+            margin: 0 auto;
+        }
+
+        &__filters {
+            margin-bottom: 104px;
+
+            &-types {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+                margin-bottom: 24px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 12px;
+                    width: 100vw;
+                    height: 1px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: #dddddd;
+                }
+            }
+
+            &-size {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+            }
+        }
+
+        .types-btn {
+            font: 300 24px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            padding-inline: 31px;
+            text-transform: uppercase;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            @include transitions(0.3s, ease-in);
+
+            &.is-active {
+                color: var(--accent-color);
+
+                &::after {
+                    z-index: 2;
+                    position: relative;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+            &::after {
+                content: '';
+                display: inline-flex;
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+                background: url('../img/icons/star_1.svg') no-repeat center
+                    center / cover;
+                @include transitions(0.3s, ease-in);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(5px);
+            }
+        }
+
+        .size-btn {
+            font: 500 14px / 100% var(--ff-base);
+            text-transform: uppercase;
+            padding: 13px 20px;
+            border-radius: 68px;
+            border: 1px solid #dddddd;
+            color: rgba(22, 22, 22, 0.6);
+            min-width: max-content;
+            @include transitions(0.3s, ease-in);
+
+            &.is-active {
+                border-color: transparent;
+                background: var(--accent-color);
+                color: var(--wht-color);
+            }
+        }
+
+        &__collect {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px 43px;
+        }
+
+        &__box {
+            flex-direction: column;
+            max-width: 720px;
+            justify-content: space-between;
+
+            @include hover {
+                .rooms__pic::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .rooms__logo {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(-50%, -50%);
+                }
+
+                .rooms__title {
+                    color: var(--accent-color);
+                }
+
+                .link-more {
+                    .ico {
+                        &:first-of-type {
+                            width: 32px;
+                            transform: translateX(0px) rotate(180deg);
+                        }
+
+                        &:last-of-type {
+                            width: 0;
+                            transform: translateX(5px) rotate(180deg);
+                        }
+                    }
+
+                    .text {
+                        margin-left: 8px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            font: 300 32px / 100% var(--ff-accent);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+        }
+
+        &__details {
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+
+            &-point {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                span {
+                    font: 500 18px / 100% var(--ff-base);
+                }
+
+                img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+
+        &__pic {
+            width: 100%;
+            height: 620px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: #ffffff4d;
+                backdrop-filter: blur(20px);
+                opacity: 0;
+                visibility: hidden;
+                @include transitions(0.3s, ease-in);
+            }
+        }
+
+        &__logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -45%);
+            @include transitions(0.3s, ease-in);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--rooms {
+    .popular {
+        margin-bottom: var(--section-mb);
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        &__card {
+            flex-direction: column;
+            gap: 24px;
+            @include hover {
+                .popular__pic img {
+                    transform: scale(1.15);
+                }
+            }
+        }
+
+        &__title {
+            font: 300 44px / 100% var(--ff-accent);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        &__info {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        &__descr {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            span {
+                font: 500 18px / 100% var(--ff-base);
+            }
+
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        &__pic {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 16px;
+
+            img {
+                width: 100%;
+                @include transitions(0.5s, ease-in);
+            }
+        }
+    }
+}
