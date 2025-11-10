@@ -2,8 +2,20 @@
 @use '../../base/mixins' as *;
 
 .main--rooms {
-    padding-top: 196px;
+    position: relative;
+
+    .logo-bg {
+        max-width: 970px;
+        width: 100%;
+        opacity: 4%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
     .rooms {
+        padding-top: 196px;
         overflow: hidden;
         margin-bottom: 144px;
         &__info {

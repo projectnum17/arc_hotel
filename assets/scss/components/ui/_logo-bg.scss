@@ -1,0 +1,13 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.logo-bg {
+    pointer-events: none;
+    clip-path: var(--clip);
+    --clip: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: clip-path 1s ease;
+
+    &.is-visible {
+        --clip: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+}
