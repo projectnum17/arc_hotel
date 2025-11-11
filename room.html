@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icons/logo_drk.svg" type="image/svg+xml" />
+    <title>ARCH Hotel | Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="service-modal js-service">
+        <div class="service-modal__wrapper">
+            <div class="service-modal__inner">
+                <button type="button" class="service-modal__close js-service-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.73496" y1="2.62843" x2="22.3239" y2="20.2664" stroke="#6AAFA3" />
+                        <line x1="2.06583" y1="20.2671" x2="21.6548" y2="2.62909" stroke="#6AAFA3" />
+                    </svg>
+                </button>
+                <div class="service-modal__content">
+                    <div class="service-modal__pic js-service-pic">
+                        <img width="524" height="360" src="" alt="Thumbnail">
+                    </div>
+                    <h3 class="service-modal__title js-service-title"></h3>
+                    <p class="service-modal__text js-service-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aside-menu js-aside-menu">
+        <div class="aside-menu__logo">
+            <div class="animated-logo animated-logo--wht">
+                <div class="animated-logo__ico">
+                    <img src="./assets/img/icons/logo-sign.svg" alt="Logo">
+                </div>
+                <div class="animated-logo__deco-wrapper">
+                    <div class="animated-logo__deco js-logo-deco-top" data-text="archotel">
+                        archotel
+                    </div>
+
+                    <div class="animated-logo__deco js-logo-deco-bottom" data-text="avenu">
+                        avenu
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aside-menu__routes">
+            <img class="aside-menu__bg" src="./assets/img/bg-menu.jpg" alt="Thumbnail">
+            <div class="container">
+                <nav class="aside-menu__nav">
+                    <ul>
+                        <li><a href="#!">номери готелю</a></li>
+                        <li><a href="#!">wellness & spa</a></li>
+                        <li><a href="#!">Конференц сервіс</a></li>
+                        <li><a href="#!">health boutique</a></li>
+                        <li><a href="#!">спеціальні пропозиції</a></li>
+                        <li><a href="#!">ресторани</a></li>
+                        <li><a href="#!">арт-простір</a></li>
+                        <li><a href="#!">послуги для дітей</a></li>
+                        <li><a href="#!">аквапарк</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="aside-menu__info">
+            <div class="aside-menu__details">
+                <div class="aside-menu__pic">
+                    <img loading="lazy" width="182" height="112" src="./assets/img/icons/logo_wht.svg" alt="Logo">
+                </div>
+                <ul class="aside-menu__social">
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-fb_wht.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-inst_wht.svg" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-tt_wht.svg" alt="TikTok">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="aside-menu__submenu">
+                <ul>
+                    <li><a href="#!">Лоббі</a></li>
+                    <li><a href="#!">Транспортні послуги</a></li>
+                    <li><a href="#!">Догляд за тілом</a></li>
+                    <li><a href="#!">Контакти</a></li>
+                    <li><a href="#!">Афіша івентів</a></li>
+                    <li><a href="#!">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="aside-menu__contacts">
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Бронювання та консультації</p>
+                    <a href="tel:+0800200880">0 800 200 880</a>
+                </div>
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Wellness & SPA</p>
+                    <a href="tel:+380935390553">+38 093 53 90 553</a>
+                </div>
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Медичний центр</p>
+                    <a href="tel:+380935390553">+38 093 53 90 553</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header header--colored js-header">
+        <div class="container">
+            <div class="header__controls">
+                <button class="header__burger js-burger">
+                    <span></span>
+                </button>
+                <ul class="header__lang">
+                    <li><a href="#!" class="current-lang">ua</a></li>
+                    <li><a href="#!">en</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="header__logo">
+                <svg width="117" height="72" viewBox="0 0 117 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_858_5018)">
+                        <path
+                            d="M6.75251 36.4151H8.90837L15.6403 50.4577H14.2294L8.06044 37.6793H7.5764L1.42809 50.4577H0L6.75251 36.4151ZM3.06558 44.9398H12.6228V46.1425H3.06558V44.9398Z"
+                            fill="white" />
+                        <path
+                            d="M17.8394 36.4121H22.999C24.7979 36.4121 26.1813 36.805 27.1425 37.5943C28.1003 38.3835 28.5843 39.4598 28.5843 40.8231C28.5843 41.6397 28.3681 42.3811 27.939 43.0507C27.5098 43.7204 26.8748 44.2466 26.0337 44.6361C25.1926 45.0256 24.1799 45.2169 22.999 45.2169H18.8658V44.0518H22.999C23.9396 44.0518 24.7326 43.9015 25.3746 43.6008C26.02 43.3002 26.5006 42.9038 26.8164 42.4084C27.1322 41.913 27.2901 41.3868 27.2901 40.8231C27.2901 39.8322 26.9365 39.06 26.2328 38.5065C25.5256 37.953 24.4477 37.6729 22.999 37.6729H18.5809L19.1267 37.1125V50.4547H17.8359V36.4121H17.8394ZM19.3704 44.8001H21.2242L28.7834 50.4581H26.7271L19.3704 44.8001Z"
+                            fill="white" />
+                        <path
+                            d="M34.8338 49.7471C33.6769 49.1116 32.7775 48.2403 32.1321 47.1265C31.4868 46.016 31.1641 44.786 31.1641 43.4364C31.1641 42.0868 31.4902 40.8568 32.1424 39.7567C32.7947 38.6531 33.6907 37.7784 34.8338 37.1395C35.977 36.4971 37.2506 36.176 38.6615 36.176C39.8047 36.176 40.8174 36.34 41.7065 36.668C42.5922 36.996 43.3062 37.3991 43.8418 37.8809V39.4867H43.7216C43.1414 38.8581 42.4137 38.3592 41.5348 37.9936C40.656 37.6246 39.6982 37.4401 38.6615 37.4401C37.4772 37.4401 36.4164 37.7032 35.4792 38.2328C34.5386 38.759 33.8005 39.4833 33.2616 40.399C32.7226 41.3147 32.4548 42.3294 32.4548 43.4399C32.4548 44.5503 32.7192 45.5787 33.2513 46.491C33.7799 47.3998 34.5283 48.1207 35.4895 48.6469C36.4507 49.1765 37.5424 49.4396 38.7645 49.4396C39.7463 49.4396 40.6663 49.2687 41.5245 48.9271C42.3828 48.5854 43.1586 48.0592 43.8418 47.352H43.9619V48.8553C43.3852 49.4157 42.6368 49.8667 41.7237 50.2015C40.8105 50.5363 39.8218 50.7037 38.7611 50.7037C37.2952 50.7037 35.9839 50.386 34.8304 49.7505"
+                            fill="white" />
+                        <path
+                            d="M48.158 50.4577H46.8672V36.4151H48.158V50.4577ZM59.205 44.0583H47.5744V42.8146H59.205V44.0583ZM59.8916 50.4577H58.6008V36.4151H59.8916V50.4577Z"
+                            fill="white" />
+                        <path
+                            d="M66.6627 49.7334C65.547 49.0911 64.6647 48.2164 64.0228 47.106C63.3774 45.9955 63.0547 44.7724 63.0547 43.433C63.0547 42.0937 63.3774 40.8705 64.0228 39.7601C64.6682 38.6497 65.547 37.775 66.6627 37.1326C67.7784 36.4903 69.0073 36.1691 70.3496 36.1691C71.6919 36.1691 72.9243 36.4903 74.04 37.1326C75.1557 37.775 76.0379 38.6497 76.6799 39.7601C77.3252 40.8705 77.6479 42.0937 77.6479 43.433C77.6479 44.7724 77.3252 45.9955 76.6799 47.106C76.0345 48.2164 75.1557 49.0911 74.04 49.7334C72.9243 50.3757 71.6953 50.6969 70.3496 50.6969C69.0039 50.6969 67.7784 50.3757 66.6627 49.7334ZM73.4049 48.6435C74.3249 48.1139 75.0492 47.393 75.571 46.4773C76.0963 45.5616 76.3572 44.5469 76.3572 43.4364C76.3572 42.326 76.0963 41.3147 75.571 40.3956C75.0492 39.4799 74.3249 38.7556 73.4049 38.2294C72.4849 37.6998 71.4722 37.4367 70.3702 37.4367C69.2682 37.4367 68.2349 37.6998 67.3149 38.2294C66.3949 38.7556 65.6671 39.4799 65.1385 40.3956C64.6064 41.3113 64.342 42.326 64.342 43.4364C64.342 44.5469 64.6064 45.5616 65.1385 46.4773C65.6671 47.393 66.3949 48.1173 67.3149 48.6435C68.2349 49.1731 69.2476 49.4362 70.3496 49.4362C71.4516 49.4362 72.4849 49.1731 73.4049 48.6435Z"
+                            fill="white" />
+                        <path
+                            d="M78.1172 36.4151H91.8247V37.6793H78.1172V36.4151ZM85.6146 50.4577H84.3239V37.4367H85.6146V50.4577Z"
+                            fill="white" />
+                        <path
+                            d="M93.9766 36.4151H104.035V37.6793H94.7215L95.2673 37.119V49.7573L94.7215 49.197H104.237V50.4612H93.9766V36.4185V36.4151ZM95.0236 42.7736H103.832V43.9387H95.0236V42.7736Z"
+                            fill="white" />
+                        <path d="M108.353 36.4151V49.7539L107.807 49.1936H117.001V50.4577H107.062V36.4151H108.353Z"
+                            fill="white" />
+                        <path
+                            d="M21.7286 57.7148H23.8845L30.6164 71.7574H29.2054L23.0365 58.9756H22.5525L16.4042 71.7574H14.9727L21.7252 57.7148H21.7286ZM18.0417 66.2429H27.5989V67.4455H18.0417V66.2429Z"
+                            fill="white" />
+                        <path
+                            d="M35.4979 71.7608L28.6836 57.7148H30.1357L36.181 70.196H35.3366L41.3853 57.7148H42.834L36.0231 71.7608H35.4979Z"
+                            fill="white" />
+                        <path
+                            d="M45.0156 57.7148H55.074V58.979H45.7606L46.3064 58.4186V71.057L45.7606 70.4967H55.2766V71.7608H45.0156V57.7182V57.7148ZM46.0627 64.0733H54.8715V65.2384H46.0627V64.0733Z"
+                            fill="white" />
+                        <path
+                            d="M58.0977 57.7148H59.6905L70.1506 69.0104V57.7148H71.4413V71.7608H70.9985L59.6905 59.5598H59.3884V71.7608H58.0977V57.7148Z"
+                            fill="white" />
+                        <path
+                            d="M87.3781 68.638C86.8219 69.7279 86.0427 70.5616 85.0403 71.1356C84.0379 71.713 82.8947 72 81.604 72C80.3132 72 79.1666 71.713 78.1676 71.1356C77.1686 70.5616 76.3894 69.7279 75.8298 68.638C75.2737 67.548 74.9922 66.2463 74.9922 64.7361V57.7148H76.283V64.7361C76.283 65.9661 76.4992 67.0321 76.9283 67.9375C77.3575 68.8396 77.9719 69.5331 78.7718 70.0149C79.5717 70.4967 80.5157 70.7358 81.604 70.7358C82.6922 70.7358 83.6568 70.4967 84.4567 70.0149C85.2566 69.5331 85.8676 68.8396 86.2899 67.9375C86.7121 67.0355 86.9249 65.9695 86.9249 64.7361V57.7148H88.2157V64.7361C88.2157 66.2463 87.9376 67.548 87.3781 68.638Z"
+                            fill="white" />
+                        <path
+                            d="M91.7617 57.7148H101.82V58.979H92.5067L93.0525 58.4186V71.057L92.5067 70.4967H102.023V71.7608H91.7617V57.7182V57.7148ZM92.8122 64.0733H101.621V65.2384H92.8122V64.0733Z"
+                            fill="white" />
+                        <path
+                            d="M58.5015 4.12695C55.8993 4.12695 53.7812 6.23505 53.7812 8.82491V22.1808L55.0411 21.4564V8.82491C55.0411 6.92523 56.5928 5.38088 58.5015 5.38088C60.4102 5.38088 61.9618 6.92523 61.9618 8.82491V21.4633L63.2217 22.1876V8.82491C63.2217 6.23505 61.1036 4.12695 58.5015 4.12695Z"
+                            fill="white" />
+                        <path
+                            d="M58.5 0C53.6115 0 49.6328 3.95995 49.6328 8.82532V24.5626L50.8927 23.8383V8.82532C50.8927 4.65012 54.305 1.25393 58.5 1.25393C62.695 1.25393 66.1073 4.65012 66.1073 8.82532V23.8451L67.3672 24.5695V8.82532C67.3672 3.95995 63.3884 0 58.5 0Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_858_5018">
+                            <rect width="117" height="72" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <div class="header__connect">
+                <a class="header__phone" href="tel:+0000000000">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                            stroke="#0C1C34" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <button class="header__reserv js-reserv">забронювати</button>
+            </div>
+        </div>
+    </header>
+    <main class="main main--room">
+        <section class="intro">
+            <div class="intro__bg">
+                <img src="./assets/img/bg-room.jpg" alt="">
+            </div>
+            <div class="container">
+                <div class="intro__content">
+                    <h1 class="intro__title main-title">
+                        класичний з терасою
+                    </h1>
+                    <div class="intro__panel">
+                        <ul class="intro__panel-info">
+                            <li class="intro__panel-point">
+                                <img width="28" height="28" src="./assets/img/icons/ico-user_gr.svg" alt="Icon">
+                                до 4 гостей
+                            </li>
+                            <li class="intro__panel-point">
+                                <img width="28" height="28" src="./assets/img/icons/ico-square_gr.svg" alt="Icon">
+                                площа 42 м.кв.
+                            </li>
+                            <li class="intro__panel-point">
+                                <img width="28" height="28" src="./assets/img/icons/ico-door_gr.svg" alt="Icon">
+                                1 кімната
+                            </li>
+                            <li class="intro__panel-point">
+                                <img width="28" height="28" src="./assets/img/icons/ico-clock_gr.svg" alt="Icon">
+                                Заїзд: 14:00
+                            </li>
+                            <li class="intro__panel-point">
+                                <img width="28" height="28" src="./assets/img/icons/ico-clock_gr.svg" alt="Icon">
+                                Виїзд: 12:00
+                            </li>
+                        </ul>
+                        <a href="#!" class="intro__panel-link link-accent">
+                            <span>забронювати номер</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="concept">
+            <div class="container">
+                <div class="concept__head">
+                    <h2 class="concept__title main-title">концепція</h2>
+                    <p class="concept__descr">
+                        Класичний номер ARCHOTEL – це витончене поєднання сучасного стилю та продуманого комфорту.
+                        Інтер’єр створює атмосферу легкості, а кожна деталь спрямована на те, щоб ваш час тут став
+                        особливим. Простір номера налаштовує на приємне проведення часу, а великі вікна наповнюють
+                        кімнату м’яким природним світлом.
+                    </p>
+                </div>
+                <div class="concept__slider swiper js-concept-slider">
+                    <div class="concept__slider-nav nav--details js-concept-nav">
+                        <button type="button" class="concept__slider-btn js-concept-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.00002 12H20" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.9999 17C8.9999 17 4 13.3176 4 12C4 10.6824 9 7 9 7" stroke="#161616"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="concept__slider-pag js-concept-progress"></div>
+                        <button type="button" class="concept__slider-btn js-concept-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12H4" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M15.0001 17C15.0001 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#161616"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="concept__slider-wrapper swiper-wrapper">
+                        <div class="concept__slider-slide swiper-slide">
+                            <div class="concept__slider-pic">
+                                <img width="604" height="680" src="./assets/img/concept_1.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="concept__slider-slide swiper-slide">
+                            <div class="concept__slider-pic">
+                                <img width="604" height="680" src="./assets/img/concept_2.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                        <div class="concept__slider-slide swiper-slide">
+                            <div class="concept__slider-pic">
+                                <img width="604" height="680" src="./assets/img/concept_3.jpg" alt="Thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="equipment">
+            <div class="equipment__line line--hor"></div>
+            <div class="equipment__line line--vert"></div>
+            <svg class="equipment__deco" width="1594" height="798" viewBox="0 0 1594 798" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2"
+                    d="M1588 2.6665C1588 4.13926 1589.19 5.33317 1590.67 5.33317C1592.14 5.33317 1593.33 4.13926 1593.33 2.6665C1593.33 1.19374 1592.14 -0.00016284 1590.67 -0.00016284C1589.19 -0.00016284 1588 1.19374 1588 2.6665ZM-0.000651121 2.6665C-0.000651121 4.13926 1.19326 5.33317 2.66602 5.33317C4.13877 5.33317 5.33268 4.13926 5.33268 2.6665C5.33268 1.19374 4.13877 -0.00016284 2.66602 -0.00016284C1.19326 -0.00016284 -0.000651121 1.19374 -0.000651121 2.6665ZM1590.67 2.6665H1590.17C1590.17 440.904 1234.9 796.167 796.666 796.167V796.667V797.167C1235.46 797.167 1591.17 441.457 1591.17 2.6665H1590.67ZM796.666 796.667V796.167C358.428 796.167 3.16602 440.904 3.16602 2.6665H2.66602H2.16602C2.16602 441.457 357.876 797.167 796.666 797.167V796.667Z"
+                    fill="#FFFBF1"></path>
+            </svg>
+            <div class="equipment__bg">
+                <img src="./assets/img/bg-gold.jpg" alt="">
+            </div>
+            <div class="container">
+                <h2 class="equipment__title main-title">Комплектація номеру</h2>
+                <div class="equipment__services js-eq-items">
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_1.svg" alt="Icon">
+                        <span>Велике двоспальне ліжко</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_2.svg" alt="Icon">
+                        <span>Дзеркало для фото у соцмережі</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_3.svg" alt="Icon">
+                        <span>Міні-бар</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_4.svg" alt="Icon">
+                        <span>Швидкий WI-FI</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_5.svg" alt="Icon">
+                        <span>Бомбосховище</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_6.svg" alt="Icon">
+                        <span>Pets-Friendly</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_7.svg" alt="Icon">
+                        <span>Клімат-контроль</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_8.svg" alt="Icon">
+                        <span>Великий телевізор</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_9.svg" alt="Icon">
+                        <span>Сейф</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_10.svg" alt="Icon">
+                        <span>Велика шафа</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_11.svg" alt="Icon">
+                        <span>SPA & Фітнес</span>
+                    </div>
+                    <div class="equipment__service js-eq-item">
+                        <img src="./assets/img/icons/eq_12.svg" alt="Icon">
+                        <span>Йога на світанку</span>
+                    </div>
+                </div>
+                <div class="equipment__reserv">
+                    <div class="equipment__pic">
+                        <img width="440" height="480" src="./assets/img/eq-pic.jpg" alt="Thumbnail">
+                    </div>
+                    <h3 class="equipment__subtitle">Різні історії — один готель, де вас чекають</h3>
+                    <a href="#!" class="comfort__link link-accent">
+                        <span>забронювати номер</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="presentation">
+            <div class="container">
+                <div class="presentation__inner">
+                    <div class="marquee-text">
+                        <span>Something special&nbsp;</span>
+                        <span>Something special&nbsp;</span>
+                        <span>Something special&nbsp;</span>
+                        <span>Something special&nbsp;</span>
+                    </div>
+                    <div class="presentation__content">
+                        <div class="presentation__pic">
+                            <img width="730" height="740" src="./assets/img/presentation-pic.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="presentation__info">
+                            <h2 class="presentation__title">Ритуал релаксу у номері</h2>
+                            <p class="presentation__descr">
+                                Окрема ванна, розташована просто в просторі номеру, створює відчуття свободи та розкоші.
+                                Вона стає акцентом інтер’єру, поєднуючи функціональність та естетику. Такий формат
+                                дозволяє
+                                насолоджуватися відпочинком без бар’єрів, додає атмосфері інтимності й витонченого
+                                дизайну.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="services__bg">
+                <img src="./assets/img/Mask group.png" alt="Thumbnail">
+            </div>
+            <div class="container">
+                <div class="services__content">
+                    <h2 class="services__title main-title">
+                        Тут все для вас: від сніданку до релаксу
+                    </h2>
+                    <ul class="services__list">
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details"
+                                data-img="./assets/img/service-details.jpg"
+                                data-title="Готель, де ваш улюбленець — повноправний гість"
+                                data-description="У нашому готелі комфорт починається не лише для вас, а й для вашого чотирилапого друга. Ми створили простір, де відпочинок можливий без компромісів — поруч із тими, кого ви любите. Ваш улюбленець зможе вільно гуляти територією, насолоджуватись природою та спокоєм. Для зручності ми підготували спеціальні зони вигулу, м’які лежаки, миски для води та їжі, а також сервіси за запитом — від грумінгу до ветеринарного супроводу. Ми розуміємо, що домашні тварини — це частина сім’ї, тому робимо все, щоб ви могли подорожувати разом без турбот. Просто повідомте нас під час бронювання — і ми підготуємо номер з урахуванням потреб вашого хвостатого компаньйона.">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">цілодобовий room service</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details" data-img="./assets/img/appart_2.jpg"
+                                data-title="Готель, де ваш улюбленець — повноправний гість"
+                                data-description="У нашому готелі комфорт починається не лише для вас, а й для вашого чотирилапого друга.">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">ексклюзивні вечірки</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">wellness & spa</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">health boutique</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">естетична медицина</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">розваги для дітей</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">конференц-сервіс</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">КОНСЬЄРЖ СЕРВІС</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            <a href="javascript:void(0)" class="link-more link-more--drk js-service-details">
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                                <span class="text">pets friendly</span>
+                                <span class="ico">
+                                    <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                </span>
+                            </a>
+                        </li>
+                        <li class="services__point">
+                            безкоштовні сніданки
+                        </li>
+                        <li class="services__point">
+                            бомбосховище
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="other">
+            <div class="container">
+                <h2 class="other__title main-title">інші номери</h2>
+                <div class="rooms-slider swiper js-rooms-slider">
+                    <div class="rooms-slider__nav js-rooms-nav">
+                        <button type="button" class="rooms-slider__btn js-rooms-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.00002 12H20" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M8.9999 17C8.9999 17 4 13.3176 4 12C4 10.6824 9 7 9 7" stroke="#161616"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button type="button" class="rooms-slider__btn js-rooms-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12H4" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M15.0001 17C15.0001 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#161616"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="rooms-slider__wrapper swiper-wrapper">
+                        <div class="rooms-slider__slide swiper-slide">
+                            <div class="room-box">
+                                <h3 class="room-box__title">
+                                    дизайнерський marvel
+                                </h3>
+                                <div class="room-box__wrapper">
+                                    <div class="room-box__info">
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-user.svg"
+                                                alt="Icon">
+                                            <span>до 4 гостей</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-square.svg"
+                                                alt="Icon">
+                                            <span>площа 42 м.кв.</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-door.svg"
+                                                alt="Icon">
+                                            <span>1 кімната</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-box__reserv">
+                                        <span class="room-box__price">від 5 500 грн / ніч</span>
+                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                            <span>Забронювати</span>
+                                        </a>
+                                    </div>
+                                    <div class="room-box__thumb">
+                                        <img width="580" height="568" src="./assets/img/appart_9.jpg" alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rooms-slider__slide swiper-slide">
+                            <div class="room-box">
+                                <h3 class="room-box__title">
+                                    суперіор з терасою <span>art</span>
+                                </h3>
+                                <div class="room-box__wrapper">
+                                    <div class="room-box__info">
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-user.svg"
+                                                alt="Icon">
+                                            <span>до 4 гостей</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-square.svg"
+                                                alt="Icon">
+                                            <span>площа 42 м.кв.</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-door.svg"
+                                                alt="Icon">
+                                            <span>1 кімната</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-box__reserv">
+                                        <span class="room-box__price">від 5 500 грн / ніч</span>
+                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                            <span>Забронювати</span>
+                                        </a>
+                                    </div>
+                                    <div class="room-box__thumb">
+                                        <img width="580" height="568" src="./assets/img/appart_10.jpg" alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rooms-slider__slide swiper-slide">
+                            <div class="room-box">
+                                <h3 class="room-box__title">
+                                    делюкс <span>art</span>
+                                </h3>
+                                <div class="room-box__wrapper">
+                                    <div class="room-box__info">
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-user.svg"
+                                                alt="Icon">
+                                            <span>до 4 гостей</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-square.svg"
+                                                alt="Icon">
+                                            <span>площа 42 м.кв.</span>
+                                        </div>
+                                        <div class="room-box__descr">
+                                            <img width="28" height="28" src="./assets/img/icons/ico-door.svg"
+                                                alt="Icon">
+                                            <span>1 кімната</span>
+                                        </div>
+                                    </div>
+                                    <div class="room-box__reserv">
+                                        <span class="room-box__price">від 5 500 грн / ніч</span>
+                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                            <span>Забронювати</span>
+                                        </a>
+                                    </div>
+                                    <div class="room-box__thumb">
+                                        <img width="580" height="568" src="./assets/img/appart_8.jpg" alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rooms-slider__slide swiper-slide">
+                            <div class="empty-box">
+                                <h3 class="empty-box__title">
+                                    Не знаєте, який саме номер обрати?
+                                </h3>
+                                <div class="room-box__wrapper">
+                                    <div class="empty-box__info">
+                                        <p class="empty-box__descr">
+                                            Залиште запит, і наш менеджер порадить найкращий номер саме для вас.
+                                        </p>
+                                        <a href="#!" class="room-box__link link-accent">
+                                            <span>підібрати номер</span>
+                                        </a>
+                                    </div>
+                                    <div class="empty-box__thumb">
+                                        <img width="580" height="568" src="./assets/img/empty-room.jpg" alt="Thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="./assets/img/bg-gold.jpg" alt="" class="footer__bg">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <img loading="lazy" width="182" height="112" src="./assets/img/icons/logo_wht.svg" alt="Logo">
+                    </div>
+                    <ul class="footer__social">
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-fb_wht.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-inst_wht.svg" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-tt_wht.svg" alt="TikTok">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__phone footer__phone--lg">
+                        <p class="footer__title">Бронювання та консультації</p>
+                        <a href="tel:+0800200880">0 800 200 880</a>
+                    </div>
+                    <div class="footer__phone">
+                        <p class="footer__title">Wellness & SPA</p>
+                        <a href="tel:+380935390553">+38 093 53 90 553</a>
+                    </div>
+                    <div class="footer__phone">
+                        <p class="footer__title">Медичний центр</p>
+                        <a href="tel:+380935390553">+38 093 53 90 553</a>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="#!">Номери готелю</a></li>
+                        <li><a href="#!">Wellness & SPA</a></li>
+                        <li><a href="#!">Health Boutique</a></li>
+                        <li><a href="#!">Ресторани</a></li>
+                        <li><a href="#!">Аквапарк</a></li>
+                        <li><a href="#!">Конференц-сервіс</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!">Естетична медицина</a></li>
+                        <li><a href="#!">Арт-простір</a></li>
+                        <li><a href="#!">Спеціальні пропозиції</a></li>
+                        <li><a href="#!">Контакти</a></li>
+                        <li><a href="#!">Послуги для дітей</a></li>
+                        <li><a href="#!">Афіша івентів</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__row">
+                <button class="footer__reserv js-reserv">
+                    <span>забронювати номер</span>
+                </button>
+                <a href="#!" class="footer__location">
+                    <img width="32" height="32" src="./assets/img/icons/ico-pin_accent.svg" alt="">
+                    <span>Аркадійська алея 1А, Одеса</span>
+                </a>
+                <a href="#!" class="footer__route">
+                    <span>прокласти маршрут</span>
+                    <img width="32" height="32" src="./assets/img/icons/ico-route_accent.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <div>
+                    <p>Copyrights © ARCH HOTEL 2025. Усі права захищені.</p>
+                </div>
+                <div>
+                    <a href="#!">Публічна оферта</a>
+                    <p>Made by Esfirum Agency</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--room {
+    .concept {
+        overflow: hidden;
+        margin-bottom: 160px;
+
+        &__head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            max-width: 50%;
+        }
+
+        &__descr {
+            font: 400 18px / 140% var(--ff-base);
+            max-width: 605px;
+        }
+
+        &__slider {
+            overflow: visible;
+
+            &-slide {
+                width: auto;
+            }
+
+            &-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+
+            &-btn {
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 48px;
+                height: 48px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 1px solid var(--dark-color);
+                @include transitions(0.3s, ease-in);
+
+                &.swiper-button-disabled {
+                    opacity: 0.6;
+                    pointer-events: none;
+                }
+
+                svg {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &-pag {
+                position: relative;
+                max-width: 1230px;
+                height: 1px;
+                background: rgba(22, 22, 22, 0.1);
+
+                .swiper-pagination-progressbar-fill {
+                    background: var(--dark-color);
+                }
+            }
+
+            &-pic {
+                max-width: 604px;
+                height: 680px;
+                border-radius: 16px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

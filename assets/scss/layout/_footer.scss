@@ -64,6 +64,10 @@
             justify-content: center;
             border-radius: 50%;
             border: 1px solid var(--accent-color);
+            @include transitions(.3s, ease-in);
+            @include hover {
+                background: var(--accent-color);
+            }
 
             img {
                 width: 32px;

@@ -46,6 +46,8 @@
             left: 50%;
             transform: translateX(-50%);
             bottom: 128px;
+            max-width: 90%;
+            width: 100%;
         }
 
         &__line {

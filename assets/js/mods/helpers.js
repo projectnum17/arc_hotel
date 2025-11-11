@@ -95,12 +95,38 @@ const helpers = () => {
         handleFilterGroup(sizesFilters);
     };
 
-    filtersHandler();
+    const groupElementsHandler = (options) => {
+        const { containerSelector, itemSelector, wrapperClass, groupSize } =
+            options;
+
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const items = container.querySelectorAll(itemSelector);
+        const itemsArray = Array.from(items);
+
+        for (let i = 0; i < itemsArray.length; i += groupSize) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add(wrapperClass);
+
+            const group = itemsArray.slice(i, i + groupSize);
+            const firstItem = group[0];
+
+            container.insertBefore(wrapper, firstItem);
+            group.forEach((item) => wrapper.appendChild(item));
+        }
+    };
 
     moreSEOTextHandler();
     animationLogo();
     parallaxHandler();
     filtersHandler();
+    groupElementsHandler({
+        containerSelector: '.js-eq-items',
+        itemSelector: '.js-eq-item',
+        wrapperClass: 'eq-inner',
+        groupSize: 6,
+    });
 };
 
 export default helpers;

@@ -41,7 +41,7 @@ const header = () => {
 
         let lastScroll = 0;
 
-        window.addEventListener('scroll', () => {
+        const handleScroll = () => {
             const currentScroll = window.scrollY;
 
             if (currentScroll > lastScroll && currentScroll > 150) {
@@ -51,15 +51,17 @@ const header = () => {
             }
 
             lastScroll = currentScroll;
-        });
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 1) {
+            if (currentScroll > 1) {
                 header.classList.add('is-scroll');
             } else {
                 header.classList.remove('is-scroll');
             }
-        });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        handleScroll();
     };
 
     asideMenuHandler();

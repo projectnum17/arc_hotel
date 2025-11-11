@@ -53,6 +53,29 @@
         }
     }
 
+    &--colored {
+        .header__lang {
+            a {
+                color: var(--wht-color);
+            }
+        }
+        .header__logo {
+            svg {
+                color: var(--wht-color);
+            }
+        }
+
+        .header__phone {
+            border: 1px solid var(--accent-color);
+            color: var(--wht-color);
+        }
+
+        .header__reserv {
+            border: 1px solid var(--accent-color);
+            color: var(--wht-color);
+        }
+    }
+
     &--drk {
         .header__phone {
             border: 1px solid var(--graphite-color);

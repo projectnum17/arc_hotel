@@ -67,6 +67,7 @@ body:not(:has(.main--home)) {
 .swiper-wrapper {
     &.is-centered {
         justify-content: center;
+        gap: 20px;
     }
 }
 

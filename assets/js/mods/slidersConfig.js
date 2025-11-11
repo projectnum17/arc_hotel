@@ -53,8 +53,39 @@ const slidersConfig = () => {
         });
     };
 
+    const conceptSlider = () => {
+        const sliderEl = document.querySelector('.js-concept-slider');
+        const navPanel = document.querySelector('.js-concept-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 3) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+            return;
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 40,
+            slidesPerView: 'auto',
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-concept-prev',
+                nextEl: '.js-concept-next',
+            },
+            pagination: {
+                el: '.js-concept-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     roomsSlider();
     reviewsSlider();
+    conceptSlider();
 };
 
 export default slidersConfig;
