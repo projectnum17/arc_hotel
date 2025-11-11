@@ -1,4 +1,4 @@
-const mainLogoAnimation = () => {
+const clipLogoAnimation = () => {
     const logoBg = document.querySelector('.js-logo-bg');
     if (!logoBg) return;
 
@@ -19,4 +19,4 @@ const mainLogoAnimation = () => {
     observer.observe(logoBg);
 };
 
-export default mainLogoAnimation;
+export default clipLogoAnimation;

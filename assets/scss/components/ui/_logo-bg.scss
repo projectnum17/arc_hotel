@@ -2,12 +2,27 @@
 @use '../../base/mixins' as *;
 
 .logo-bg {
+    max-width: 970px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    transform: translateX(-50%);
     pointer-events: none;
     clip-path: var(--clip);
     --clip: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transition: clip-path 1s ease;
+    transition: clip-path 1.5s ease;
 
     &.is-visible {
         --clip: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    &--light {
+        opacity: 12%;
+    }
+
+    &--drk {
+        opacity: 4%;
     }
 }

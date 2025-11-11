@@ -1,0 +1,107 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.perform {
+    padding-block: var(--section-pdd);
+    overflow: hidden;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 60px;
+    }
+
+    &__soon {
+        font: 400 16px / 100% var(--ff-base);
+        display: inline-flex;
+        padding: 7px 15px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        border: 1px solid var(--accent-color);
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__content {
+        position: relative;
+        height: 622px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__promo {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font: 400 272px / 100% var(--ff-accent);
+        text-transform: uppercase;
+        opacity: 6%;
+        letter-spacing: -5px;
+    }
+
+    &__box {
+        height: 622px;
+        position: relative;
+
+        &:has(.is-scale) {
+            .perform__logo {
+                max-width: 300px;
+                height: 300px;
+                transform: translate(-50%, 130%);
+
+                path:first-child {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        height: 622px;
+        max-width: 425px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        @include transitions(1s, linear);
+
+        path:first-child {
+            color: var(--wht-color);
+            opacity: 0.23;
+            @include transitions(1s, linear);
+        }
+        path:last-child {
+            color: var(--accent-color);
+            @include transitions(1s, linear);
+        }
+    }
+
+    &__pic {
+        max-width: 410px;
+        margin: 0 auto;
+        height: 622px;
+        border-radius: 316px;
+        overflow: hidden;
+        @include transitions(1s, ease-in);
+
+        &.is-scale {
+            max-width: 100%;
+            border-radius: 60px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

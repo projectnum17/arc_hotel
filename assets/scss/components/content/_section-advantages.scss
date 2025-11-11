@@ -1,0 +1,10 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.advantages {
+    margin-bottom: 140px;
+
+    .content-head {
+        margin-bottom: 104px;
+    }
+}

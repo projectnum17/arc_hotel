@@ -2,7 +2,7 @@
 @use '../base/mixins' as *;
 
 .header {
-    padding-block: 12px 8px;
+    padding-block: 24px 20px;
     z-index: 10;
     position: fixed;
     top: 0;
@@ -119,6 +119,10 @@
     }
 
     &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         max-width: 117px;
         display: inline-flex;
         flex-shrink: 0;

@@ -1,0 +1,59 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.benefit-box {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 740px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 92px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -60px;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 120px;
+            background: var(--accent-color);
+        }
+    }
+
+    &__img {
+        border-radius: 16px;
+        height: 488px;
+        max-width: 480px;
+        width: 100%;
+        overflow: hidden;
+        width: 100%;
+        @include transitions(1s, ease-in);
+        &.is-scale {
+            height: 740px;
+            max-width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        text-align: center;
+        max-width: 977px;
+        margin: 0 auto;
+    }
+
+    &__descr {
+        font: 400 18px / 140% var(--ff-base);
+    }
+}

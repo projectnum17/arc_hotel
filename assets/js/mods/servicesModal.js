@@ -1,5 +1,8 @@
-const servicesModalHandler = () => {
+const servicesModal = () => {
     const serviceModal = document.querySelector('.js-service');
+
+    if (!serviceModal) return;
+
     const closeBtn = serviceModal.querySelector('.js-service-close');
 
     const modalImg = serviceModal.querySelector('.js-service-pic img');
@@ -8,7 +11,7 @@ const servicesModalHandler = () => {
 
     const serviceLinks = document.querySelectorAll('.js-service-details');
 
-    if (!serviceLinks.length || !serviceModal) return;
+    if (!serviceLinks.length) return;
 
     serviceLinks.forEach((link) => {
         link.addEventListener('click', () => {
@@ -42,4 +45,4 @@ const servicesModalHandler = () => {
     });
 };
 
-export default servicesModalHandler;
+export default servicesModal;

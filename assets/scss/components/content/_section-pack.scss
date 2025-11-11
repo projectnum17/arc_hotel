@@ -1,0 +1,99 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.pack {
+    margin-bottom: var(--section-mb);
+    &__head {
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1300px;
+    }
+
+    &__cards {
+        .pack-card:last-child {
+            border-bottom: 1px solid #cececb;
+        }
+    }
+
+    .pack-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: space-between;
+        padding-block: 48px;
+        border-top: 1px solid #cececb;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 480px;
+        }
+
+        &__benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 448px;
+            width: 100%;
+        }
+
+        &__points {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__pic {
+            max-width: 424px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__date {
+            font: 400 18px / 140% var(--ff-base);
+        }
+
+        &__subtitle {
+            font: 300 54px / 100% var(--ff-accent);
+            letter-spacing: -2px;
+        }
+
+        &__price {
+            display: inline-flex;
+            font: 300 32px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            color: var(--accent-color);
+        }
+
+        &__benefit {
+            font: 400 16px / 140% var(--ff-base);
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 17px;
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 20px;
+                height: 20px;
+                background: url('../img/icons/ico_star_gld.svg') no-repeat
+                    center center / cover;
+            }
+        }
+
+        .link-accent {
+            width: max-content;
+        }
+    }
+}

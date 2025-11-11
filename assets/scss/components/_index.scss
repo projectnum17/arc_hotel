@@ -1,7 +1,9 @@
 @use 'ui';
+@use 'content';
 @forward 'aside-menu';
 @forward 'relax-card';
 @forward 'room-box';
 @forward 'rooms-slider';
 @forward 'promo-boxes';
 @forward 'service-modal';
+@forward 'benefit-box';
