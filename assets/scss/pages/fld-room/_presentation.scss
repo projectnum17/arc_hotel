@@ -8,8 +8,8 @@
 
         .marquee-text {
             position: absolute;
-            top: 50%;
             left: 50%;
+            bottom: 90px;
             transform: translateX(-50%);
             display: flex;
             align-items: center;
@@ -32,6 +32,12 @@
 
         &__inner {
             width: 100%;
+        }
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
             position: relative;
         }
 
