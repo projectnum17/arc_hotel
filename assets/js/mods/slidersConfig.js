@@ -9,10 +9,9 @@ const slidersConfig = () => {
         const slideCount = sliderEl.querySelectorAll('.swiper-slide');
         const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
 
-        if (slideCount.length < 2) {
+        if (slideCount.length < 3) {
             navPanel.style.display = 'none';
             sliderWrapper.classList.add('is-centered');
-            return;
         }
 
         new Swiper(sliderEl, {
@@ -38,7 +37,6 @@ const slidersConfig = () => {
         if (slideCount.length < 2) {
             navPanel.style.display = 'none';
             sliderWrapper.classList.add('is-centered');
-            return;
         }
 
         new Swiper(sliderEl, {
@@ -64,12 +62,11 @@ const slidersConfig = () => {
         if (slideCount.length < 3) {
             navPanel.style.display = 'none';
             sliderWrapper.classList.add('is-centered');
-            return;
         }
 
         new Swiper(sliderEl, {
             spaceBetween: 40,
-            slidesPerView: 'auto',
+            slidesPerView: 2.5,
             grabCursor: true,
             speed: 900,
             navigation: {
@@ -83,9 +80,39 @@ const slidersConfig = () => {
         });
     };
 
+    const infoSlider = () => {
+        const sliderEl = document.querySelector('.js-info-slider');
+        const navPanel = document.querySelector('.js-info-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 4) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 40,
+            slidesPerView: 3,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-info-prev',
+                nextEl: '.js-info-next',
+            },
+            pagination: {
+                el: '.js-info-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     roomsSlider();
     reviewsSlider();
     conceptSlider();
+    infoSlider();
 };
 
 export default slidersConfig;
