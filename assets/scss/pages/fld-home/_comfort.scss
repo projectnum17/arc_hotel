@@ -222,6 +222,9 @@
             gap: 16px;
 
             &-btn {
+                transform: translateZ(0);
+                backface-visibility: hidden;
+                will-change: opacity, transform;
                 display: inline-flex;
                 flex-shrink: 0;
                 width: 32px;
@@ -238,6 +241,9 @@
                 }
 
                 svg {
+                    @include transitions(0.3s, ease-in);
+                    // width: 70%;
+                    // height: 70%;
                     width: 20px;
                     height: 20px;
                 }

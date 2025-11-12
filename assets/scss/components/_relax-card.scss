@@ -44,7 +44,8 @@
             bottom: -200px;
             position: absolute;
             opacity: 0.5;
-
+            will-change: transform;
+            transform: translateZ(0);
             filter: blur(250px);
         }
 

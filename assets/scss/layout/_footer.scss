@@ -64,7 +64,7 @@
             justify-content: center;
             border-radius: 50%;
             border: 1px solid var(--accent-color);
-            @include transitions(.3s, ease-in);
+            @include transitions(0.3s, ease-in);
             @include hover {
                 background: var(--accent-color);
             }
@@ -189,6 +189,8 @@
         }
 
         &::after {
+            will-change: opacity;
+            transform: translateZ(0);
             content: '';
             inset: 0;
             position: absolute;

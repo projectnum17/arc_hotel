@@ -59,6 +59,7 @@
         height: 48px;
         align-items: center;
         justify-content: center;
+        will-change: opacity;
         @include transitions(0.3s, ease-in);
 
         &.swiper-button-disabled {

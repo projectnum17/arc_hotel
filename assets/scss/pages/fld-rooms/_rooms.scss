@@ -163,6 +163,7 @@
             text-transform: uppercase;
             letter-spacing: -1px;
             margin-bottom: 24px;
+            @include transitions(.3s, ease-in)
         }
 
         &__details {
