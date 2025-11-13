@@ -10,45 +10,62 @@
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     &.is-scroll {
-        background: var(--dark-color);
+        padding-block: 16px;
+        background: var(--wht-color);
 
         .header__burger {
             span {
-                background: var(--wht-color);
+                background: var(--accent-color);
 
                 &::after,
                 &::before {
-                    background: var(--wht-color);
+                    background: var(--accent-color);
                 }
             }
         }
 
         .header__lang a {
-            color: var(--wht-color);
+            color: var(--dark-color);
         }
 
         .header__phone {
-            border-color: var(--wht-color);
+            border-color: var(--accent-color);
             @include hover {
                 border-color: transparent;
+                svg {
+                    color: var(--wht-color);
+                }
             }
 
             svg {
-                color: var(--wht-color);
+                color: var(--dark-color);
             }
         }
 
         .header__reserv {
-            border-color: var(--wht-color);
-            color: var(--wht-color);
+            border-color: var(--accent-color);
+            color: var(--dark-color);
             @include hover {
                 border-color: transparent;
+                color: var(--wht-color);
             }
         }
 
         .header__logo {
             svg {
-                color: var(--wht-color);
+                color: var(--dark-color);
+            }
+
+            &-f {
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
+            }
+
+            &-s {
+                opacity: 1;
+                visibility: visible;
+                height: 44px;
             }
         }
     }
@@ -119,18 +136,44 @@
     }
 
     &__logo {
+        height: 72px;
+        overflow: hidden;
+        flex-direction: column;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         max-width: 117px;
         display: inline-flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
-        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         svg {
             width: 100%;
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        &-f {
+            height: 100%;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        &-s {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
     }
 
@@ -172,7 +215,10 @@
             height: 1px;
             display: inline-flex;
             background: var(--graphite-color);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
 
             &::after,
             &::before {
@@ -181,7 +227,10 @@
                 width: 81px;
                 height: 1px;
                 background: var(--graphite-color);
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
             }
 
             &::after {
@@ -216,7 +265,10 @@
             font: 500 16px / 100% var(--ff-base);
             text-transform: uppercase;
             opacity: 0.4;
-            @include transitions(0.2s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.2s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
 
             &.current-lang {
                 opacity: 1;
@@ -245,7 +297,10 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
 
         @include hover {
@@ -268,7 +323,10 @@
             width: 24px;
             height: 24px;
             transform-origin: 50% 0%;
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
     }
 
@@ -289,7 +347,10 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
 
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
