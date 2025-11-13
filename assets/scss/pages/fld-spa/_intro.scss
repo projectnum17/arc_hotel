@@ -79,10 +79,7 @@
         &__service {
             font: 400 16px / 100% var(--ff-base);
             text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+
             padding: 18px 25px;
             min-width: 288px;
             width: 100%;
@@ -90,6 +87,15 @@
             width: 100%;
             border-radius: 88px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+                font: inherit;
+            }
 
             img {
                 width: 36px;
