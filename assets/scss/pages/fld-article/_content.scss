@@ -1,0 +1,138 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--article {
+    .content {
+        padding-top: 152px;
+        margin-bottom: 160px;
+
+        .link-more {
+            margin: 0 auto;
+        }
+
+        &__info {
+            padding-top: 32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font: 300 80px / 100% var(--ff-accent);
+            letter-spacing: -3px;
+            text-transform: uppercase;
+            margin: 0 0 40px 0;
+            text-align: center;
+            color: var(--graphite-color);
+        }
+
+        h2 {
+            font: 300 44px / 110% var(--ff-accent);
+            letter-spacing: -1px;
+            margin: 0 0 24px 0;
+            color: var(--graphite-color);
+        }
+
+        h3 {
+            font: 300 32px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+            color: var(--graphite-color);
+        }
+
+        h4 {
+            font: 300 28px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+            color: var(--graphite-color);
+        }
+
+        h5 {
+            font: 300 24px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+            color: var(--graphite-color);
+        }
+
+        h6 {
+            font: 300 20px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+            color: var(--graphite-color);
+        }
+
+        p {
+            font: 400 18px / 140% var(--ff-base);
+            margin-bottom: 60px;
+
+            &:has(+ p) {
+                margin-bottom: 24px;
+            }
+        }
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 60px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            li {
+                font: 400 16px / 140% var(--ff-base);
+                list-style-type: none;
+                display: inline-flex;
+                align-items: flex-start;
+                gap: 17px;
+                color: var(--graphite-color);
+
+                &::before {
+                    content: '';
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 20px;
+                    height: 20px;
+                    background: url('../img/icons/ico_star_gld.svg') no-repeat
+                        center center / cover;
+                }
+            }
+        }
+
+        ol {
+            counter-reset: process-counter;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            li {
+                counter-increment: process-counter;
+                font: 400 16px / 140% var(--ff-base);
+                list-style-type: none;
+                display: inline-flex;
+                align-items: flex-start;
+                gap: 17px;
+                color: var(--graphite-color);
+
+                &::before {
+                    content: counter(process-counter, decimal-leading-zero);
+                    font: 400 16px / 140% var(--ff-base);
+                    letter-spacing: -2px;
+                    text-transform: uppercase;
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}

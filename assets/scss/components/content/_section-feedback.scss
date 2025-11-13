@@ -14,7 +14,6 @@
         pointer-events: none;
         position: absolute;
         top: 50%;
-        border-radius: 16px;
         overflow: hidden;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -79,6 +78,52 @@
     &__subtitle {
         font: 400 16px / 140% var(--ff-base);
         margin-bottom: 80px;
+    }
+
+    &__details {
+        font: 300 44px / 110% var(--ff-accent);
+        letter-spacing: -1px;
+        margin-bottom: 60px;
+    }
+
+    &__phone {
+        width: max-content;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font: 300 24px / 100% var(--ff-accent);
+        letter-spacing: -1px;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            color: var(--accent-color);
+            span:first-child {
+                background: var(--accent-color);
+            }
+        }
+
+        span:first-child {
+            display: inline-flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            svg {
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 24px;
+                height: 24px;
+                color: var(--wht-color);
+            }
+        }
     }
 
     &__form {
