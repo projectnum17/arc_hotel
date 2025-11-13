@@ -2,6 +2,8 @@
 @use '../../base/mixins' as *;
 
 .main--article {
+    overflow: hidden;
+    position: relative;
     .content {
         padding-top: 152px;
         margin-bottom: 160px;
@@ -14,6 +16,8 @@
             padding-top: 32px;
             position: relative;
             z-index: 2;
+            max-width: 980px;
+            margin: 0 auto;
         }
 
         h1 {
