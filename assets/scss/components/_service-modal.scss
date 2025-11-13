@@ -12,7 +12,7 @@
     height: 100vh;
     height: 100svh;
     background: rgba(0, 0, 0, 0.8);
-    @include transitions(0.3s, ease-in);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     &.is-show {
         opacity: 1;

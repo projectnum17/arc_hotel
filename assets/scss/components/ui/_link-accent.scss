@@ -11,7 +11,7 @@
     min-width: max-content;
     color: var(--wht-color);
     background: var(--accent-color);
-    @include transitions(0.3s, ease-in);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     span {
         position: relative;
@@ -26,7 +26,7 @@
         visibility: hidden;
         pointer-events: none;
         background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 
     @include hover {

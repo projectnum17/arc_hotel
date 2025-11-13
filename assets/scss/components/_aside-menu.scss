@@ -12,7 +12,7 @@
     opacity: 0;
     visibility: hidden;
     background: var(--bg-color);
-    @include transitions(0.5s, ease-in);
+    @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     &.is-shown {
         opacity: 1;
@@ -39,7 +39,7 @@
         height: 100%;
         transform: translateX(-100%);
         background: rgba(22, 22, 22, 0.88);
-        @include transitions(0.5s, ease-in);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &::after,
         &::before {
@@ -115,9 +115,9 @@
                     left: 0;
                     height: 1px;
                     background: var(--accent-color);
-                    @include transitions(0.3s, ease-in);
+                    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
                 }
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
                 @include hover {
                     color: var(--accent-color);
 
@@ -146,7 +146,7 @@
         height: 100%;
         width: 42%;
         background: linear-gradient(180deg, #161616 0%, #0f2d2b 100%);
-        @include transitions(0.5s, ease-in);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 
     &__logo {
@@ -158,7 +158,7 @@
         pointer-events: none;
         opacity: 0;
         visibility: hidden;
-        @include transitions(0.5s, ease-in);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 
     &__details {
@@ -217,7 +217,7 @@
             a {
                 font: 400 16px / 100% var(--ff-base);
                 color: var(--wht-color);
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
                 @include hover {
                     opacity: 0.6;
                 }

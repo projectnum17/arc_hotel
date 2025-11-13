@@ -64,7 +64,7 @@
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
             &.is-active {
                 color: var(--accent-color);
@@ -86,7 +86,7 @@
                 flex-shrink: 0;
                 background: url('../img/icons/star_1.svg') no-repeat center
                     center / cover;
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(5px);
@@ -101,7 +101,7 @@
             border: 1px solid #dddddd;
             color: rgba(22, 22, 22, 0.6);
             min-width: max-content;
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
             &.is-active {
                 border-color: transparent;
@@ -163,7 +163,7 @@
             text-transform: uppercase;
             letter-spacing: -1px;
             margin-bottom: 24px;
-            @include transitions(.3s, ease-in)
+            @include transitions(.3s, ecubic-bezier(0.768, 0.304, 0.496, 0.884)n)
         }
 
         &__details {
@@ -210,7 +210,7 @@
                 backdrop-filter: blur(20px);
                 opacity: 0;
                 visibility: hidden;
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             }
         }
 
@@ -221,7 +221,7 @@
             opacity: 0;
             visibility: hidden;
             transform: translate(-50%, -45%);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 }

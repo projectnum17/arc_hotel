@@ -30,7 +30,7 @@
         width: 100%;
         overflow: hidden;
         width: 100%;
-        @include transitions(1s, ease-in);
+        @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         &.is-scale {
             height: 740px;
             max-width: 100%;

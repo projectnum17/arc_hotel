@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    @include transitions(0.3s, ease-in);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
     &.is-scroll {
         background: var(--dark-color);
@@ -115,7 +115,7 @@
         display: flex;
         align-items: center;
         gap: 11px;
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 
     &__logo {
@@ -126,11 +126,11 @@
         max-width: 117px;
         display: inline-flex;
         flex-shrink: 0;
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         svg {
             width: 100%;
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 
@@ -172,7 +172,7 @@
             height: 1px;
             display: inline-flex;
             background: var(--graphite-color);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
             &::after,
             &::before {
@@ -181,7 +181,7 @@
                 width: 81px;
                 height: 1px;
                 background: var(--graphite-color);
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             }
 
             &::after {
@@ -216,7 +216,7 @@
             font: 500 16px / 100% var(--ff-base);
             text-transform: uppercase;
             opacity: 0.4;
-            @include transitions(0.2s, ease-in);
+            @include transitions(0.2s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
             &.current-lang {
                 opacity: 1;
@@ -234,7 +234,7 @@
         border-radius: 50%;
         position: relative;
         overflow: hidden;
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &::after {
             content: '';
@@ -245,7 +245,7 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
 
         @include hover {
@@ -268,7 +268,7 @@
             width: 24px;
             height: 24px;
             transform-origin: 50% 0%;
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 
@@ -289,10 +289,10 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
 
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
             color: var(--wht-color);
             border-color: transparent;

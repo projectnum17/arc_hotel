@@ -64,7 +64,7 @@
             justify-content: center;
             border-radius: 50%;
             border: 1px solid var(--accent-color);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             @include hover {
                 background: var(--accent-color);
             }
@@ -97,7 +97,7 @@
 
             a {
                 font: 400 16px / 100% var(--ff-base);
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
                 @include hover {
                     color: var(--accent-color);
                 }
@@ -160,7 +160,7 @@
     &__phone {
         a {
             font: 300 24px / 110% var(--ff-accent);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
             @include hover {
                 color: var(--accent-color);
             }
@@ -198,10 +198,10 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
 
-        @include transitions(0.3s, ease-in);
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
             color: var(--wht-color);
             border: 1px solid var(--accent-color);
@@ -229,7 +229,7 @@
 
         span {
             font: 400 18px / 100% var(--ff-base);
-            @include transitions(0.3s, ease-in);
+            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 

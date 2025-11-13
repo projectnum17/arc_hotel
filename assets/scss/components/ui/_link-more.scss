@@ -63,7 +63,7 @@
         text-transform: uppercase;
         position: relative;
         margin-right: 8px;
-        @include transitions(0.5s, ease-in);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &::after {
             content: '';
@@ -72,7 +72,7 @@
             position: absolute;
             bottom: -4px;
             left: 0;
-            @include transitions(0.5s, ease-in);
+            @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 
@@ -81,7 +81,7 @@
         flex-shrink: 0;
         width: 32px;
         height: 32px;
-        @include transitions(0.5s, ease-in);
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &:first-of-type {
             width: 0;

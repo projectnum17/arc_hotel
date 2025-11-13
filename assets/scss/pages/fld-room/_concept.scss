@@ -47,7 +47,7 @@
                 justify-content: center;
                 border-radius: 50%;
                 border: 1px solid var(--dark-color);
-                @include transitions(0.3s, ease-in);
+                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
                 &.swiper-button-disabled {
                     opacity: 0.6;

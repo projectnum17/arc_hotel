@@ -74,16 +74,16 @@
         left: 50%;
         top: 0;
         transform: translateX(-50%);
-        @include transitions(1s, linear);
+        @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         path:first-child {
             color: var(--wht-color);
             opacity: 0.23;
-            @include transitions(1s, linear);
+            @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
         path:last-child {
             color: var(--accent-color);
-            @include transitions(1s, linear);
+            @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         }
     }
 
@@ -93,7 +93,7 @@
         height: 622px;
         border-radius: 316px;
         overflow: hidden;
-        @include transitions(1s, ease-in);
+        @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &.is-transform {
             max-width: 100%;
