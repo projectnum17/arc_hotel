@@ -7,6 +7,7 @@ import slidersConfig from './mods/slidersConfig.js';
 import circleLogoAnimation from './mods/circleLogoAnimation.js';
 import servicesModal from './mods/servicesModal.js';
 import initIntersectionAnimations from './mods/initIntersectionAnimations.js';
+import selectHandler from './mods/selectHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     helpers();
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     circleLogoAnimation();
     servicesModal();
     initIntersectionAnimations();
+    selectHandler();
 });

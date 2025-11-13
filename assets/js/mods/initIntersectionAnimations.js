@@ -45,7 +45,7 @@ const initIntersectionAnimations = () => {
     observerHandlerConfig(
         '.js-section-animation',
         'is-scale',
-        1,
+        0.7,
         '.js-content-animation'
     );
     observerHandlerConfig('.js-logo-bg', 'is-visible', 0);

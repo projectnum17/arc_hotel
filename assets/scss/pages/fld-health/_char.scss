@@ -1,0 +1,124 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--health {
+    .char {
+        margin-bottom: 160px;
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 112px;
+            counter-reset: process-counter;
+        }
+    }
+
+    .char-card {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &__thumb {
+            width: 100%;
+            max-width: 605px;
+            height: 656px;
+            border-radius: 16px;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__info {
+            width: 100%;
+        }
+
+        &__details {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(12, 28, 52, 0.2);
+        }
+
+        &__head {
+            padding-right: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 732px;
+            counter-increment: process-counter;
+
+            &::before {
+                content: counter(process-counter, decimal-leading-zero);
+                font: 300 56px / 100% var(--ff-accent);
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                color: var(--accent-color);
+            }
+        }
+
+        &__title {
+            font: 300 56px / 100% var(--ff-accent);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            color: var(--graphite-color);
+        }
+
+        &__subtitle {
+            font: 300 32px / 100% var(--ff-accent);
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: var(--graphite-color);
+        }
+
+        &__text {
+            font: 400 18px / 140% var(--ff-base);
+        }
+
+        &__points {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        &__point {
+            font: 400 16px / 140% var(--ff-base);
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 17px;
+            color: var(--graphite-color);
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 20px;
+                height: 20px;
+                background: url('../img/icons/ico_star_gld.svg') no-repeat
+                    center center / cover;
+            }
+        }
+
+        &__foot {
+            padding-right: 20px;
+            max-width: 732px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__descr {
+            max-width: 482px;
+            width: 100%;
+        }
+
+        &__about {
+            max-width: 482px;
+            width: 100%;
+        }
+    }
+}

@@ -87,6 +87,17 @@ const helpers = () => {
         }
     };
 
+    const formHandler = () => {
+        const forms = document.querySelectorAll('form');
+        if (!forms.length) return;
+
+        forms.forEach((form) => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+        });
+    };
+
     moreSEOTextHandler();
     parallaxHandler();
     filtersHandler();
@@ -96,6 +107,8 @@ const helpers = () => {
         wrapperClass: 'eq-inner',
         groupSize: 6,
     });
+
+    formHandler();
 };
 
 export default helpers;
