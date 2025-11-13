@@ -42,7 +42,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font: 400 272px / 100% var(--ff-accent);
+        font: 400 272px / 100% var(--ff-druzok);
         text-transform: uppercase;
         opacity: 6%;
         letter-spacing: -5px;
@@ -51,14 +51,14 @@
     &__box {
         height: 622px;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1419px;
         position: relative;
 
         &:has(.is-transform) {
             .perform__logo {
-                max-width: 300px;
-                height: 300px;
-                transform: translate(-50%, 130%);
+                max-width: 267px;
+                height: 370px;
+                transform: translate(-50%, 90%);
 
                 path:first-child {
                     opacity: 1;
