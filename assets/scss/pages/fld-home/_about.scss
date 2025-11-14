@@ -121,6 +121,13 @@
             text-transform: uppercase;
             color: var(--wht-color);
             border: 1px solid var(--accent-color);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                background: var(--accent-color);
+            }
 
             img {
                 width: 24px;
@@ -141,7 +148,10 @@
             div {
                 display: grid;
                 grid-template-rows: 0fr;
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
 
                 &.is-mtb {
                     margin-top: 24px;
@@ -175,7 +185,10 @@
             max-height: 100px;
 
             &.is-hide {
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
 
                 span {
                     &.text {
@@ -209,7 +222,10 @@
                     display: flex;
                     align-items: center;
                     height: 20px;
-                    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                    @include transitions(
+                        0.3s,
+                        cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                    );
 
                     &:last-child {
                         height: 0;
@@ -228,7 +244,10 @@
                     justify-content: center;
                     background: var(--ball-blue);
                     color: #fff;
-                    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                    @include transitions(
+                        0.3s,
+                        cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                    );
                 }
             }
         }

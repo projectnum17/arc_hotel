@@ -1,0 +1,16 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--rest {
+    .gallery {
+        margin-bottom: var(--section-mb-sm);
+        &__title {
+            font: 300 44px / 110% var(--ff-accent);
+            letter-spacing: -1px;
+            max-width: 979px;
+            margin: 0 auto 60px;
+            text-align: center;
+            color: var(--graphite-color);
+        }
+    }
+}

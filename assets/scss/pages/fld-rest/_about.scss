@@ -1,0 +1,137 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--rest {
+    .about {
+        position: relative;
+        background: var(--bg-color);
+
+        &__title {
+            text-align: center;
+            span {
+                color: var(--accent-color);
+            }
+        }
+
+        &__cards {
+            display: flex;
+            transform: translateY(50%);
+            position: relative;
+            z-index: 2;
+            margin-top: -100px;
+
+            .container {
+                max-width: 1688px;
+                display: flex;
+                justify-content: space-between;
+                gap: 32px;
+            }
+        }
+
+        &__card {
+            height: 296px;
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 304px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+            }
+
+            &--accent {
+                padding: 5px;
+                background: linear-gradient(180deg, #6aafa3 0%, #f4a9cb 100%);
+                -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+                mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+            }
+        }
+
+        &__info {
+            padding-block: 148px 0;
+            background: var(--dark-color);
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                max-width: 1520px;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                opacity: 0.2;
+                background: radial-gradient(
+                    50% 75900% at 50% 50%,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+            }
+        }
+
+        &__soc {
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-block: 36px 48px;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                max-width: 1520px;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                opacity: 0.2;
+                background: radial-gradient(
+                    50% 75900% at 50% 50%,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+            }
+        }
+
+        &__sign {
+            font: 400 16px / 160% var(--ff-base);
+            color: #caccd2;
+        }
+
+        &__tag {
+            font: 400 24px / 110% var(--ff-base);
+            text-transform: uppercase;
+            color: var(--wht-color);
+        }
+
+        &__link {
+            font: 400 24px / 110% var(--ff-base);
+            text-transform: uppercase;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            text-transform: uppercase;
+            color: var(--wht-color);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                color: var(--accent-color);
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}

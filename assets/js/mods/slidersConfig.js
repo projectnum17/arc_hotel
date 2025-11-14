@@ -109,10 +109,40 @@ const slidersConfig = () => {
         });
     };
 
+    const gallerySlider = () => {
+        const sliderEl = document.querySelector('.js-gallery-slider');
+        const navPanel = document.querySelector('.js-gallery-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 4) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 40,
+            slidesPerView: 3,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-gallery-prev',
+                nextEl: '.js-gallery-next',
+            },
+            pagination: {
+                el: '.js-gallery-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     roomsSlider();
     reviewsSlider();
     conceptSlider();
     infoSlider();
+    gallerySlider();
 };
 
 export default slidersConfig;
