@@ -3,7 +3,7 @@
 
 .main--health {
     .char {
-        margin-bottom: 160px;
+        margin-bottom: var(--section-mb-sm);
         &__cards {
             display: flex;
             flex-direction: column;
@@ -60,9 +60,6 @@
         }
 
         &__title {
-            font: 300 56px / 100% var(--ff-accent);
-            text-transform: uppercase;
-            letter-spacing: -2px;
             margin-bottom: 24px;
             color: var(--graphite-color);
         }

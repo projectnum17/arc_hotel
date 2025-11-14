@@ -2,10 +2,6 @@
 @use '../../base/mixins' as *;
 
 .main--care {
-    .content-head__title {
-        font: 300 56px / 100% var(--ff-accent);
-    }
-
     .perform {
         padding-top: 0;
     }

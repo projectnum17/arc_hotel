@@ -3,7 +3,7 @@
 
 .main--health {
     .directions {
-        margin-bottom: 160px;
+        margin-bottom: var(--section-mb-sm);
         &__head {
             max-width: 979px;
             text-align: center;
@@ -11,12 +11,6 @@
             flex-direction: column;
             gap: 24px;
             margin: 0 auto 60px;
-        }
-
-        &__title {
-            font: 300 56px / 100% var(--ff-accent);
-            letter-spacing: -2px;
-            text-transform: uppercase;
         }
 
         &__subtitle {

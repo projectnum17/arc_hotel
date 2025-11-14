@@ -4,7 +4,7 @@
 .main--room {
     .concept {
         overflow: hidden;
-        margin-bottom: 160px;
+        margin-bottom: var(--section-mb-sm);
 
         &__head {
             display: flex;

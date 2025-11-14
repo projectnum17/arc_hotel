@@ -2,7 +2,7 @@
 @use '../base/mixins' as *;
 
 .present-boxes {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-mb-sm);
 
     .container {
         max-width: 1844px;

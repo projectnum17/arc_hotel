@@ -7,7 +7,7 @@
         min-height: 100svh;
         position: relative;
         display: grid;
-        margin-bottom: 160px;
+        margin-bottom: var(--section-mb-sm);
         color: var(--wht-color);
 
         &::after {

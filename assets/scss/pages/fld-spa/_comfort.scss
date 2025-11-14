@@ -5,7 +5,7 @@
         position: relative;
         min-height: 100vh;
         min-height: 100svh;
-        padding-block: 160px;
+        padding-block: var(--section-mb-sm);
         background: var(--bg-color);
         color: var(--wht-color);
 

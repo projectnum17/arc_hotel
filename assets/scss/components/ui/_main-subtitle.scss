@@ -1,0 +1,8 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main-subtitle {
+    font: 300 56px / 100% var(--ff-accent);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}

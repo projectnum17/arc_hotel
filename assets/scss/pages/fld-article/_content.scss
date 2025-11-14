@@ -6,7 +6,7 @@
     position: relative;
     .content {
         padding-top: 152px;
-        margin-bottom: 160px;
+        margin-bottom: var(--section-mb-sm);
 
         .link-more {
             margin: 0 auto;

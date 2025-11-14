@@ -3,7 +3,7 @@
 
 .main--room {
     .equipment {
-        padding-block: 160px 180px;
+        padding-block: var(--section-mb-sm) var(--section-mb);
         position: relative;
         overflow: hidden;
         color: var(--wht-color);

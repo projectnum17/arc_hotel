@@ -4,7 +4,7 @@
 .main--home {
     .preview {
         display: grid;
-        padding-block: 180px 92px;
+        padding-block: var(--section-pdd) 92px;
         position: relative;
         min-height: 100vh;
         min-height: 100svh;
