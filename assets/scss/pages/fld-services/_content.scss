@@ -1,0 +1,33 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--services {
+    .content {
+        padding-top: 196px;
+
+        &__head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 32px;
+            max-width: 979px;
+            margin: 0 auto 104px;
+
+            .link-accent {
+                width: max-content;
+                margin: 0 auto;
+            }
+        }
+
+        &__descr {
+            font: 400 18px / 140% var(--ff-base);
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 104px;
+        }
+    }
+}
