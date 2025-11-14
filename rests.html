@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icons/logo_drk.svg" type="image/svg+xml" />
+    <title>ARCH Hotel | Rests</title>
+    <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <div class="aside-menu js-aside-menu">
+        <div class="aside-menu__logo">
+            <div class="animated-logo animated-logo--wht">
+                <div class="animated-logo__ico">
+                    <img src="./assets/img/icons/logo-sign.svg" alt="Logo">
+                </div>
+                <div class="animated-logo__deco-wrapper">
+                    <div class="animated-logo__deco js-logo-deco-top" data-text="archotel">
+                        archotel
+                    </div>
+
+                    <div class="animated-logo__deco js-logo-deco-bottom" data-text="avenu">
+                        avenu
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aside-menu__routes">
+            <img class="aside-menu__bg" src="./assets/img/bg-menu.jpg" alt="Thumbnail">
+            <div class="container">
+                <nav class="aside-menu__nav">
+                    <ul>
+                        <li><a href="#!">номери готелю</a></li>
+                        <li><a href="#!">wellness & spa</a></li>
+                        <li><a href="#!">Конференц сервіс</a></li>
+                        <li><a href="#!">health boutique</a></li>
+                        <li><a href="#!">спеціальні пропозиції</a></li>
+                        <li><a href="#!">ресторани</a></li>
+                        <li><a href="#!">арт-простір</a></li>
+                        <li><a href="#!">послуги для дітей</a></li>
+                        <li><a href="#!">аквапарк</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="aside-menu__info">
+            <div class="aside-menu__details">
+                <div class="aside-menu__pic">
+                    <img loading="lazy" width="182" height="112" src="./assets/img/icons/logo_wht.svg" alt="Logo">
+                </div>
+                <ul class="aside-menu__social">
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-fb_wht.svg" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-inst_wht.svg" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <img width="32" height="32" src="./assets/img/icons/ico-tt_wht.svg" alt="TikTok">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="aside-menu__submenu">
+                <ul>
+                    <li><a href="#!">Лоббі</a></li>
+                    <li><a href="#!">Транспортні послуги</a></li>
+                    <li><a href="#!">Догляд за тілом</a></li>
+                    <li><a href="#!">Контакти</a></li>
+                    <li><a href="#!">Афіша івентів</a></li>
+                    <li><a href="#!">Блог</a></li>
+                </ul>
+            </nav>
+            <div class="aside-menu__contacts">
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Бронювання та консультації</p>
+                    <a href="tel:+0800200880">0 800 200 880</a>
+                </div>
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Wellness & SPA</p>
+                    <a href="tel:+380935390553">+38 093 53 90 553</a>
+                </div>
+                <div class="aside-menu__phone">
+                    <p class="aside-menu__title">Медичний центр</p>
+                    <a href="tel:+380935390553">+38 093 53 90 553</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header header--colored js-header">
+        <div class="container">
+            <div class="header__controls">
+                <button class="header__burger js-burger">
+                    <span></span>
+                </button>
+                <ul class="header__lang">
+                    <li><a href="#!" class="current-lang">ua</a></li>
+                    <li><a href="#!">en</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="header__logo">
+                <div class="header__logo-f">
+                    <svg width="117" height="72" viewBox="0 0 117 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_858_5663)">
+                            <path
+                                d="M6.75251 36.4151H8.90837L15.6403 50.4577H14.2294L8.06044 37.6793H7.5764L1.42809 50.4577H0L6.75251 36.4151ZM3.06558 44.9398H12.6228V46.1425H3.06558V44.9398Z"
+                                fill="#161616" />
+                            <path
+                                d="M17.8394 36.4121H22.999C24.7979 36.4121 26.1813 36.805 27.1425 37.5943C28.1003 38.3835 28.5843 39.4598 28.5843 40.8231C28.5843 41.6397 28.3681 42.3811 27.939 43.0507C27.5098 43.7204 26.8748 44.2466 26.0337 44.6361C25.1926 45.0256 24.1799 45.2169 22.999 45.2169H18.8658V44.0518H22.999C23.9396 44.0518 24.7326 43.9015 25.3746 43.6008C26.02 43.3002 26.5006 42.9038 26.8164 42.4084C27.1322 41.913 27.2901 41.3868 27.2901 40.8231C27.2901 39.8322 26.9365 39.06 26.2328 38.5065C25.5256 37.953 24.4477 37.6729 22.999 37.6729H18.5809L19.1267 37.1125V50.4547H17.8359V36.4121H17.8394ZM19.3704 44.8001H21.2242L28.7834 50.4581H26.7271L19.3704 44.8001Z"
+                                fill="#161616" />
+                            <path
+                                d="M34.8338 49.7471C33.6769 49.1116 32.7775 48.2403 32.1321 47.1265C31.4868 46.016 31.1641 44.786 31.1641 43.4364C31.1641 42.0868 31.4902 40.8568 32.1424 39.7567C32.7947 38.6531 33.6907 37.7784 34.8338 37.1395C35.977 36.4971 37.2506 36.176 38.6615 36.176C39.8047 36.176 40.8174 36.34 41.7065 36.668C42.5922 36.996 43.3062 37.3991 43.8418 37.8809V39.4867H43.7216C43.1414 38.8581 42.4137 38.3592 41.5348 37.9936C40.656 37.6246 39.6982 37.4401 38.6615 37.4401C37.4772 37.4401 36.4164 37.7032 35.4792 38.2328C34.5386 38.759 33.8005 39.4833 33.2616 40.399C32.7226 41.3147 32.4548 42.3294 32.4548 43.4399C32.4548 44.5503 32.7192 45.5787 33.2513 46.491C33.7799 47.3998 34.5283 48.1207 35.4895 48.6469C36.4507 49.1765 37.5424 49.4396 38.7645 49.4396C39.7463 49.4396 40.6663 49.2687 41.5245 48.9271C42.3828 48.5854 43.1586 48.0592 43.8418 47.352H43.9619V48.8553C43.3852 49.4157 42.6368 49.8667 41.7237 50.2015C40.8105 50.5363 39.8218 50.7037 38.7611 50.7037C37.2952 50.7037 35.9839 50.386 34.8304 49.7505"
+                                fill="#161616" />
+                            <path
+                                d="M48.158 50.4577H46.8672V36.4151H48.158V50.4577ZM59.205 44.0583H47.5744V42.8146H59.205V44.0583ZM59.8916 50.4577H58.6008V36.4151H59.8916V50.4577Z"
+                                fill="#161616" />
+                            <path
+                                d="M66.6627 49.7334C65.547 49.0911 64.6647 48.2164 64.0228 47.106C63.3774 45.9955 63.0547 44.7724 63.0547 43.433C63.0547 42.0937 63.3774 40.8705 64.0228 39.7601C64.6682 38.6497 65.547 37.775 66.6627 37.1326C67.7784 36.4903 69.0073 36.1691 70.3496 36.1691C71.6919 36.1691 72.9243 36.4903 74.04 37.1326C75.1557 37.775 76.0379 38.6497 76.6799 39.7601C77.3252 40.8705 77.6479 42.0937 77.6479 43.433C77.6479 44.7724 77.3252 45.9955 76.6799 47.106C76.0345 48.2164 75.1557 49.0911 74.04 49.7334C72.9243 50.3757 71.6953 50.6969 70.3496 50.6969C69.0039 50.6969 67.7784 50.3757 66.6627 49.7334ZM73.4049 48.6435C74.3249 48.1139 75.0492 47.393 75.571 46.4773C76.0963 45.5616 76.3572 44.5469 76.3572 43.4364C76.3572 42.326 76.0963 41.3147 75.571 40.3956C75.0492 39.4799 74.3249 38.7556 73.4049 38.2294C72.4849 37.6998 71.4722 37.4367 70.3702 37.4367C69.2682 37.4367 68.2349 37.6998 67.3149 38.2294C66.3949 38.7556 65.6671 39.4799 65.1385 40.3956C64.6064 41.3113 64.342 42.326 64.342 43.4364C64.342 44.5469 64.6064 45.5616 65.1385 46.4773C65.6671 47.393 66.3949 48.1173 67.3149 48.6435C68.2349 49.1731 69.2476 49.4362 70.3496 49.4362C71.4516 49.4362 72.4849 49.1731 73.4049 48.6435Z"
+                                fill="#161616" />
+                            <path
+                                d="M78.1152 36.4151H91.8228V37.6793H78.1152V36.4151ZM85.6127 50.4577H84.3219V37.4367H85.6127V50.4577Z"
+                                fill="#161616" />
+                            <path
+                                d="M93.9785 36.4151H104.037V37.6793H94.7234L95.2693 37.119V49.7573L94.7234 49.197H104.239V50.4612H93.9785V36.4185V36.4151ZM95.0255 42.7736H103.834V43.9387H95.0255V42.7736Z"
+                                fill="#161616" />
+                            <path d="M108.351 36.4151V49.7539L107.805 49.1936H116.999V50.4577H107.061V36.4151H108.351Z"
+                                fill="#161616" />
+                            <path
+                                d="M21.7286 57.7148H23.8845L30.6164 71.7574H29.2054L23.0365 58.9756H22.5525L16.4042 71.7574H14.9727L21.7252 57.7148H21.7286ZM18.0417 66.2429H27.5989V67.4455H18.0417V66.2429Z"
+                                fill="#161616" />
+                            <path
+                                d="M35.4979 71.7608L28.6836 57.7148H30.1357L36.181 70.196H35.3366L41.3853 57.7148H42.834L36.0231 71.7608H35.4979Z"
+                                fill="#161616" />
+                            <path
+                                d="M45.0156 57.7148H55.074V58.979H45.7606L46.3064 58.4186V71.057L45.7606 70.4967H55.2766V71.7608H45.0156V57.7182V57.7148ZM46.0627 64.0733H54.8715V65.2384H46.0627V64.0733Z"
+                                fill="#161616" />
+                            <path
+                                d="M58.0977 57.7148H59.6905L70.1506 69.0104V57.7148H71.4413V71.7608H70.9985L59.6905 59.5598H59.3884V71.7608H58.0977V57.7148Z"
+                                fill="#161616" />
+                            <path
+                                d="M87.3781 68.638C86.8219 69.7279 86.0427 70.5616 85.0403 71.1356C84.0379 71.713 82.8947 72 81.604 72C80.3132 72 79.1666 71.713 78.1676 71.1356C77.1686 70.5616 76.3894 69.7279 75.8298 68.638C75.2737 67.548 74.9922 66.2463 74.9922 64.7361V57.7148H76.283V64.7361C76.283 65.9661 76.4992 67.0321 76.9283 67.9375C77.3575 68.8396 77.9719 69.5331 78.7718 70.0149C79.5717 70.4967 80.5157 70.7358 81.604 70.7358C82.6922 70.7358 83.6568 70.4967 84.4567 70.0149C85.2566 69.5331 85.8676 68.8396 86.2899 67.9375C86.7121 67.0355 86.9249 65.9695 86.9249 64.7361V57.7148H88.2157V64.7361C88.2157 66.2463 87.9376 67.548 87.3781 68.638Z"
+                                fill="#161616" />
+                            <path
+                                d="M91.7617 57.7148H101.82V58.979H92.5067L93.0525 58.4186V71.057L92.5067 70.4967H102.023V71.7608H91.7617V57.7182V57.7148ZM92.8122 64.0733H101.621V65.2384H92.8122V64.0733Z"
+                                fill="#161616" />
+                            <path
+                                d="M58.4995 4.12695C55.8974 4.12695 53.7793 6.23505 53.7793 8.82491V22.1808L55.0392 21.4564V8.82491C55.0392 6.92523 56.5908 5.38088 58.4995 5.38088C60.4082 5.38088 61.9599 6.92523 61.9599 8.82491V21.4633L63.2198 22.1876V8.82491C63.2198 6.23505 61.1017 4.12695 58.4995 4.12695Z"
+                                fill="#161616" />
+                            <path
+                                d="M58.5 0C53.6115 0 49.6328 3.95995 49.6328 8.82532V24.5626L50.8927 23.8383V8.82532C50.8927 4.65012 54.305 1.25393 58.5 1.25393C62.695 1.25393 66.1073 4.65012 66.1073 8.82532V23.8451L67.3672 24.5695V8.82532C67.3672 3.95995 63.3884 0 58.5 0Z"
+                                fill="#161616" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_858_5663">
+                                <rect width="117" height="72" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="header__logo-s">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.999 7.26367C17.4193 7.26367 13.6914 10.9739 13.6914 15.5321V39.0384L15.9088 37.7635V15.5321C15.9088 12.1886 18.6397 9.47058 21.999 9.47058C25.3583 9.47058 28.0893 12.1886 28.0893 15.5321V37.7756L30.3066 39.0504V15.5321C30.3066 10.9739 26.5788 7.26367 21.999 7.26367Z"
+                            fill="#161616" />
+                        <path
+                            d="M21.9998 0C13.3961 0 6.39355 6.96951 6.39355 15.5326V43.2302L8.61093 41.9554V15.5326C8.61093 8.18421 14.6166 2.20691 21.9998 2.20691C29.383 2.20691 35.3886 8.18421 35.3886 15.5326V41.9674L37.606 43.2422V15.5326C37.606 6.96951 30.6034 0 21.9998 0Z"
+                            fill="#161616" />
+                    </svg>
+                </div>
+            </a>
+            <div class="header__connect">
+                <a class="header__phone" href="tel:+0000000000">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                            stroke="#0C1C34" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <button class="header__reserv js-reserv">забронювати</button>
+            </div>
+        </div>
+    </header>
+    <main class="main main--rests">
+        <section class="intro">
+            <div class="logo-bg js-logo-bg logo-bg--light">
+                <svg width="971" height="960" viewBox="0 0 971 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M485.212 -110.542C752.708 -110.542 970.424 106.147 970.424 372.38V1233.9L901.484 1194.26V372.38C901.484 143.913 714.762 -41.9265 485.212 -41.9265C255.661 -41.9264 68.9406 143.913 68.9404 372.38V1193.89L0 1233.53V372.38C0.000125881 106.147 217.716 -110.542 485.212 -110.542Z"
+                        fill="url(#paint0_linear_407_16922)" />
+                    <path
+                        d="M485.187 115.308C627.576 115.308 743.478 230.663 743.479 372.38V1103.59L674.538 1063.95V372.38C674.538 268.429 589.63 183.923 485.187 183.923C380.743 183.923 295.836 268.43 295.836 372.38V1063.58L226.896 1103.21V372.38C226.896 230.663 342.798 115.308 485.187 115.308Z"
+                        fill="url(#paint1_linear_407_16922)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_407_16922" x1="485.212" y1="-110.542" x2="485.212" y2="1233.9"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="0.497251" stop-color="white" stop-opacity="0.7" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_407_16922" x1="485.212" y1="-110.542" x2="485.212" y2="1233.9"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white" />
+                            <stop offset="0.497251" stop-color="white" stop-opacity="0.7" />
+                            <stop offset="1" stop-color="white" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <video muted autoplay loop playsinline class="intro__bg js-video-autoplay"
+                poster="./assets/videos/rests-poster.jpg">
+                <source data-src="./assets/videos/rests.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
+            <div class="container">
+                <div class="intro__content">
+                    <h1 class="intro__title main-title">ресторани</h1>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="content-head">
+                    <div class="content-head__stars">
+                        <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                        <img src="./assets/img/icons/star_2.svg" alt="Icon">
+                        <img src="./assets/img/icons/star_3.svg" alt="Icon">
+                        <img src="./assets/img/icons/star_4.svg" alt="Icon">
+                        <img src="./assets/img/icons/star_5.svg" alt="Icon">
+                    </div>
+                    <h2 class="content-head__title">
+                        ЗНАЄМО, ЯК МАЄ <br>
+                        СМАКУВАТИ ОДЕСА
+                    </h2>
+                    <p class="relax__descr content-head__text">
+                        Авторські страви з локальних продуктів, свіжі морепродукти та винна карта з акцентом на
+                        провідних українських виноробів задають настрій та запрошують у вишукану гастрономічну
+                        мандрівку.
+                    </p>
+                </div>
+            </div>
+            <div class="present-boxes">
+                <div class="container">
+                    <div class="present-boxes__content">
+                        <div class="present-boxes__marquee">
+                            <span>altezza&nbsp;</span>
+                            <span>altezza&nbsp;</span>
+                            <span>altezza&nbsp;</span>
+                            <span>altezza&nbsp;</span>
+                        </div>
+                        <div class="present-boxes__box box--sm">
+                            <img width="412" height="513" src="./assets/img/coll_1.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="present-boxes__box box--lg">
+                            <img width="730" height="740" src="./assets/img/coll_2.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="present-boxes__box box--sm">
+                            <img width="412" height="513" src="./assets/img/coll_3.jpg" alt="Thumbnail">
+                        </div>
+                    </div>
+                    <div class="present-boxes__info">
+                        <h2 class="present-boxes__title main-title">ALTEZZA</h2>
+                        <p class="present-boxes__descr">
+                            У нашому ресторані гармонійно переплітаються традиції середземноморської, європейської та одеської кухні, створюючи неповторний кулінарний досвід.
+                        </p>
+                        <a href="#!" class="link-more link-more--drk link-more--colored">
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                            <span class="text">Детальніше</span>
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="present-boxes">
+                <div class="container">
+                    <div class="present-boxes__content">
+                        <div class="present-boxes__marquee">
+                            <span>SPATIUM&nbsp;</span>
+                            <span>SPATIUM&nbsp;</span>
+                            <span>SPATIUM&nbsp;</span>
+                            <span>SPATIUM&nbsp;</span>
+                        </div>
+                        <div class="present-boxes__box box--sm">
+                            <img width="412" height="513" src="./assets/img/coll_4.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="present-boxes__box box--lg">
+                            <img width="730" height="740" src="./assets/img/coll_5.jpg" alt="Thumbnail">
+                        </div>
+                        <div class="present-boxes__box box--sm">
+                            <img width="412" height="513" src="./assets/img/coll_6.jpg" alt="Thumbnail">
+                        </div>
+                    </div>
+                    <div class="present-boxes__info">
+                        <h2 class="present-boxes__title main-title">SPATIUM</h2>
+                        <p class="present-boxes__descr">
+                            У нашому ресторані гармонійно переплітаються традиції середземноморської, європейської та одеської кухні, створюючи неповторний кулінарний досвід.
+                        </p>
+                        <a href="#!" class="link-more link-more--drk link-more--colored">
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                            <span class="text">Детальніше</span>
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="perform">
+            <div class="container">
+                <div class="perform__head">
+                    <h2 class="perform__title main-title">конференц-сервіс</h2>
+                    <div class="perform__links">
+                        <a href="#!" class="link-more link-more--drk link-more--colored">
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                            <span class="text">Детальніше</span>
+                            <span class="ico">
+                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="perform__content">
+                    <span class="perform__promo">archotel</span>
+                    <div class="perform__box">
+                        <svg class="perform__logo" width="425" height="622" viewBox="0 0 425 622" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M212.499 97.4297C150.105 97.4297 99.3164 148.04 99.3164 210.216V530.859L129.526 513.469V210.216C129.526 164.61 166.732 127.534 212.499 127.534C258.266 127.534 295.473 164.61 295.473 210.216V513.633L325.682 531.023V210.216C325.682 148.04 274.894 97.4297 212.499 97.4297Z"
+                                fill="white"></path>
+                            <path
+                                d="M212.5 0C95.3494 0 0 94.7384 0 211.138V587.639L30.1926 570.31V211.138C30.1926 111.25 111.968 29.9991 212.5 29.9991C313.032 29.9991 394.807 111.25 394.807 211.138V570.474L425 587.803V211.138C425 94.7384 329.651 0 212.5 0Z"
+                                fill="#6AAFA3"></path>
+                        </svg>
+                        <div class="perform__pic js-logo-box">
+                            <img width="1440" height="622" src="./assets/img/perform_5.jpg" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="./assets/img/bg-gold.jpg" alt="" class="footer__bg">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <img loading="lazy" width="182" height="112" src="./assets/img/icons/logo_wht.svg" alt="Logo">
+                    </div>
+                    <ul class="footer__social">
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-fb_wht.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-inst_wht.svg" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img width="32" height="32" src="./assets/img/icons/ico-tt_wht.svg" alt="TikTok">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__phone footer__phone--lg">
+                        <p class="footer__title">Бронювання та консультації</p>
+                        <a href="tel:+0800200880">0 800 200 880</a>
+                    </div>
+                    <div class="footer__phone">
+                        <p class="footer__title">Wellness & SPA</p>
+                        <a href="tel:+380935390553">+38 093 53 90 553</a>
+                    </div>
+                    <div class="footer__phone">
+                        <p class="footer__title">Медичний центр</p>
+                        <a href="tel:+380935390553">+38 093 53 90 553</a>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="#!">Номери готелю</a></li>
+                        <li><a href="#!">Wellness & SPA</a></li>
+                        <li><a href="#!">Health Boutique</a></li>
+                        <li><a href="#!">Ресторани</a></li>
+                        <li><a href="#!">Аквапарк</a></li>
+                        <li><a href="#!">Конференц-сервіс</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!">Естетична медицина</a></li>
+                        <li><a href="#!">Арт-простір</a></li>
+                        <li><a href="#!">Спеціальні пропозиції</a></li>
+                        <li><a href="#!">Контакти</a></li>
+                        <li><a href="#!">Послуги для дітей</a></li>
+                        <li><a href="#!">Афіша івентів</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__row">
+                <button class="footer__reserv js-reserv">
+                    <span>забронювати номер</span>
+                </button>
+                <a href="#!" class="footer__location">
+                    <img width="32" height="32" src="./assets/img/icons/ico-pin_accent.svg" alt="">
+                    <span>Аркадійська алея 1А, Одеса</span>
+                </a>
+                <a href="#!" class="footer__route">
+                    <span>прокласти маршрут</span>
+                    <img width="32" height="32" src="./assets/img/icons/ico-route_accent.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <div>
+                    <p>Copyrights © ARCH HOTEL 2025. Усі права захищені.</p>
+                </div>
+                <div>
+                    <a href="#!">Публічна оферта</a>
+                    <p>Made by Esfirum Agency</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
