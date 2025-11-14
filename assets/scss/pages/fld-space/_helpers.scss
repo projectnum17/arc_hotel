@@ -1,0 +1,12 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--space {
+    .gallery {
+        margin-bottom: var(--section-mb-sm);
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}

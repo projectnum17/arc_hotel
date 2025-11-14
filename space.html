@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/img/icons/logo_drk.svg" type="image/svg+xml" />
-    <title>ARCH Hotel | Health</title>
+    <title>ARCH Hotel | Space</title>
     <link href="https://cdn.jsdelivr.net/npm/air-datepicker@3.6.0/air-datepicker.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.min.css">
@@ -15,6 +15,30 @@
 </head>
 
 <body>
+    <div class="video-modal js-video-modal" id="videoModal">
+        <div class="video-modal__inner">
+            <div class="video-modal__wrapper js-video-modal__wrapper">
+                <button class="video-modal__close js-video-modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5.00068 14.9993M14.9993 15L5 5.00071" stroke="#26aacc" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="video-modal__play js-video-modal__play">
+                    <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.0387 14.987C22.6263 16.5538 20.6775 17.661 16.7797 19.8755C13.0117 22.0161 11.1277 23.0865 9.60948 22.6562C8.98177 22.4783 8.40986 22.1405 7.94862 21.6751C6.83301 20.5495 6.83301 18.3664 6.83301 14C6.83301 9.63363 6.83301 7.45045 7.94862 6.32487C8.40986 5.85953 8.98177 5.52169 9.60948 5.34382C11.1277 4.91359 13.0117 5.98392 16.7797 8.12459C20.6775 10.339 22.6263 11.4462 23.0387 13.013C23.2089 13.6598 23.2089 14.3402 23.0387 14.987Z"
+                                fill="white"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="video-modal__video">
+                    <video controls playsinline id="videoPlayer"></video>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="aside-menu js-aside-menu">
         <div class="aside-menu__logo">
             <div class="animated-logo animated-logo--wht">
@@ -192,7 +216,7 @@
             </div>
         </div>
     </header>
-    <main class="main main--health">
+    <main class="main main--space">
         <section class="intro">
             <div class="logo-bg js-logo-bg logo-bg--light">
                 <svg width="971" height="960" viewBox="0 0 971 960" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,18 +242,23 @@
                     </defs>
                 </svg>
             </div>
-            <img src="./assets/img/health-bg.jpg" alt="Thumbnail" class="intro__bg">
+            <img src="./assets/img/space-bg.jpg" alt="" class="intro__bg">
             <div class="container">
                 <div class="intro__content">
-                    <span class="intro__tag">coming soon</span>
-                    <h1 class="intro__title main-title">HEALTH BOUTIQUE</h1>
-                    <a href="#!" class="comfort__link link-accent">
-                        <span>презентація</span>
-                    </a>
+                    <div>
+                        <h1 class="intro__title main-title">art space</h1>
+                        <a href="#!" class="link-accent">
+                            <span>провести захід</span>
+                        </a>
+                    </div>
+                    <div>
+                        <p class="intro__cons">Консультації за телефоном</p>
+                        <a class="intro__phone" href="tel:+0800200880">0 800 200 880</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="gallery">
+        <section class="content">
             <div class="container">
                 <div class="content-head">
                     <div class="content-head__stars">
@@ -239,419 +268,349 @@
                         <img src="./assets/img/icons/star_4.svg" alt="Icon">
                         <img src="./assets/img/icons/star_5.svg" alt="Icon">
                     </div>
-                    <h2 class="content-head__title main-title">
-                        Ми дивимося на здоровʼя як на найбільш цінний актив
+                    <h2 class="content-head__title main-subtitle">
+                        Де події стають мистецтвом
                     </h2>
-                    <p class="relax__descr content-head__text">
-                        Так само як і у бізнесі, ключ до успіху — стратегія, контроль і робота з ризиками. Ми не
-                        боремося з
-                        хворобою, а разом із клієнтом вибудовуємо систему управління здоровʼям, перетворюючи
-                        сьогоднішній
-                        стан на нові можливості сили, енергії та внутрішньої гармонії. Ми виявляємо та аналізуємо
-                        найслабші
-                        ланки організму та перетворюєм їх на опору для стабільного майбутнього.
+                    <p class="content-head__text">
+                        Сучасна, стильна локація, створена для тих, хто цінує естетику, креативність та вільну
+                        атмосферу. Це місце, де мистецтво стає частиною життя, де народжуються нові ідеї та створюються
+                        яскраві події.
                     </p>
-                </div>
-                <div class="gallery__content js-gallery-box">
-                    <div class="gallery__content-col col--left">
-                        <div class="gallery__content-pic pic--lg">
-                            <img width="480" height="392" src="./assets/img/gallery_1.jpg" alt="Thumbnail">
-                        </div>
-                        <div class="gallery__content-pic pic--sm">
-                            <img width="335" height="274" src="./assets/img/gallery_3.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                    <div class="gallery__content-col col--mid">
-                        <video muted autoplay loop playsinline class="js-video-autoplay"
-                            poster="./assets/videos/health-poster.jpg">
-                            <source data-src="./assets/videos/health.mp4" type="video/mp4">
-                            <p>Your browser does not support the video tag.</p>
-                        </video>
-                    </div>
-                    <div class="gallery__content-col col--right">
-                        <div class="gallery__content-pic pic--lg">
-                            <img width="480" height="392" src="./assets/img/gallery_2.jpg" alt="Thumbnail">
-                        </div>
-                        <div class="gallery__content-pic pic--sm">
-                            <img width="335" height="274" src="./assets/img/gallery_4.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="directions">
-            <div class="container">
-                <div class="directions__head">
-                    <h2 class="directions__title main-subtitle">Комплексний аналіз</h2>
-                    <h3 class="directions__subtitle">
-                        діагностичних показників різних систем організму в оцінці ресурсів здоровʼя
-                    </h3>
-                    <p class="directions__descr">
-                        Третій стан — це стан функціональної напруги або нестійкої рівноваги організму, коли людина ще
-                        не хвора, проте її організм вже не повністю здоровий.
-                    </p>
-                </div>
-                <div class="directions__points">
-                    <div class="directions__chart">
-                        <img src="./assets/img/polygon.svg" alt="Chart">
-                    </div>
-                    <div class="directions__item item-l">
-                        <p class="directions__point">Енергія організму</p>
-                        <div class="directions__deco"></div>
-                        <p class="directions__point">Якість життя</p>
-                    </div>
-                    <div class="directions__item item-t">
-                        <p class="directions__point">Ресурт організму</p>
-                        <div class="directions__deco"></div>
-                        <p class="directions__point">Потенціал активного довголіття</p>
-                    </div>
-                    <div class="directions__bg">
-                        <div class="directions__video">
-                            <video muted autoplay loop playsinline class="js-video-autoplay"
-                                poster="./assets/videos/wave-poster.png">
-                                <source data-src="./assets/videos/wave.mp4" type="video/mp4">
-                                <p>Your browser does not support the video tag.</p>
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="char">
-            <div class="container">
-                <div class="char__cards">
-                    <div class="char-card">
-                        <div class="char-card__info">
-                            <div class="char-card__details">
-                                <div class="char-card__head">
-                                    <div class="char-card__about">
-                                        <h2 class="char-card__title main-subtitle">енергія організму</h2>
-                                        <h3 class="char-card__subtitle">Характеристика:</h3>
-                                        <p class="char-card__text">
-                                            Рівень фізичної та психічної активності, відчу т тя жит тєвого тонусу та
-                                            витривалості
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="char-card__foot">
-                                <div class="char-card__descr">
-                                    <h3 class="char-card__subtitle">Характеристика:</h3>
-                                    <ul class="char-card__points">
-                                        <li class="char-card__point">
-                                            BAT ( Burn out Assesment Tool )
-                                        </li>
-                                        <li class="char-card__point">
-                                            Метаболографія
-                                        </li>
-                                        <li class="char-card__point">Спірографія</li>
-                                        <li class="char-card__point">IMT</li>
-                                        <li class="char-card__point">
-                                            Лабораторна діагностика (глюкоза інсулін , лептин, НОМА , печінкові
-                                            проби,залізо)
-                                        </li>
-                                        <li class="char-card__point">Гормональний профіль</li>
-                                    </ul>
-                                    <a href="#!" class="link-accent link-accent--transparent">
-                                        <span>запис на консультацію</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="char-card__thumb">
-                            <img width="605" height="656" src="./assets/img/char_1.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                    <div class="char-card">
-                        <div class="char-card__info">
-                            <div class="char-card__details">
-                                <div class="char-card__head">
-                                    <div class="char-card__about">
-                                        <h2 class="char-card__title main-subtitle">ресурс організму</h2>
-                                        <h3 class="char-card__subtitle">Характеристика:</h3>
-                                        <p class="char-card__text">
-                                            А даптаційні можливості організму, імунний
-                                            статус , резервисистем (серцево -судинної,опорно -рухового апарат у,
-                                            нервової, ендокринної).
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="char-card__foot">
-                                <div class="char-card__descr">
-                                    <h3 class="char-card__subtitle">Характеристика:</h3>
-                                    <ul class="char-card__points">
-                                        <li class="char-card__point">
-                                            Сила мʼязів
-                                        </li>
-                                        <li class="char-card__point">
-                                            Сполуч на тканина - спец тести, мінеральна щільність кісток , УЗД
-                                        </li>
-                                        <li class="char-card__point">
-                                            Стероїдні гормони та Мікробіом кишківника
-                                        </li>
-                                        <li class="char-card__point">
-                                            Тести від новлення т витривалості
-                                        </li>
-                                        <li class="char-card__point">
-                                            ФГДС
-                                        </li>
-                                        <li class="char-card__point">Тредміл-тест</li>
-                                    </ul>
-                                    <a href="#!" class="link-accent link-accent--transparent">
-                                        <span>запис на консультацію</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="char-card__thumb">
-                            <img width="605" height="656" src="./assets/img/char_2.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                    <div class="char-card">
-                        <div class="char-card__info">
-                            <div class="char-card__details">
-                                <div class="char-card__head">
-                                    <div class="char-card__about">
-                                        <h2 class="char-card__title main-subtitle">
-                                            потенціал активного довголіття
-                                        </h2>
-                                        <h3 class="char-card__subtitle">Характеристика:</h3>
-                                        <p class="char-card__text">
-                                            Ймовірність збереження високої якості життя та функціональних можливостей у
-                                            старшому віці.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="char-card__foot">
-                                <div class="char-card__descr">
-                                    <h3 class="char-card__subtitle">Характеристика:</h3>
-                                    <ul class="char-card__points">
-                                        <li class="char-card__point">
-                                            Сила мʼязів
-                                        </li>
-                                        <li class="char-card__point">
-                                            In - Body (біоімпеданс метрія)
-                                        </li>
-                                        <li class="char-card__point">
-                                            Онкомаркери
-                                        </li>
-                                        <li class="char-card__point">
-                                            Оцінка способу життя - харчування,
-                                            фізична активність , шкідливі звички ;
-                                        </li>
-                                        <li class="char-card__point">
-                                            Тести від новлення твитривалості
-                                        </li>
-                                        <li class="char-card__point">Біологічний вік</li>
-                                    </ul>
-                                    <a href="#!" class="link-accent link-accent--transparent">
-                                        <span>запис на консультацію</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="char-card__thumb">
-                            <img width="605" height="656" src="./assets/img/char_3.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                    <div class="char-card">
-                        <div class="char-card__info">
-                            <div class="char-card__details">
-                                <div class="char-card__head">
-                                    <div class="char-card__about">
-                                        <h2 class="char-card__title main-subtitle">
-                                            Якість життя
-                                        </h2>
-                                        <h3 class="char-card__subtitle">Характеристика:</h3>
-                                        <p class="char-card__text">
-                                            Оцінює субʼєктивне сприйняття людиною свого фізичного, психологічного,
-                                            соціального та емоційного благополуччя.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="char-card__foot">
-                                <div class="char-card__descr">
-                                    <h3 class="char-card__subtitle">Характеристика:</h3>
-                                    <ul class="char-card__points">
-                                        <li class="char-card__point">
-                                            Анкет ування (шкала вигорання або SF-36 )
-                                        </li>
-                                        <li class="char-card__point">
-                                            Оцінка рівня стресу - PSS -10
-                                        </li>
-                                        <li class="char-card__point">
-                                            Рівень кортизолу
-                                        </li>
-                                    </ul>
-                                    <a href="#!" class="link-accent link-accent--transparent">
-                                        <span>запис на консультацію</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="char-card__thumb">
-                            <img width="605" height="656" src="./assets/img/char_4.jpg" alt="Thumbnail">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="relax">
-            <div class="container">
-                <div class="relax__head">
-                    <h2 class="relax__title main-title">
-                        ВІДПОЧИНОК ТА ОЗДОРОВЛЕННЯ
-                    </h2>
-                    <p class="relax__text">
-                        Передове медичне обладнання, яке прискорює процес відновлення, оптимізує вагу та дарує нову
-                        енергію. Програми реабілітації, розроблені на основі сучасних наукових підходів.
-                        Санаторно-курортне лікування, що поєднує найсучасніші методи з природними факторами, включаючи
-                        мінералізовані води та прогулянки біля узбережжя чорного моря.
-                    </p>
-                </div>
-                <div class="relax__cards">
-                    <div class="relax__card">
-                        <div class="relax__pic">
-                            <img width="452" height="540" src="./assets/img/relax_5.jpg" alt="Thumbnail">
-                        </div>
-                        <h3 class="relax__subtitle">
-                            Інтенсивна підтримка зсредини
-                        </h3>
-                        <a href="#!" class="link-more link-more--drk link-more--colored">
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                            <span class="text">Детальніше</span>
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="relax__card">
-                        <div class="relax__pic">
-                            <img width="452" height="540" src="./assets/img/relax_6.jpg" alt="Thumbnail">
-                        </div>
-                        <h3 class="relax__subtitle">
-                            ДНК-тест
-                        </h3>
-                        <a href="#!" class="link-more link-more--drk link-more--colored">
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                            <span class="text">Детальніше</span>
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="relax__card">
-                        <div class="relax__pic">
-                            <img width="452" height="540" src="./assets/img/relax_7.jpg" alt="Thumbnail">
-                        </div>
-                        <h3 class="relax__subtitle">
-                            Аудит здоровʼя
-                        </h3>
-                        <a href="#!" class="link-more link-more--drk link-more--colored">
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                            <span class="text">Детальніше</span>
-                            <span class="ico">
-                                <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="pack">
-            <div class="container">
-                <div class="pack__head">
-                    <h2 class="pack__title main-title">пакетні пропозиції</h2>
-                    <a href="#!" class="link-more link-more--drk link-more--colored">
-                        <span class="ico">
-                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                        </span>
-                        <span class="text">Детальніше</span>
-                        <span class="ico">
-                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
-                        </span>
+                    <a href="#!" class="link-accent link-accent--transparent">
+                        <span>завантажити презентацію</span>
                     </a>
                 </div>
-                <div class="pack__cards">
-                    <div class="pack-card">
-                        <div class="pack-card__info">
-                            <h3 class="pack-card__subtitle">check-up організму</h3>
+                <div class="space-boxes">
+                    <div class="space-boxes__box box--sm js-video-trigger" data-video="./assets/videos/rests.mp4">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_1.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <div class="video-play">
+                                    <div class="video-play__rec">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M23.0387 14.987C22.6263 16.5538 20.6775 17.661 16.7797 19.8755C13.0117 22.0161 11.1277 23.0865 9.60948 22.6562C8.98177 22.4783 8.40986 22.1405 7.94862 21.6751C6.83301 20.5495 6.83301 18.3664 6.83301 14C6.83301 9.63363 6.83301 7.45045 7.94862 6.32487C8.40986 5.85953 8.98177 5.52169 9.60948 5.34382C11.1277 4.91359 13.0117 5.98392 16.7797 8.12459C20.6775 10.339 22.6263 11.4462 23.0387 13.013C23.2089 13.6598 23.2089 14.3402 23.0387 14.987Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pack-card__pic">
-                            <img width="424" height="298" src="./assets/img/pack_4.jpg" alt="Thumbnail">
+                        <h3 class="space-boxes__title">
+                            Кіно на руфтопі
+                        </h3>
+                    </div>
+                    <div class="space-boxes__box box--lg">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <video muted autoplay loop playsinline class="js-video-autoplay"
+                                    poster="./assets/videos/space-poster.jpg">
+                                    <source data-src="./assets/videos/space.mp4" type="video/mp4">
+                                    <p>Your browser does not support the video tag.</p>
+                                </video>
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pack-card__points">
-                            <ul class="pack-card__benefits">
-                                <li class="pack-card__benefit">
-                                    Вхід до SPA-зони (басейн, сауни, хамам) – 3 год
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Ароматичний масаж тіла – 45 хв
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Чайна церемонія з трав’яними чаями
-                                </li>
-                            </ul>
-                            <a href="#!" class="link-accent link-accent--transparent">
-                                <span>замовити</span>
-                            </a>
+                        <h3 class="space-boxes__title">
+                            ПРОВЕДЕННЯ ВЫСТАВОК
+                        </h3>
+                    </div>
+                    <div class="space-boxes__box box--sm">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_2.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="space-boxes__title">
+                            майстер-класи
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ivents">
+            <div class="container">
+                <h2 class="ivents__title main-title">реалізовані івенти</h2>
+            </div>
+            <div class="info-gallery">
+                <div class="container">
+                    <div class="info-gallery__slider js-ivents-slider swiper">
+                        <div class="info-gallery__nav nav--details js-ivents-nav">
+                            <button type="button" class="info-gallery__btn js-ivents-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00002 12H20" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.9999 17C8.9999 17 4 13.3176 4 12C4 10.6824 9 7 9 7" stroke="#161616"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="info-gallery__pag js-ivents-progress"></div>
+                            <button type="button" class="info-gallery__btn js-ivents-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12H4" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15.0001 17C15.0001 17 20 13.3176 20 12C20 10.6824 15 7 15 7"
+                                        stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="info-gallery__wrapper swiper-wrapper">
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__content">
+                                    <div class="info-gallery__pic">
+                                        <img width="520" height="560" src="./assets/img/event_1.jpg" alt="Thumbnail">
+                                    </div>
+                                    <p>Колаборація з MAKHNO STUDIO</p>
+                                    <a href="#!" class="link-more link-more--drk link-more--colored">
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                        <span class="text">Детальніше</span>
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__content">
+                                    <div class="info-gallery__pic">
+                                        <img width="520" height="560" src="./assets/img/event_2.jpg" alt="Thumbnail">
+                                    </div>
+                                    <p>Some Event Name</p>
+                                    <a href="#!" class="link-more link-more--drk link-more--colored">
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                        <span class="text">Детальніше</span>
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__content">
+                                    <div class="info-gallery__pic">
+                                        <img width="520" height="560" src="./assets/img/event_3.jpg" alt="Thumbnail">
+                                    </div>
+                                    <p>Модний показ від “NATALI BOLGAR”</p>
+                                    <a href="#!" class="link-more link-more--drk link-more--colored">
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                        <span class="text">Детальніше</span>
+                                        <span class="ico">
+                                            <img src="./assets/img/icons/star_1.svg" alt="Icon">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="pack-card">
-                        <div class="pack-card__info">
-                            <h3 class="pack-card__subtitle">check-up організму</h3>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="space-boxes">
+                    <div class="space-boxes__box box--sm">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_3.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pack-card__pic">
-                            <img width="424" height="298" src="./assets/img/pack_5.jpg" alt="Thumbnail">
-                        </div>
-                        <div class="pack-card__points">
-                            <ul class="pack-card__benefits">
-                                <li class="pack-card__benefit">
-                                    Вхід до SPA-зони (басейн, сауни, хамам) – 3 год
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Ароматичний масаж тіла – 45 хв
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Чайна церемонія з трав’яними чаями
-                                </li>
-                            </ul>
-                            <a href="#!" class="link-accent link-accent--transparent">
-                                <span>замовити</span>
-                            </a>
-                        </div>
+                        <h3 class="space-boxes__title">
+                            лекції
+                        </h3>
                     </div>
-                    <div class="pack-card">
-                        <div class="pack-card__info">
-                            <h3 class="pack-card__subtitle">check-up організму</h3>
+                    <div class="space-boxes__box box--lg">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_4.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pack-card__pic">
-                            <img width="424" height="298" src="./assets/img/pack_4.jpg" alt="Thumbnail">
+                        <h3 class="space-boxes__title">
+                            джаз клуб
+                        </h3>
+                    </div>
+                    <div class="space-boxes__box box--sm">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_5.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
                         </div>
-                        <div class="pack-card__points">
-                            <ul class="pack-card__benefits">
-                                <li class="pack-card__benefit">
-                                    Вхід до SPA-зони (басейн, сауни, хамам) – 3 год
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Ароматичний масаж тіла – 45 хв
-                                </li>
-                                <li class="pack-card__benefit">
-                                    Чайна церемонія з трав’яними чаями
-                                </li>
-                            </ul>
-                            <a href="#!" class="link-accent link-accent--transparent">
-                                <span>замовити</span>
-                            </a>
+                        <h3 class="space-boxes__title">
+                            Авторська вечірня казка
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="space-boxes">
+                    <div class="space-boxes__box box--sm">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_6.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="space-boxes__title">
+                            організація фотосесій
+                        </h3>
+                    </div>
+                    <div class="space-boxes__box box--lg">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_7.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="space-boxes__title">
+                            Організація ігор
+                        </h3>
+                        <p class="space-boxes__subtitle">Мафія або кешфлоу</p>
+                    </div>
+                    <div class="space-boxes__box box--sm">
+                        <div class="space-boxes__preview">
+                            <div class="space-boxes__pic">
+                                <img src="./assets/img/space_box_8.jpg" alt="Thumbnail">
+                            </div>
+                            <div class="space-boxes__content">
+                                <p>
+                                    Місце де можна бути поза часом, проживати свої відчуття та емоції в своєму темпі та
+                                    інтенсивності. Тут кожна деталь створена для відновлення балансу та гармонії. 
+                                    «Затонула Атлантида» втілює атмосферу міфічного спокою через поєднання води, світла
+                                    та каменю.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="space-boxes__title">
+                            організація зустрічей
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="container">
+                <h2 class="gallery__title main-title">
+                    інста зони
+                </h2>
+            </div>
+            <div class="info-gallery">
+                <div class="container">
+                    <div class="info-gallery__slider js-gallery-slider swiper">
+                        <div class="info-gallery__nav nav--details js-gallery-nav">
+                            <button type="button" class="info-gallery__btn js-gallery-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.00002 12H20" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.9999 17C8.9999 17 4 13.3176 4 12C4 10.6824 9 7 9 7" stroke="#161616"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="info-gallery__pag js-gallery-progress"></div>
+                            <button type="button" class="info-gallery__btn js-gallery-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12H4" stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M15.0001 17C15.0001 17 20 13.3176 20 12C20 10.6824 15 7 15 7"
+                                        stroke="#161616" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="info-gallery__wrapper swiper-wrapper">
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__pic">
+                                    <img width="520" height="560" src="./assets/img/insta_1.jpg" alt="Thumbnail">
+                                </div>
+                            </div>
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__pic">
+                                    <img width="520" height="560" src="./assets/img/insta_2.jpg" alt="Thumbnail">
+                                </div>
+                            </div>
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__pic">
+                                    <img width="520" height="560" src="./assets/img/insta_3.jpg" alt="Thumbnail">
+                                </div>
+                            </div>
+                            <div class="info-gallery__slide swiper-slide">
+                                <div class="info-gallery__pic">
+                                    <img width="520" height="560" src="./assets/img/insta_1.jpg" alt="Thumbnail">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -664,7 +623,7 @@
                         <img src="./assets/img/humans_3.svg" alt="">
                     </div>
                     <div class="feedback__bg-r">
-                        <img src="./assets/img/feedback_1.jpg" alt="">
+                        <img src="./assets/img/feedback_2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -673,8 +632,8 @@
                     <h2 class="feedback__title main-title">
                         запишіться на консультацію
                     </h2>
-                    <h3 class="feedback__subtitle">
-                        Ми допоможемо визначити оптимальний формат послуг саме для вас
+                    <h3 class="feedback__details">
+                        або зателефонуйте
                     </h3>
                     <form class="feedback__form">
                         <div class="feedback__form-field field--info">
@@ -682,17 +641,6 @@
                         </div>
                         <div class="feedback__form-field field--info">
                             <input type="number" name="feedbackPhone" id="feedbackPhone" placeholder="Номер телефону">
-                        </div>
-                        <div class="feedback__form-field field--select">
-                            <select class="feedback__form-select js-select" id="feedbackDirection"
-                                name="feedbackDirection">
-                                <option value="" disabled selected>
-                                    Оберіть напрям
-                                </option>
-                                <option value="1">Напрям 1</option>
-                                <option value="2">Напрям 2</option>
-                                <option value="3">Напрям 3</option>
-                            </select>
                         </div>
                         <div class="feedback__form-foot">
                             <button type="submit" class="feedback__form-submit link-accent">
@@ -703,13 +651,24 @@
                             </p>
                         </div>
                     </form>
+                    <a href="tel:+" class="feedback__phone">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span>+38 (063) 788 77 15</span>
+                    </a>
                 </div>
             </div>
         </section>
         <section class="perform">
             <div class="container">
                 <div class="perform__head">
-                    <h2 class="perform__title main-title">естетична медицина</h2>
+                    <h2 class="perform__title main-title">ресторани</h2>
                     <div class="perform__links">
                         <a href="#!" class="link-more link-more--drk link-more--colored">
                             <span class="ico">
@@ -729,13 +688,13 @@
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M212.499 97.4297C150.105 97.4297 99.3164 148.04 99.3164 210.216V530.859L129.526 513.469V210.216C129.526 164.61 166.732 127.534 212.499 127.534C258.266 127.534 295.473 164.61 295.473 210.216V513.633L325.682 531.023V210.216C325.682 148.04 274.894 97.4297 212.499 97.4297Z"
-                                fill="white" />
+                                fill="white"></path>
                             <path
                                 d="M212.5 0C95.3494 0 0 94.7384 0 211.138V587.639L30.1926 570.31V211.138C30.1926 111.25 111.968 29.9991 212.5 29.9991C313.032 29.9991 394.807 111.25 394.807 211.138V570.474L425 587.803V211.138C425 94.7384 329.651 0 212.5 0Z"
-                                fill="#6AAFA3" />
+                                fill="#6AAFA3"></path>
                         </svg>
                         <div class="perform__pic js-logo-box">
-                            <img width="1440" height="622" src="./assets/img/perform_2.jpg" alt="Thumbnail">
+                            <img width="1440" height="622" src="./assets/img/perform_4.jpg" alt="Thumbnail">
                         </div>
                     </div>
                 </div>

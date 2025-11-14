@@ -1,0 +1,113 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.space-boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    &__pic {
+        border-radius: 16px;
+        overflow: hidden;
+        height: 100%;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            @include transitions(
+                0.4s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__subtitle {
+        font: 500 18px / 140% var(--ff-base);
+        text-align: center;
+        padding-top: 16px;
+    }
+
+    &__title {
+        font: 300 32px / 100% var(--ff-accent);
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: -1px;
+        padding-top: 32px;
+        hyphens: auto;
+    }
+
+    &__preview {
+        position: relative;
+    }
+
+    &__content {
+        overflow: auto;
+        padding: 24px;
+        position: absolute;
+        inset: 20px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: 16px;
+        background: #ffffff99;
+        backdrop-filter: blur(20px);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        opacity: 0;
+        visibility: hidden;
+        @include transitions(0.4s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        p {
+            font: 400 16px / 140% var(--ff-base);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:has(.video-play) {
+            padding-top: 50px;
+        }
+    }
+
+    &__box {
+        width: 100%;
+        cursor: pointer;
+
+        @include hover {
+            .space-boxes__content {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .space-boxes__pic {
+                img,
+                video {
+                    transform: scale(1.15);
+                }
+            }
+        }
+
+        &.box--sm {
+            max-width: 355px;
+            .space-boxes__preview {
+                height: 442px;
+            }
+        }
+
+        &.box--lg {
+            max-width: 594px;
+            .space-boxes__preview {
+                height: 670px;
+            }
+        }
+    }
+}

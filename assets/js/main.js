@@ -8,6 +8,7 @@ import circleLogoAnimation from './mods/circleLogoAnimation.js';
 import servicesModal from './mods/servicesModal.js';
 import initIntersectionAnimations from './mods/initIntersectionAnimations.js';
 import selectHandler from './mods/selectHandler.js';
+import videoModalHandler from './mods/videoModalHandler.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     helpers();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     servicesModal();
     initIntersectionAnimations();
     selectHandler();
+    videoModalHandler();
 });

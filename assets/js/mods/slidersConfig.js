@@ -138,11 +138,45 @@ const slidersConfig = () => {
         });
     };
 
+    const iventsSlider = () => {
+        const sliderEl = document.querySelector('.js-ivents-slider');
+        const navPanel = document.querySelector('.js-ivents-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 2) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 48,
+            slidesPerView: 2.2,
+            initialSlide: 1,
+            centeredSlidesBounds: true,
+            normalizeSlideIndex: false,
+            grabCursor: true,
+            centeredSlides: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-ivents-prev',
+                nextEl: '.js-ivents-next',
+            },
+            pagination: {
+                el: '.js-ivents-progress',
+                type: 'progressbar',
+            },
+        });
+    };
+
     roomsSlider();
     reviewsSlider();
     conceptSlider();
     infoSlider();
     gallerySlider();
+    iventsSlider();
 };
 
 export default slidersConfig;

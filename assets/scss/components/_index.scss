@@ -1,5 +1,6 @@
 @use 'ui';
 @use 'content';
+@use 'mod';
 @forward 'aside-menu';
 @forward 'relax-card';
 @forward 'room-box';
@@ -9,3 +10,4 @@
 @forward 'benefit-box';
 @forward 'info-gallery';
 @forward 'present-box';
+@forward 'space-box';

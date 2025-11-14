@@ -1,0 +1,32 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--space {
+    .ivents {
+        overflow: hidden;
+        margin-bottom: var(--section-mb-sm);
+
+        &__title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-gallery__slider {
+            overflow: visible;
+        }
+
+        .info-gallery__content {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            p {
+                font: 300 24px / 100% var(--ff-accent);
+                letter-spacing: -1px;
+                margin: 0;
+            }
+        }
+    }
+}
