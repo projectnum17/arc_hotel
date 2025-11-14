@@ -1,0 +1,11 @@
+
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--lobbie {
+    .content {
+        .content-head {
+            margin-bottom: 104px;
+        }
+    }
+}
