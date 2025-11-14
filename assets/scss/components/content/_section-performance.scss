@@ -2,7 +2,7 @@
 @use '../../base/mixins' as *;
 
 .perform {
-    padding-block: var(--section-pdd) calc(var(--section-pdd) / 2);
+    padding-block: var(--section-pdd) 100px;
     overflow: hidden;
 
     &__head {
