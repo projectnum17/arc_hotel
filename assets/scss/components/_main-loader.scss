@@ -16,9 +16,13 @@
     transition: border-radius 0.2s cubic-bezier(0.768, 0.304, 0.496, 0.884),
         transform 0.7s cubic-bezier(0.768, 0.304, 0.496, 0.884);
 
+    @include media('mobile') {
+        width: 250%;
+    }
+
     &._animated {
         border-radius: 0 0 50% 50% / 0 0 40% 40%;
-        transform: translate(-50%,-100%);
+        transform: translate(-50%, -100%);
     }
 
     &__content {

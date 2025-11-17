@@ -7,6 +7,9 @@
     position: relative;
     background: var(--dark-color);
     color: var(--wht-color);
+    @include media('mobile') {
+        padding-top: 60px;
+    }
 
     &__bg {
         pointer-events: none;
@@ -23,6 +26,10 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 32px;
+            }
         }
 
         &:last-child {
@@ -32,6 +39,15 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
+            @include media('desktop') {
+                flex-wrap: wrap;
+            }
+
+            @include media('mobile') {
+                flex-direction: column;
+                margin-bottom: 32px;
+                gap: 0;
+            }
         }
     }
 
@@ -42,6 +58,15 @@
         max-width: 457px;
         width: 100%;
         margin-left: 150px;
+        @include media('desktop') {
+            margin-left: 0;
+            align-items: flex-end;
+        }
+        @include media('mobile') {
+            max-width: 100%;
+            align-items: center;
+            gap: 24px;
+        }
     }
 
     &__info {
@@ -49,11 +74,19 @@
         flex-direction: column;
         align-items: center;
         gap: 12px;
+        @include media('mobile') {
+            width: 100%;
+            align-items: center;
+            gap: 32px;
+        }
     }
 
     &__social {
         display: flex;
         gap: 30px;
+        @include media('mobile') {
+            gap: 28px;
+        }
 
         a {
             width: 60px;
@@ -64,14 +97,25 @@
             justify-content: center;
             border-radius: 50%;
             border: 1px solid var(--accent-color);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
             @include hover {
                 background: var(--accent-color);
+            }
+            @include media('mobile') {
+                width: 48px;
+                height: 48px;
             }
 
             img {
                 width: 32px;
                 height: 32px;
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
@@ -83,6 +127,10 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 20px;
+
+        @include media('desktop') {
+            display: none;
+        }
 
         ul {
             padding: 0;
@@ -97,7 +145,10 @@
 
             a {
                 font: 400 16px / 100% var(--ff-base);
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
                 @include hover {
                     color: var(--accent-color);
                 }
@@ -110,6 +161,9 @@
         max-width: 1720px;
         margin: 0 auto;
         background: rgba(255, 255, 255, 0.04);
+        @include media('mobile') {
+            padding-block: 24px;
+        }
 
         .container {
             width: 100%;
@@ -117,6 +171,11 @@
             align-items: center;
             justify-content: space-between;
             gap: 15px;
+            flex-wrap: wrap;
+            @include media('mobile') {
+                align-items: center;
+                flex-direction: column;
+            }
 
             div:last-child {
                 max-width: 593px;
@@ -125,9 +184,16 @@
                 align-items: center;
                 justify-content: space-between;
                 gap: 15px;
+                @include media('mobile') {
+                    max-width: 100%;
+                    flex-direction: column;
+                }
 
                 p {
                     margin-right: 35px;
+                    @include media('mobile') {
+                        margin-right: 0;
+                    }
                 }
             }
         }
@@ -143,6 +209,11 @@
     &__title {
         font: 400 16px / 100% var(--ff-base);
         opacity: 0.6;
+        @include media('mobile') {
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-align: center;
+        }
     }
 
     &__logo {
@@ -150,6 +221,10 @@
         width: 100%;
         min-width: 120px;
         margin-bottom: 36px;
+        @include media('mobile') {
+            max-width: 143px;
+            margin-bottom: 0;
+        }
 
         img {
             width: 100%;
@@ -160,15 +235,24 @@
     &__phone {
         a {
             font: 300 24px / 110% var(--ff-accent);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
             @include hover {
                 color: var(--accent-color);
+            }
+            @include media('mobile') {
+                font-size: 18px;
             }
         }
 
         &--lg {
             a {
                 font: 300 32px / 110% var(--ff-accent);
+                @include media('mobile') {
+                    font-size: 28px;
+                }
             }
         }
     }
@@ -182,6 +266,10 @@
         overflow: hidden;
         border: 1px solid var(--accent-color);
         background: var(--accent-color);
+        @include media('mobile') {
+            margin-bottom: 32px;
+            padding: 13px 20px;
+        }
 
         span {
             position: relative;
@@ -198,7 +286,10 @@
             visibility: hidden;
             pointer-events: none;
             background: linear-gradient(90deg, #6aafa3 0%, #337569 100%);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
 
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
@@ -229,13 +320,33 @@
 
         span {
             font: 400 18px / 100% var(--ff-base);
-            @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__location {
+        @include media('mobile') {
+            margin-bottom: 16px;
+            flex-direction: column;
         }
     }
 
     &__route {
         span {
             text-transform: uppercase;
+            @include media('mobile') {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            @include media('mobile') {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }

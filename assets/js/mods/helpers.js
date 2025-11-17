@@ -184,6 +184,8 @@ const helpers = () => {
 
         const ids = [
             'feedbackDate',
+            'arrivalDate',
+            'departureDate',
         ];
 
         ids.forEach((id) => {

@@ -20,7 +20,7 @@
 
 .desktop--hidden {
     @include media('desktop') {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -33,7 +33,7 @@
 
 .tablet--hidden {
     @include media('tablet') {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -46,7 +46,7 @@
 
 .mobile--hidden {
     @include media('mobile') {
-        display: none;
+        display: none !important;
     }
 }
 

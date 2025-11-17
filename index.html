@@ -58,6 +58,10 @@
         <div class="aside-menu__routes">
             <img class="aside-menu__bg" src="./assets/img/bg-menu.jpg" alt="Thumbnail">
             <div class="container">
+                <ul class="header__lang mobile--visible">
+                    <li><a href="#!" class="current-lang">ua</a></li>
+                    <li><a href="#!">en</a></li>
+                </ul>
                 <nav class="aside-menu__nav">
                     <ul>
                         <li><a href="#!">номери готелю</a></li>
@@ -107,7 +111,7 @@
                 </ul>
             </nav>
             <div class="aside-menu__contacts">
-                <div class="aside-menu__phone">
+                <div class="aside-menu__phone lg-phone">
                     <p class="aside-menu__title">Бронювання та консультації</p>
                     <a href="tel:+0800200880">0 800 200 880</a>
                 </div>
@@ -128,7 +132,7 @@
                 <button class="header__burger js-burger">
                     <span></span>
                 </button>
-                <ul class="header__lang">
+                <ul class="header__lang mobile--hidden">
                     <li><a href="#!" class="current-lang">ua</a></li>
                     <li><a href="#!">en</a></li>
                 </ul>
@@ -211,12 +215,12 @@
                             stroke="#0C1C34" stroke-linejoin="round" />
                     </svg>
                 </a>
-                <a href="#!" class="header__reserv js-reserv">забронювати</a>
+                <a href="#!" class="header__reserv js-reserv">бронювати</a>
             </div>
         </div>
     </header>
     <main class="main main--home">
-        <section class="hero">
+        <section class="hero" style="display: none !important;">
             <div class="hero__slide" data-parallax>
                 <div class="hero__video">
                     <video muted autoplay loop playsinline class="js-video-autoplay"
@@ -239,11 +243,42 @@
                             Archotel це сучасный арт-готель в Одесі — найкраща ціна при прямому бронюванні
                         </p>
                     </div>
-                    <div class="hero__panel js-hero-panel">panel</div>
+                    <div class="hero__panel js-hero-panel">
+                        <form class="hero__form">
+                            <div class="hero__form-data">
+                                <div class="hero__form-fields date-fields">
+                                    <div class="hero__form-date drk-mode">
+                                        <input data-lang="uk" name="arrivalDate" id="arrivalDate"
+                                            placeholder="Дата Заїзду">
+                                    </div>
+                                    <div class="hero__form-date drk-mode">
+                                        <input data-lang="uk" name="departureDate" id="departureDate"
+                                            placeholder="Дата Виїзду">
+                                    </div>
+                                </div>
+                                <div class="hero__form-fields value-fields">
+                                    <div class="hero__form-value drk-mode">
+                                        <input name="adultValue" id="adultValue" placeholder="Дорослі" type="number">
+                                    </div>
+                                    <div class="hero__form-value drk-mode">
+                                        <input name="childrenValue" id="childrenValue" placeholder="Діти" type="number">
+                                    </div>
+                                </div>
+                                <div class="hero__form-fields promo-fields">
+                                    <div class="hero__form-promo drk-mode">
+                                        <input name="promoCode" id="promoCode" placeholder="Промокод">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="hero__form-submit link-accent">
+                                <span>Забронювати номер</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="relax">
+        <section class="relax" style="display: none !important;">
             <img src="./assets/img/humans.svg" alt="" class="relax__bg">
             <div class="container">
                 <div class="content-head js-animation--to-top">
@@ -411,7 +446,7 @@
                 </div>
             </div>
         </section>
-        <section class="appartments">
+        <section class="appartments" style="display: none !important;">
             <div class="container">
                 <div class="appartments__head js-animation--to-top">
                     <h2 class="appartments__title main-title">
@@ -581,7 +616,7 @@
                 </div>
             </div>
         </section>
-        <section class="preview section--animation">
+        <section class="preview section--animation" style="display: none !important;">
             <div class="preview__anim js-section-animation">
                 <video muted autoplay loop playsinline class="preview__bg js-video-autoplay"
                     poster="./assets/videos/park-poster.jpg">
@@ -610,7 +645,7 @@
                 </div>
             </div>
         </section>
-        <section class="comfort">
+        <section class="comfort" style="display: none !important;">
             <div class="comfort__line"></div>
             <svg class="comfort__deco" width="1594" height="798" viewBox="0 0 1594 798" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -763,7 +798,7 @@
                 </div>
             </div>
         </section>
-        <section class="benefits">
+        <section class="benefits" style="display: none !important;">
             <div class="container">
                 <h2 class="benefits__title main-title js-animation--to-top">
                     Місце, де відпочинок має безліч форм
@@ -861,7 +896,7 @@
                 </div>
             </div>
         </section>
-        <section class="space section--animation">
+        <section class="space section--animation" style="display: none !important;">
             <div class="space__anim js-section-animation">
                 <img src="./assets/img/bg-space.jpg" alt="" class="space__bg">
             </div>
@@ -888,7 +923,7 @@
                 </div>
             </div>
         </section>
-        <section class="promo">
+        <section class="promo" style="display: none !important;">
             <div class="container">
                 <h2 class="promo__title main-title js-animation--to-top">афіша подій archotel</h2>
                 <a href="#!" class="link-more link-more--drk js-animation--to-top">
@@ -925,7 +960,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" style="display: none !important;">
             <div class="container">
                 <h2 class="about__title js-animation--to-top">Діліться накращими моментами з нами в instagram</h2>
             </div>
