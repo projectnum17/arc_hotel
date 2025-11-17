@@ -15,6 +15,29 @@
 </head>
 
 <body>
+    <div class="main-loader js-loader">
+        <div class="intro-mask">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path id="maskPath" d="M 0 30 Q 50 60 100 30 L 100 100 L 0 100 Z" fill="white" />
+            </svg>
+        </div>
+        <div class="main-loader__content">
+            <div class="main-loader__logo js-loader-logo">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.999 7.26367C17.4193 7.26367 13.6914 10.9739 13.6914 15.5321V39.0384L15.9088 37.7635V15.5321C15.9088 12.1886 18.6397 9.47058 21.999 9.47058C25.3583 9.47058 28.0893 12.1886 28.0893 15.5321V37.7756L30.3066 39.0504V15.5321C30.3066 10.9739 26.5788 7.26367 21.999 7.26367Z"
+                        fill="#161616"></path>
+                    <path
+                        d="M21.9998 0C13.3961 0 6.39355 6.96951 6.39355 15.5326V43.2302L8.61093 41.9554V15.5326C8.61093 8.18421 14.6166 2.20691 21.9998 2.20691C29.383 2.20691 35.3886 8.18421 35.3886 15.5326V41.9674L37.606 43.2422V15.5326C37.606 6.96951 30.6034 0 21.9998 0Z"
+                        fill="#161616"></path>
+                </svg>
+            </div>
+            <div class="main-loader__text">
+                <span class="main-loader__word js-loader-text">archotel</span>
+                <span class="main-loader__word js-loader-text">avenue</span>
+            </div>
+        </div>
+    </div>
     <div class="aside-menu js-aside-menu">
         <div class="aside-menu__logo">
             <div class="animated-logo animated-logo--wht">
@@ -202,11 +225,11 @@
                         <p>Your browser does not support the video tag.</p>
                     </video>
                 </div>
-                <img src="./assets/img/hero-home.png" class="hero__pic" alt="Picture">
+                <img src="./assets/img/hero-home.png" class="hero__pic js-hero-pic" alt="Picture">
             </div>
             <div class="container">
                 <div class="hero__content">
-                    <div class="hero__box">
+                    <div class="hero__box js-hero-box">
                         <div class="hero__status">
                             <span class="hero__value">5</span>
                             <img width="28" height="28" src="./assets/img/icons/ico-star_wht.svg" alt="Star">
@@ -216,7 +239,7 @@
                             Archotel це сучасный арт-готель в Одесі — найкраща ціна при прямому бронюванні
                         </p>
                     </div>
-                    <div class="hero__panel">panel</div>
+                    <div class="hero__panel js-hero-panel">panel</div>
                 </div>
             </div>
         </section>
