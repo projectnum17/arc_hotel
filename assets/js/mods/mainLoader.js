@@ -25,6 +25,8 @@ const mainLoader = () => {
     const box = document.querySelector('.js-hero-box');
     const panel = document.querySelector('.js-hero-panel');
 
+    document.body.classList.add('is-locked');
+
     animItems('.js-loader-text');
     animItems('.js-loader-logo');
 
@@ -35,6 +37,7 @@ const mainLoader = () => {
             pic?.classList.add('is-active');
             box?.classList.add('is-active');
             panel?.classList.add('is-active');
+            document.body.classList.remove('is-locked');
         }, 500);
     }, 1000);
 };
