@@ -132,6 +132,14 @@
         flex-direction: column;
         gap: 48px;
 
+        &-details {
+            display: flex;
+            gap: 32px;
+            .feedback__form-field  {
+                width: 100%;
+            }
+        }
+
         &-field {
             input {
                 padding: 24px 5px;
@@ -164,6 +172,26 @@
                 &[type='number'] {
                     -moz-appearance: textfield;
                 }
+            }
+        }
+
+        .field--date {
+            cursor: pointer;
+            position: relative;
+            &::after {
+                pointer-events: none;
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                background: url('../img/icons/ico-cal.svg') no-repeat center center / cover;
+            }
+
+            input {
+                cursor: pointer;
             }
         }
 

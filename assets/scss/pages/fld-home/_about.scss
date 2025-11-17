@@ -13,6 +13,7 @@
         }
 
         &__cards {
+            overflow: hidden;
             display: flex;
             transform: translateY(50%);
             position: relative;

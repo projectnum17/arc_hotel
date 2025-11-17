@@ -6,6 +6,10 @@
     gap: 68px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
+    &--lg {
+        grid-template-columns: repeat(auto-fit, minmax(448px, 1fr));
+    }
+
     .promo-box {
         width: 100%;
 

@@ -5,6 +5,11 @@
     padding-left: calc(
         (100% - var(--container-width)) / 2 + var(--container-padding)
     );
+    @media (max-width: 1510px) {
+        & > div:first-child {
+            padding-left: 20px;
+        }
+    }
 }
 
 .container--left {

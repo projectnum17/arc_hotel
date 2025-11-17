@@ -10,12 +10,12 @@
     z-index: 1;
     transform: translateX(-50%);
     pointer-events: none;
-    clip-path: var(--clip);
-    --clip: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transition: clip-path 1.5s ease;
+    // clip-path: var(--clip);
+    // --clip: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    // transition: clip-path 1.5s ease;
 
     &.is-visible {
-        --clip: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
+        // --clip: polygon(0 0%, 100% 0%, 100% 100%, 0 100%);
     }
 
     svg {

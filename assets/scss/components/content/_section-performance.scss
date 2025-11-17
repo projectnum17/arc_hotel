@@ -5,6 +5,10 @@
     padding-block: var(--section-pdd) 100px;
     overflow: hidden;
 
+    &__title {
+        text-align: center;
+    }
+
     &__head {
         display: flex;
         flex-direction: column;

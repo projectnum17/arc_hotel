@@ -1,0 +1,16 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--offers {
+    .posters {
+        margin-bottom: 208px;
+    }
+}
+
+.posters {
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+}

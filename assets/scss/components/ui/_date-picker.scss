@@ -1,0 +1,24 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+body:has(.air-datepicker-overlay.-active-) {
+    overflow: hidden;
+}
+
+body:has(.drk-mode) {
+    .air-datepicker-body--day-name {
+        color: var(--accent-color);
+    }
+    .air-datepicker-cell.-selected-.-current- {
+        background: var(--dark-color);
+    }
+    .air-datepicker-cell.-selected- {
+        background: var(--dark-color);
+    }
+    .air-datepicker-cell.-current- {
+        color: var(--accent-color);
+    }
+    .-selected-.air-datepicker-cell.-day-.-current-.-weekend- {
+        color: var(--wht-color);
+    }
+}

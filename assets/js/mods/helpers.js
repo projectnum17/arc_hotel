@@ -48,9 +48,8 @@ const helpers = () => {
         const typesFilters = document.querySelectorAll('.js-type-btn');
         const sizesFilters = document.querySelectorAll('.js-size-btn');
 
-        if (!typesFilters.length || !sizesFilters.length) return;
-
         const handleFilterGroup = (buttons) => {
+            if (!buttons || !buttons.length) return;
             buttons.forEach((btn, index) => {
                 if (index === 0) btn.classList.add('is-active');
 
@@ -98,6 +97,110 @@ const helpers = () => {
         });
     };
 
+    const showMoreHandler = (
+        wrapperSelector,
+        cardSelector,
+        showCount,
+        limit,
+        btnSelector
+    ) => {
+        const wrapper = document.querySelector(wrapperSelector);
+        const btn = document.querySelector(btnSelector);
+        if (!wrapper || !btn) return;
+
+        const cards = wrapper.querySelectorAll(cardSelector);
+        const total = cards.length;
+
+        if (total < limit) {
+            btn.style.display = 'none';
+            cards.forEach((card) => (card.style.display = ''));
+            return;
+        }
+
+        cards.forEach((card, index) => {
+            if (index < showCount) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        btn.addEventListener('click', () => {
+            cards.forEach((card) => (card.style.display = ''));
+            btn.style.display = 'none';
+        });
+    };
+
+    const datePickerHandler = () => {
+        const datepickerLocales = {
+            uk: {
+                days: [
+                    'Неділя',
+                    'Понеділок',
+                    'Вівторок',
+                    'Середа',
+                    'Четвер',
+                    'П’ятниця',
+                    'Субота',
+                ],
+                daysShort: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                daysMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                months: [
+                    'Січень',
+                    'Лютий',
+                    'Березень',
+                    'Квітень',
+                    'Травень',
+                    'Червень',
+                    'Липень',
+                    'Серпень',
+                    'Вересень',
+                    'Жовтень',
+                    'Листопад',
+                    'Грудень',
+                ],
+                monthsShort: [
+                    'Січ',
+                    'Лют',
+                    'Бер',
+                    'Кві',
+                    'Тра',
+                    'Чер',
+                    'Лип',
+                    'Сер',
+                    'Вер',
+                    'Жов',
+                    'Лис',
+                    'Гру',
+                ],
+                today: 'Сьогодні',
+                clear: 'Очистити',
+                dateFormat: 'dd.MM.yyyy',
+                timeFormat: 'hh:ii aa',
+                firstDay: 1,
+            },
+            en: {},
+        };
+
+        const ids = [
+            'feedbackDate',
+        ];
+
+        ids.forEach((id) => {
+            const dateInput = document.querySelector(`#${id}`);
+            if (!dateInput) return;
+
+            const lang = dateInput.dataset.lang || 'en';
+            const locale = datepickerLocales[lang] || {};
+
+            new AirDatepicker(dateInput, {
+                isMobile: true,
+                autoClose: true,
+                locale: locale,
+            });
+        });
+    };
+
     moreSEOTextHandler();
     parallaxHandler();
     filtersHandler();
@@ -107,8 +210,22 @@ const helpers = () => {
         wrapperClass: 'eq-inner',
         groupSize: 6,
     });
-
     formHandler();
+    datePickerHandler();
+    showMoreHandler(
+        '.js-offers-collection',
+        '.offer-card',
+        4,
+        5,
+        '.js-offers-trigger'
+    );
+    showMoreHandler(
+        '.js-blog-collection',
+        '.blog-card',
+        4,
+        5,
+        '.js-blog-trigger'
+    );
 };
 
 export default helpers;
