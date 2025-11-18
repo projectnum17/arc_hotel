@@ -54,16 +54,10 @@ body:not(:has(.main--home)) {
         &__burger {
             span {
                 background: var(--accent-color);
-                @include media('mobile') {
-                    background: #0c1c34;
-                }
 
                 &::after,
                 &::before {
                     background: var(--accent-color);
-                    @include media('mobile') {
-                        background: #0c1c34;
-                    }
                 }
             }
         }

@@ -145,6 +145,20 @@ const slidersConfig = () => {
                 el: '.js-info-progress',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    spaceBetween: 12,
+                    slidesPerView: 1
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 40,
+                    slidesPerView: 3,
+                },
+            },
         });
     };
 

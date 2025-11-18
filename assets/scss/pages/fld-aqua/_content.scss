@@ -2,11 +2,13 @@
 @use '../../base/mixins' as *;
 
 .main--aqua {
-
     .content {
         margin-bottom: var(--section-mb-sm);
         .content-head {
             margin-bottom: 60px;
+            @include media('mobile') {
+                margin-bottom: 32px;
+            }
         }
     }
 }

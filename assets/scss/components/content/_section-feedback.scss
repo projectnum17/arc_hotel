@@ -10,6 +10,13 @@
     background: var(--dark-color);
     color: var(--wht-color);
 
+    @include media('mobile') {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 60px;
+        padding-block: var(--section-pdd) 0;
+    }
+
     &__anim {
         pointer-events: none;
         position: absolute;
@@ -20,6 +27,12 @@
         width: 100%;
         height: 100%;
         @include transitions(0.7s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: translate(0);
+        }
     }
 
     &__bg {
@@ -29,11 +42,17 @@
         align-items: center;
         width: 100%;
         height: 100%;
+        @include media('mobile') {
+            position: relative;
+        }
 
         &-l {
             height: 100%;
             width: 40%;
             padding-block: 91px;
+            @include media('mobile') {
+                display: none;
+            }
             img {
                 opacity: 2%;
                 width: 100%;
@@ -45,6 +64,10 @@
             height: 100%;
             width: 60%;
             position: relative;
+            @include media('mobile') {
+                width: 100%;
+                height: 350px;
+            }
 
             &::after {
                 content: '';
@@ -73,6 +96,9 @@
     }
     &__title {
         margin-bottom: 32px;
+        @include media('mobile') {
+            margin-bottom: 16px;
+        }
     }
 
     &__subtitle {
@@ -102,6 +128,11 @@
             }
         }
 
+        @include media('mobile') {
+            font-size: 20px;
+            margin: 0 auto;
+        }
+
         span:first-child {
             display: inline-flex;
             flex-shrink: 0;
@@ -116,12 +147,21 @@
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
 
+            @include media('mobile') {
+                width: 34px;
+                height: 34px;
+            }
+
             svg {
                 display: inline-flex;
                 flex-shrink: 0;
                 width: 24px;
                 height: 24px;
                 color: var(--wht-color);
+                @include media('mobile') {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }
@@ -131,11 +171,16 @@
         display: flex;
         flex-direction: column;
         gap: 48px;
+        @include media('mobile') {
+            max-width: 100%;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
 
         &-details {
             display: flex;
             gap: 32px;
-            .feedback__form-field  {
+            .feedback__form-field {
                 width: 100%;
             }
         }
@@ -154,6 +199,11 @@
                     0.3s,
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
                 );
+
+                @include media('mobile') {
+                    font-size: 14px;
+                    padding: 12px 5px;
+                }
 
                 &:focus {
                     border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -187,7 +237,8 @@
                 transform: translateY(-50%);
                 width: 24px;
                 height: 24px;
-                background: url('../img/icons/ico-cal.svg') no-repeat center center / cover;
+                background: url('../img/icons/ico-cal.svg') no-repeat center
+                    center / cover;
             }
 
             input {
@@ -330,12 +381,26 @@
             align-items: flex-start;
             gap: 20px;
             justify-content: space-between;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+                .link-accent {
+                    width: 100%;
+                    display: inline-flex;
+                    justify-content: center;
+                }
+            }
         }
 
         &-terms {
             max-width: 320px;
             font: 400 16px / 140% var(--ff-base);
             opacity: 0.4;
+            @include media('mobile') {
+                font-size: 12px;
+                text-align: center;
+            }
         }
     }
 }

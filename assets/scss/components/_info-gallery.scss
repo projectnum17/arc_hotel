@@ -2,6 +2,9 @@
 @use '../base/mixins' as *;
 
 .info-gallery {
+    @include media('mobile') {
+        overflow: hidden;
+    }
     .container {
         max-width: 1686px;
     }
@@ -21,10 +24,23 @@
         border-radius: 16px;
         overflow: hidden;
 
+        @include media('mobile') {
+            height: 320px;
+        }
+
         img {
             width: 100%;
             height: auto;
             object-fit: cover;
+            @include media('mobile') {
+                height: 100%;
+            }
+        }
+    }
+
+    &__slider {
+        @include media('mobile') {
+            overflow: visible;
         }
     }
 
@@ -35,6 +51,10 @@
         gap: 20px;
         max-width: var(--container-width);
         margin: 0 auto 40px;
+        @include media('mobile') {
+            gap: 12px;
+            margin: 0 auto 16px;
+        }
     }
 
     &__btn {
@@ -47,6 +67,10 @@
         border-radius: 50%;
         border: 1px solid var(--dark-color);
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: 26px;
+            height: 26px;
+        }
 
         &.swiper-button-disabled {
             opacity: 0.6;
@@ -58,6 +82,10 @@
             flex-shrink: 0;
             width: 24px;
             height: 24px;
+            @include media('mobile') {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
