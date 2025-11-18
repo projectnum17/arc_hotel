@@ -12,6 +12,11 @@
         padding-block: 140px;
         background: var(--bg-color);
         color: var(--wht-color);
+        @include media('mobile') {
+            min-height: 100vh;
+            min-height: 100svh;
+            padding-block: 60px;
+        }
 
         &__anim {
             position: absolute;
@@ -22,7 +27,14 @@
             transform: translate(-50%, -50%);
             width: 480px;
             height: 488px;
-            @include transitions(.7s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.7s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include media('mobile') {
+                width: 90%;
+                height: 350px;
+            }
 
             &.is-scale {
                 border-radius: 0;
@@ -94,6 +106,11 @@
             max-width: 161px;
             width: 100%;
             margin-bottom: 48px;
+            @include media('mobile') {
+                max-width: 82px;
+                margin-bottom: 16px;
+                flex: 1;
+            }
 
             img {
                 width: 100%;
@@ -102,6 +119,9 @@
 
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 16px;
+            }
         }
 
         &__about {
@@ -109,6 +129,11 @@
             letter-spacing: -1px;
             max-width: 730px;
             margin: 0 auto 40px;
+            @include media('mobile') {
+                margin: 0 auto 16px;
+                max-width: 100%;
+                font-size: 14px;
+            }
         }
     }
 }

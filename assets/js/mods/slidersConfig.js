@@ -23,6 +23,45 @@ const slidersConfig = () => {
                 prevEl: '.js-rooms-prev',
                 nextEl: '.js-rooms-next',
             },
+            breakpoints: {
+                0: {
+                    spaceBetween: 12,
+                    slidesPerView: 1
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 45,
+                    slidesPerView: 2.5,
+                },
+            },
+        });
+    };
+
+    const relaxSlider = () => {
+        const sliderEl = document.querySelector('.js-relax-slider');
+        const navPanel = document.querySelector('.js-relax-nav');
+        if (!sliderEl || !navPanel) return;
+
+        const slideCount = sliderEl.querySelectorAll('.swiper-slide');
+        const sliderWrapper = sliderEl.querySelector('.swiper-wrapper');
+
+        if (slideCount.length < 3) {
+            navPanel.style.display = 'none';
+            sliderWrapper.classList.add('is-centered');
+        }
+
+        new Swiper(sliderEl, {
+            spaceBetween: 12,
+            slidesPerView: 1,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-relax-prev',
+                nextEl: '.js-relax-next',
+            },
         });
     };
 
@@ -177,6 +216,7 @@ const slidersConfig = () => {
     infoSlider();
     gallerySlider();
     iventsSlider();
+    relaxSlider();
 };
 
 export default slidersConfig;

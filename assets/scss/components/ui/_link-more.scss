@@ -44,6 +44,9 @@
             &:first-of-type {
                 width: 32px;
                 transform: translateX(0px) rotate(180deg);
+                @include media('mobile') {
+                    width: 20px;
+                }
             }
 
             &:last-of-type {
@@ -64,6 +67,9 @@
         position: relative;
         margin-right: 8px;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: 14px;
+        }
 
         &::after {
             content: '';
@@ -72,7 +78,10 @@
             position: absolute;
             bottom: -4px;
             left: 0;
-            @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
         }
     }
 
@@ -82,6 +91,10 @@
         width: 32px;
         height: 32px;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            width: 20px;
+            height: 20px;
+        }
 
         &:first-of-type {
             width: 0;

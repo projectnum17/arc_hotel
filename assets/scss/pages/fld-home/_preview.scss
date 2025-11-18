@@ -20,7 +20,16 @@
             transform: translate(-50%, -50%);
             width: 480px;
             height: 488px;
-            @include transitions(.7s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.7s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            @include media('mobile') {
+                width: 90%;
+                height: 350px;
+            }
+
             &::after {
                 content: '';
                 inset: 0;
@@ -61,7 +70,10 @@
             justify-content: space-between;
             opacity: 0;
             visibility: hidden;
-            @include transitions(.7s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.7s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
             &.is-show {
                 opacity: 1;
                 visibility: visible;
@@ -71,6 +83,12 @@
         &__descr {
             font: 300 32px / 110% var(--ff-accent);
             letter-spacing: -1px;
+            @include media('tablet') {
+                font-size: 24px;
+            }
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         &__info {

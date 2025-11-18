@@ -10,10 +10,24 @@
         &__title {
             text-align: center;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 20px;
+                padding-inline: 20px;
+            }
         }
 
         .link-more {
             margin: 0 auto 40px;
+            @include media('mobile') {
+                margin: 0 auto 20px;
+                padding-inline: 20px;
+            }
+        }
+
+        .container {
+            @include media('mobile') {
+                padding: 0;
+            }
         }
     }
 }

@@ -5,4 +5,15 @@
     font: 300 80px / 100% var(--ff-accent);
     text-transform: uppercase;
     letter-spacing: -3px;
+    @include media('desktop') {
+        font-size: 60px;
+    }
+
+    @include media('tablet') {
+        font-size: 42px;
+    }
+
+    @include media('mobile') {
+        font-size: 28px;
+    }
 }

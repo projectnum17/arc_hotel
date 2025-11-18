@@ -24,10 +24,16 @@
 
 @media (max-width: 991px) {
     :root {
+        --section-mb: 120px;
+        --section-mb-sm: 120px;
+        --section-pdd: 120px;
     }
 }
 
 @media (max-width: 767px) {
     :root {
+        --section-mb: 60px;
+        --section-mb-sm: 60px;
+        --section-pdd: 60px;
     }
 }

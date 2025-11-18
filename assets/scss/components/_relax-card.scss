@@ -7,12 +7,21 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
+    @include media('mobile') {
+        align-items: center;
+        max-width: 100%;
+    }
 
     &__title {
         font: 300 32px / 100% var(--ff-accent);
         letter-spacing: -1px;
         text-transform: uppercase;
         margin-bottom: 20px;
+        @include media('mobile') {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
     }
 
     &__box {
@@ -20,6 +29,9 @@
         position: relative;
         border-radius: 16px;
         overflow: hidden;
+        @include media('mobile') {
+            width: 100%;
+        }
 
         &--pink {
             &::before {
@@ -72,6 +84,9 @@
                 &:first-of-type {
                     width: 32px;
                     transform: translateX(0px) rotate(180deg);
+                    @include media('mobile') {
+                        width: 20px;
+                    }
                 }
 
                 &:last-of-type {
@@ -91,10 +106,21 @@
         position: relative;
         width: 100%;
 
+        @include media('mobile') {
+            height: 400px;
+        }
+
         img {
             width: 100%;
             height: auto;
-            @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include media('mobile') {
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 
@@ -107,16 +133,35 @@
         display: flex;
         flex-direction: column;
         gap: 48px;
+        @include media('tablet') {
+            bottom: 30px;
+            left: 24px;
+            right: 23px;
+        }
+        @include media('mobile') {
+            bottom: 32px;
+            left: 32px;
+            right: 32px;
+            gap: 16px;
+            align-items: center;
+        }
     }
 
     &__subtitle {
         font: 300 32px / 110% var(--ff-accent);
         letter-spacing: -1px;
         color: var(--wht-color);
+        @include media('mobile') {
+            font-size: 20px;
+            text-align: center;
+        }
     }
 
     .link-more {
         margin-bottom: 32px;
+        @include media('mobile') {
+            margin-bottom: 16px;
+        }
 
         &--mtn {
             margin-bottom: 0;

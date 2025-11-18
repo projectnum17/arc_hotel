@@ -10,6 +10,12 @@
             font: 300 44px / 110% var(--ff-accent);
             letter-spacing: -1px;
             text-align: center;
+            @include media('tablet') {
+                font-size: 32px;
+            }
+            @include media('mobile') {
+                font-size: 20px;
+            }
         }
 
         &__cards {
@@ -19,12 +25,27 @@
             position: relative;
             z-index: 2;
             margin-top: -100px;
+            @include media('mobile') {
+                transform: translateY(35%);
+                margin-top: -30px;
+            }
 
             .container {
                 max-width: 1688px;
                 display: flex;
                 justify-content: space-between;
                 gap: 32px;
+                @include media('tablet') {
+                    gap: 12px;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    scroll-snap-type: x mandatory;
+                }
             }
         }
 
@@ -34,11 +55,25 @@
             overflow: hidden;
             max-width: 304px;
 
+            @include media('tablet') {
+                flex-shrink: 0;
+                scroll-snap-align: center;
+            }
+
+            @include media('mobile') {
+                max-width: 135px;
+                height: 132px;
+                border-radius: 12px;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 16px;
+                @include media('mobile') {
+                    border-radius: 12px;
+                }
             }
 
             &--accent {
@@ -57,6 +92,9 @@
             padding-block: 148px 76px;
             background: var(--dark-color);
             position: relative;
+            @include media('mobile') {
+                padding-block: 50px 60px;
+            }
 
             &::after {
                 content: '';
@@ -83,6 +121,11 @@
             align-items: center;
             justify-content: space-between;
             gap: 20px;
+            @include media('mobile') {
+                flex-direction: column;
+                text-align: center;
+                padding-block: 16px 24px;
+            }
 
             &::after {
                 content: '';
@@ -104,12 +147,18 @@
         &__sign {
             font: 400 16px / 160% var(--ff-base);
             color: #caccd2;
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &__tag {
             font: 400 24px / 110% var(--ff-base);
             text-transform: uppercase;
             color: var(--wht-color);
+            @include media('mobile') {
+                font-size: 16px;
+            }
         }
 
         &__link {
@@ -129,6 +178,9 @@
             @include hover {
                 background: var(--accent-color);
             }
+            @include media('mobile') {
+                padding: 7px 19px;
+            }
 
             img {
                 width: 24px;
@@ -143,10 +195,20 @@
             align-items: flex-start;
             justify-content: space-between;
             color: var(--wht-color);
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                text-align: center;
+                padding-top: 24px;
+            }
         }
 
         &__text {
             max-width: 605px;
+            @include media('mobile') {
+                max-width: 100%;
+            }
             div {
                 display: grid;
                 grid-template-rows: 0fr;
@@ -157,6 +219,9 @@
 
                 &.is-mtb {
                     margin-top: 24px;
+                    @include media('mobile') {
+                        margin-top: 18px;
+                    }
                 }
 
                 &.is-active {
@@ -169,6 +234,10 @@
             max-width: 743px;
             font: 300 52px / 110% var(--ff-accent);
             letter-spacing: -2px;
+            @include media('mobile') {
+                max-width: 100%;
+                font-size: 20px;
+            }
         }
 
         &__paragraph {
