@@ -128,10 +128,6 @@ body {
         .header__reserv {
             border: 1px solid var(--graphite-color);
         }
-        @include media('mobile') {
-            background: #ffffff3d;
-            backdrop-filter: blur(24px);
-        }
     }
 
     &.is-mutate {

@@ -1,22 +1,83 @@
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
 
+body:has(.main--contacts) {
+    @include media('tablet') {
+        .header {
+            .header__logo-f {
+                svg {
+                    color: var(--wht-color);
+                }
+            }
+
+            .header__lang a.current-lang {
+                color: var(--wht-color);
+            }
+
+            .header__lang a {
+                color: var(--wht-color);
+            }
+
+            .header__phone,
+            .header__reserv {
+                border-color: var(--accent-color);
+                color: var(--wht-color);
+                svg {
+                    color: var(--wht-color);
+                }
+            }
+
+            &.is-scroll {
+                .header__phone,
+                .header__reserv {
+                    color: var(--dark-color);
+                    svg {
+                        color: var(--dark-color);
+                    }
+                }
+
+                .header__lang a.current-lang {
+                    color: var(--dark-color);
+                }
+
+                .header__lang a {
+                    color: var(--dark-color);
+                }
+            }
+        }
+    }
+}
+
 .main--contacts {
     .contacts {
         .container--right {
             display: flex;
             justify-content: space-between;
             gap: 60px;
+            @include media('tablet') {
+                flex-direction: column-reverse;
+            }
+
+            @include media('mobile') {
+                gap: 32px;
+            }
         }
 
         &__content {
-            padding-top: 156px;
+            padding-block: 156px 100px;
+            @include media('tablet') {
+                padding-block: 0 60px;
+            }
         }
 
         &__title {
             margin-bottom: 32px;
             max-width: 605px;
             width: 100%;
+            @include media('mobile') {
+                margin-bottom: 16px;
+                text-align: center;
+            }
         }
 
         &__subtitle {
@@ -26,11 +87,35 @@
             letter-spacing: -1px;
             margin-bottom: 40px;
             color: #221e1f;
+            @include media('mobile') {
+                max-width: 100%;
+                margin-bottom: 24px;
+                font-size: 20px;
+                text-align: center;
+            }
         }
 
         &__pic {
             max-width: 950px;
             width: 100%;
+            @include media('tablet') {
+                max-width: 100%;
+                height: 500px;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    z-index: 2;
+                    pointer-events: none;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(22, 22, 22, 0.8) 0%,
+                        rgba(22, 22, 22, 0.7) 50.3%,
+                        rgba(16, 76, 73, 0.7) 100%
+                    );
+                }
+            }
 
             img {
                 width: 100%;
@@ -46,6 +131,12 @@
             justify-content: space-between;
             gap: 15px;
             margin-bottom: 40px;
+            @include media('mobile') {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
         }
 
         &__road,
@@ -61,9 +152,24 @@
             @include hover {
                 color: var(--accent-color);
             }
+
+            @include media('mobile') {
+                font-size: 14px;
+            }
+
             img {
                 width: 32px;
                 height: 32px;
+                @include media('mobile') {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        &__location {
+            @include media('mobile') {
+                flex-direction: column;
             }
         }
 
@@ -75,6 +181,10 @@
             font: 400 18px / 100% var(--ff-base);
             margin-bottom: 16px;
             color: #221e1f;
+            @include media('mobile') {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
         }
 
         &__number {
@@ -89,6 +199,18 @@
             @include hover {
                 color: var(--accent-color);
             }
+            @include media('mobile') {
+                font-size: 28px;
+            }
+        }
+
+        &__letter {
+            @include media('mobile') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
 
         &__email {
@@ -102,6 +224,9 @@
             @include hover {
                 color: var(--accent-color);
             }
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         &__socials {
@@ -109,6 +234,10 @@
             gap: 30px;
             flex-wrap: wrap;
             padding-top: 40px;
+            @include media('mobile') {
+                padding-top: 24px;
+                justify-content: center;
+            }
         }
 
         &__phones {
@@ -117,6 +246,14 @@
             justify-content: space-between;
             gap: 40px;
             margin-bottom: 40px;
+            @include media('mobile') {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
         }
 
         &__social a {
@@ -138,11 +275,20 @@
                 background: var(--accent-color);
             }
 
+            @include media('mobile') {
+                width: 48px;
+                height: 48px;
+            }
+
             svg {
                 display: inline-flex;
                 flex-shrink: 0;
                 width: 32px;
                 height: 32px;
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
@@ -150,11 +296,26 @@
     .map {
         max-width: 2240px;
         margin: 0 auto;
+        @include media('tablet') {
+            height: 100vh;
+            height: 100svh;
+        }
 
         &__pic {
             display: flex;
             width: 100%;
             position: relative;
+
+            @include media('tablet') {
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
             @include hover {
                 &::before {
                     opacity: 1;
@@ -193,6 +354,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @include media('mobile') {
+                max-width: 100%;
+                width: 100%;
+                padding-inline: 20px;
+            }
             div:first-child {
                 width: 60px;
                 height: 48px;
