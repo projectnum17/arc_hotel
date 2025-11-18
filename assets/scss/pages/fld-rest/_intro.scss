@@ -10,6 +10,9 @@
         overflow: hidden;
         margin-bottom: 204px;
         color: var(--wht-color);
+        @include media('mobile') {
+            margin-bottom: var(--section-mb);
+        }
 
         &::after {
             content: '';
@@ -47,19 +50,36 @@
             justify-content: center;
             gap: 60px;
             padding-block: 120px 112px;
+            @include media('mobile') {
+                gap: 24px;
+                padding-block: var(--section-pdd);
+            }
+        }
+
+        &__logo {
+            @include media('mobile') {
+                max-width: 40px;
+            }
         }
 
         &__times {
             display: flex;
             align-items: center;
             gap: 32px;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 12px;
+            }
 
             span {
                 font: 400 18px / 100% var(--ff-base);
                 text-transform: uppercase;
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &:first-child {
-                    opacity: .4;
+                    opacity: 0.4;
                 }
             }
         }

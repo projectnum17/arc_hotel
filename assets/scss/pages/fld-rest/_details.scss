@@ -18,11 +18,23 @@
                 margin: 0 auto;
                 height: 120px;
                 background: var(--accent-color);
+                @include media('mobile') {
+                    height: 60px;
+                }
+            }
+
+            @include media('mobile') {
+                gap: 12px;
+                max-width: 100%;
+                margin-bottom: 36px;
             }
         }
 
         &__descr {
             font: 400 16px / 140% var(--ff-base);
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &__preview {
@@ -40,6 +52,10 @@
             border-radius: 16px;
             overflow: hidden;
             transition: all 0.7s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+            @include media('mobile') {
+                width: 80%;
+                height: 350px;
+            }
 
             &.is-scale {
                 border-radius: 0;

@@ -26,7 +26,7 @@ const slidersConfig = () => {
             breakpoints: {
                 0: {
                     spaceBetween: 12,
-                    slidesPerView: 1
+                    slidesPerView: 1,
                 },
                 768: {
                     spaceBetween: 30,
@@ -148,7 +148,7 @@ const slidersConfig = () => {
             breakpoints: {
                 0: {
                     spaceBetween: 12,
-                    slidesPerView: 1
+                    slidesPerView: 1,
                 },
                 768: {
                     spaceBetween: 30,
@@ -187,6 +187,20 @@ const slidersConfig = () => {
             pagination: {
                 el: '.js-gallery-progress',
                 type: 'progressbar',
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 12,
+                    slidesPerView: 1,
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 40,
+                    slidesPerView: 3,
+                },
             },
         });
     };
