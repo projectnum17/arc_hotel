@@ -180,6 +180,10 @@
         &-details {
             display: flex;
             gap: 32px;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 18px;
+            }
             .feedback__form-field {
                 width: 100%;
             }
