@@ -11,6 +11,15 @@
     &__title {
         text-align: center;
         margin-bottom: 60px;
+        @include media('mobile') {
+            margin-bottom: 24px;
+            padding-inline: 20px;
+        }
     }
 
+    .container {
+        @include media('mobile') {
+            padding: 0;
+        }
+    }
 }
