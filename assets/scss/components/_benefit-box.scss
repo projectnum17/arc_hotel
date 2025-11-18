@@ -11,6 +11,11 @@
         position: relative;
         margin-bottom: 92px;
 
+        @include media('mobile') {
+            height: 350px;
+            margin-bottom: 32px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -20,6 +25,10 @@
             width: 1px;
             height: 120px;
             background: var(--accent-color);
+            @include media('mobile') {
+                height: 50px;
+                bottom: -20px;
+            }
         }
     }
 
@@ -31,9 +40,18 @@
         overflow: hidden;
         width: 100%;
         @include transitions(1s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        @include media('mobile') {
+            height: 200px;
+            max-width: 200px;
+        }
+
         &.is-scale {
             height: 740px;
             max-width: 100%;
+            @include media('mobile') {
+                height: 350px;
+            }
         }
 
         img {
@@ -51,9 +69,16 @@
         text-align: center;
         max-width: 977px;
         margin: 0 auto;
+        @include media('mobile') {
+            max-width: 100%;
+            gap: 12px;
+        }
     }
 
     &__descr {
         font: 400 18px / 140% var(--ff-base);
+        @include media('mobile') {
+            font-size: 14px;
+        }
     }
 }

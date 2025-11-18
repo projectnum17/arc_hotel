@@ -4,7 +4,17 @@
 .advantages {
     margin-bottom: 140px;
 
+    @include media('mobile') {
+        margin-bottom: var(--section-mb);
+    }
+
     .content-head {
         margin-bottom: 104px;
+        @include media('tablet') {
+            margin-bottom: 64px;
+        }
+        @include media('mobile') {
+            margin-bottom: 32px;
+        }
     }
 }
