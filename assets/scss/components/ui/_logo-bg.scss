@@ -6,16 +6,17 @@
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 0;
-    z-index: 1;
+    top: -80px;
     transform: translateX(-50%);
     pointer-events: none;
+    z-index: -1;
     // clip-path: var(--clip);
     // --clip: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     // transition: clip-path 1.5s ease;
 
     @include media('mobile') {
         max-width: 95%;
+        top: 80px;
     }
 
     &.is-visible {
