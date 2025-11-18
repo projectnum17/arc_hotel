@@ -21,11 +21,18 @@ const mainLoader = () => {
         animatedItems.forEach((item) => observer.observe(item));
     };
 
+    const loaderExists =
+        document.querySelector('.js-loader') ||
+        document.querySelector('.js-loader-text') ||
+        document.querySelector('.js-loader-logo');
+
     const pic = document.querySelector('.js-hero-pic');
     const box = document.querySelector('.js-hero-box');
     const panel = document.querySelector('.js-hero-panel');
 
-    document.body.classList.add('is-locked');
+    if (loaderExists) {
+        document.body.classList.add('is-locked');
+    }
 
     animItems('.js-loader-text');
     animItems('.js-loader-logo');
@@ -37,7 +44,10 @@ const mainLoader = () => {
             pic?.classList.add('is-active');
             box?.classList.add('is-active');
             panel?.classList.add('is-active');
-            document.body.classList.remove('is-locked');
+
+            if (loaderExists) {
+                document.body.classList.remove('is-locked');
+            }
         }, 500);
     }, 1000);
 };
