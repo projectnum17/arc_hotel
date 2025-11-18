@@ -10,6 +10,9 @@
         overflow: hidden;
         margin-bottom: 204px;
         color: var(--wht-color);
+        @include media('mobile') {
+            margin-bottom: var(--section-mb);
+        }
 
         &::after {
             content: '';
@@ -47,12 +50,19 @@
             justify-content: center;
             gap: 60px;
             padding-block: 120px 112px;
+            @include media('mobile') {
+                padding-block: 60px;
+                gap: 24px;
+            }
         }
 
         &__subtitle {
             font: 400 18px / 100% var(--ff-base);
             text-align: center;
             text-transform: uppercase;
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
     }
 }

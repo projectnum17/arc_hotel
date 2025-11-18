@@ -4,9 +4,13 @@
 .main--rests {
     .content-head {
         margin-bottom: 104px;
+        @include media('mobile') {
+            margin-bottom: 32px;
+        }
     }
 
     .content {
+        overflow: hidden;
         .present-boxes:last-child {
             margin-bottom: 0;
         }

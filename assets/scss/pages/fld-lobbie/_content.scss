@@ -1,11 +1,17 @@
-
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
 
 .main--lobbie {
     .content {
+        overflow: hidden;
         .content-head {
             margin-bottom: 104px;
+            @include media('tablet') {
+                margin-bottom: 64px;
+            }
+            @include media('mobile') {
+                margin-bottom: 32px;
+            }
         }
     }
     .perform {
