@@ -5,27 +5,35 @@
     display: grid;
     gap: 68px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    @include media('mobile') {
-        gap: 12px;
-        display: flex;
-        align-items: flex-start;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        scroll-snap-type: x mandatory;
-        padding-inline: 20px;
+    &:not(&.promo-boxes--lg) {
+        @include media('mobile') {
+            gap: 12px;
+            display: flex;
+            align-items: flex-start;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scroll-snap-type: x mandatory;
+            padding-inline: 20px;
 
-        .promo-box {
-            scroll-snap-align: center;
+            .promo-box {
+                scroll-snap-align: center;
+                flex-shrink: 0;
+            }
         }
     }
 
     &--lg {
         grid-template-columns: repeat(auto-fit, minmax(448px, 1fr));
+        @include media('mobile') {
+            grid-template-columns: repeat(1, 1fr);
+            place-items: center;
+            gap: 40px;
+        }
     }
 
     .promo-box {
@@ -34,7 +42,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            flex-shrink: 0;
             max-width: 368px;
         }
 
