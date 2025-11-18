@@ -11,6 +11,10 @@
         color: var(--wht-color);
         background: var(--dark-color);
 
+        @include media('mobile') {
+            padding-block: var(--section-pdd);
+        }
+
         .container {
             position: relative;
             z-index: 3;
@@ -127,15 +131,24 @@
             }
 
             .ico {
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
             }
 
             .text {
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
             }
 
             .text::after {
-                @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
             }
         }
     }

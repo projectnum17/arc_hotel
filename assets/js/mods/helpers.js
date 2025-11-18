@@ -56,6 +56,12 @@ const helpers = () => {
                 btn.addEventListener('click', () => {
                     buttons.forEach((b) => b.classList.remove('is-active'));
                     btn.classList.add('is-active');
+
+                    btn.scrollIntoView({
+                        behavior: 'smooth',
+                        inline: 'center',
+                        block: 'nearest',
+                    });
                 });
             });
         };
@@ -182,11 +188,7 @@ const helpers = () => {
             en: {},
         };
 
-        const ids = [
-            'feedbackDate',
-            'arrivalDate',
-            'departureDate',
-        ];
+        const ids = ['feedbackDate', 'arrivalDate', 'departureDate'];
 
         ids.forEach((id) => {
             const dateInput = document.querySelector(`#${id}`);
