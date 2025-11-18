@@ -11,15 +11,32 @@
             flex-direction: column;
             gap: 24px;
             margin: 0 auto 60px;
+            @include media('mobile') {
+                max-width: 100%;
+                margin-bottom: 32px;
+                gap: 16px;
+            }
         }
 
         &__subtitle {
             font: 300 44px / 110% var(--ff-accent);
             letter-spacing: -1px;
+            @include media('tablet') {
+                font-size: 32px;
+            }
+            @include media('mobile') {
+                font-size: 20px;
+            }
         }
 
         &__descr {
             font: 400 18px / 140% var(--ff-base);
+            @include media('tablet') {
+                font-size: 16px;
+            }
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &__points {
@@ -32,6 +49,9 @@
             align-items: center;
             letter-spacing: -1px;
             color: var(--graphite-color);
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         &__bg {
@@ -43,6 +63,9 @@
         &__points {
             position: relative;
             height: 750px;
+            @include media('mobile') {
+                height: 350px;
+            }
         }
 
         &__bg {
@@ -97,6 +120,9 @@
             left: 56.5%;
             z-index: 3;
             transform: translate(-50%, -50%);
+            @include media('mobile') {
+                display: none;
+            }
 
             img {
                 width: 100%;
@@ -117,6 +143,9 @@
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 20px;
+                @include media('mobile') {
+                    width: 100%;
+                }
 
                 .directions__deco {
                     width: 1px;

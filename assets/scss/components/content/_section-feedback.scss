@@ -104,6 +104,10 @@
     &__subtitle {
         font: 400 16px / 140% var(--ff-base);
         margin-bottom: 80px;
+        @include media('mobile') {
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
     }
 
     &__details {
@@ -253,6 +257,7 @@
         .field--select {
             width: 100%;
             position: relative;
+            z-index: 3;
 
             .select-hidden {
                 position: absolute;
@@ -283,6 +288,11 @@
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
                 );
 
+                @include media('mobile') {
+                    padding: 12px 5px;
+                    font-size: 14px;
+                }
+
                 &.placeholder {
                     color: var(--wht-color);
                 }
@@ -300,6 +310,9 @@
                     background: url('../img/icons/ico-drop.svg') no-repeat
                         center center;
                     @include transitions(0.3s, ease-out);
+                    @include media('mobile') {
+                        right: 0;
+                    }
                 }
 
                 &:hover {
@@ -342,6 +355,11 @@
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
                 );
 
+                @include media('mobile') {
+                    border-radius: 12px;
+                    padding: 12px;
+                }
+
                 li {
                     font: 400 18px / 100% var(--ff-base);
                     color: var(--dark-color);
@@ -349,6 +367,9 @@
                         0.3s,
                         cubic-bezier(0.768, 0.304, 0.496, 0.884)
                     );
+                    @include media('mobile') {
+                        font-size: 14px;
+                    }
 
                     &:first-child {
                         display: none;
@@ -385,6 +406,7 @@
             align-items: flex-start;
             gap: 20px;
             justify-content: space-between;
+            will-change: auto;
             @include media('mobile') {
                 flex-direction: column;
                 gap: 12px;

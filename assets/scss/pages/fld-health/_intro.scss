@@ -10,6 +10,9 @@
         overflow: hidden;
         margin-bottom: 204px;
         color: var(--wht-color);
+        @include media('mobile') {
+            margin-bottom: var(--section-mb);
+        }
 
         &::after {
             content: '';
@@ -48,11 +51,18 @@
             justify-content: center;
             gap: 60px;
             padding-block: 120px 112px;
+            @include media('mobile') {
+                padding-block: var(--section-pdd);
+                gap: 24px;
+            }
         }
 
         &__tag {
             font: 400 20px / 100% var(--ff-base);
             text-transform: uppercase;
+            @include media('mobile') {
+                font-size: 16px;
+            }
         }
     }
 }

@@ -11,6 +11,14 @@
         gap: 20px;
         flex-wrap: wrap;
         max-width: 1300px;
+        @include media('mobile') {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
     }
 
     &__cards {
@@ -26,12 +34,23 @@
         justify-content: space-between;
         padding-block: 48px;
         border-top: 1px solid #cececb;
+        @include media('tablet') {
+            flex-direction: column;
+        }
+
+        @include media('mobile') {
+            padding-block: 24px;
+        }
 
         &__info {
             display: flex;
             flex-direction: column;
             gap: 32px;
             max-width: 480px;
+            @include media('tablet') {
+                max-width: 100%;
+                width: 100%;
+            }
         }
 
         &__benefits {
@@ -40,22 +59,42 @@
             gap: 16px;
             max-width: 448px;
             width: 100%;
+            @include media('mobile') {
+                max-width: 100%;
+                gap: 12px;
+            }
         }
 
         &__points {
             display: flex;
             flex-direction: column;
             gap: 32px;
+            @include media('tablet') {
+                width: 100%;
+            }
+            @include media('mobile') {
+                gap: 24px;
+            }
         }
 
         &__pic {
             max-width: 424px;
             border-radius: 16px;
             overflow: hidden;
+            @include media('tablet') {
+                max-width: 100%;
+            }
+            @include media('mobile') {
+                height: 310px;
+            }
 
             img {
                 width: 100%;
                 height: auto;
+                @include media('mobile') {
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
 
@@ -67,6 +106,16 @@
             font: 300 54px / 100% var(--ff-accent);
             letter-spacing: -2px;
             text-transform: uppercase;
+            @include media('desktop') {
+                font-size: 46px;
+            }
+            @include media('tablet') {
+                font-size: 36px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+                text-align: center;
+            }
         }
 
         &__price {
@@ -81,6 +130,10 @@
             display: inline-flex;
             align-items: flex-start;
             gap: 17px;
+            @include media('mobile') {
+                font-size: 14px;
+                gap: 10px;
+            }
 
             &::before {
                 content: '';
@@ -95,6 +148,13 @@
 
         .link-accent {
             width: max-content;
+            @include media('tablet') {
+                margin: 0 auto;
+            }
+            @include media('mobile') {
+                width: 100%;
+                justify-content: center;
+            }
         }
     }
 }
