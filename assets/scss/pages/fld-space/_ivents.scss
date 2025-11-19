@@ -5,10 +5,22 @@
     .ivents {
         overflow: hidden;
         margin-bottom: var(--section-mb-sm);
+        @include media('mobile') {
+            margin-bottom: 0;
+        }
 
         &__title {
             text-align: center;
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 16px;
+            }
+        }
+
+        .info-gallery {
+            @include media('mobile') {
+                padding-bottom: var(--section-mb);
+            }
         }
 
         .info-gallery__slider {
@@ -21,11 +33,17 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            @include media('mobile') {
+                gap: 12px;
+            }
 
             p {
                 font: 300 24px / 100% var(--ff-accent);
                 letter-spacing: -1px;
                 margin: 0;
+                @include media('mobile') {
+                    font-size: 18px;
+                }
             }
         }
     }

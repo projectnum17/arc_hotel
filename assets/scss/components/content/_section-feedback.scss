@@ -114,6 +114,13 @@
         font: 300 44px / 110% var(--ff-accent);
         letter-spacing: -1px;
         margin-bottom: 60px;
+        @include media('tablet') {
+            font-size: 32px;
+        }
+        @include media('mobile') {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
     }
 
     &__phone {

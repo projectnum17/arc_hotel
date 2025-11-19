@@ -10,6 +10,10 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
     color: var(--wht-color);
+    @include media('mobile') {
+        width: 48px;
+        height: 48px;
+    }
 
     &__rec {
         display: inline-flex;
@@ -19,5 +23,16 @@
         justify-content: center;
         border-radius: 50%;
         background: var(--accent-color);
+        @include media('mobile') {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg {
+            @include media('mobile') {
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
 }

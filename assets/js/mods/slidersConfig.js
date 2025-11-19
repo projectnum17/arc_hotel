@@ -249,6 +249,23 @@ const slidersConfig = () => {
                 el: '.js-ivents-progress',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    spaceBetween: 12,
+                    slidesPerView: 1,
+                    centeredSlidesBounds: false,
+                    initialSlide: 0,
+                    normalizeSlideIndex: true,
+                },
+                768: {
+                    spaceBetween: 30,
+                    slidesPerView: 1.2,
+                },
+                992: {
+                    spaceBetween: 40,
+                    slidesPerView: 2.2,
+                },
+            },
         });
     };
 
