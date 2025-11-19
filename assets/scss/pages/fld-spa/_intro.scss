@@ -81,7 +81,7 @@
             font: 400 16px / 100% var(--ff-base);
             text-transform: uppercase;
 
-            padding: 18px 25px;
+            
             min-width: 288px;
             width: 100%;
             flex: 1;
@@ -90,6 +90,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
 
             a {
+                padding: 18px 25px;
                 display: flex;
                 align-items: center;
                 justify-content: center;

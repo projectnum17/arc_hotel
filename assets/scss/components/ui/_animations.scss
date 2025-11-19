@@ -28,7 +28,7 @@
 }
 
 .js-animation--text {
-    transition: all 1s ease;
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
     -webkit-clip-path: inset(100% 0 0 0);
     clip-path: inset(100% 0 0 0);
     &._animated {
