@@ -255,6 +255,12 @@
             margin-top: 16px;
             max-height: 100px;
 
+            @include hover {
+                .text {
+                    color: var(--accent-color)
+                }
+            }
+
             &.is-hide {
                 @include transitions(
                     0.3s,

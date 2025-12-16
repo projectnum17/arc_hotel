@@ -7,6 +7,41 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
+
+    @include hover {
+        .relax-card__thumb {
+            img {
+                transform: scale(1.15);
+            }
+        }
+
+        .ico {
+            &:first-of-type {
+                width: 32px;
+                transform: translateX(0px) rotate(180deg);
+                @include media('mobile') {
+                    width: 20px;
+                }
+            }
+
+            &:last-of-type {
+                width: 0;
+                transform: translateX(5px) rotate(180deg);
+            }
+        }
+
+        .text {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+
+        .link-more--drk {
+            .text {
+                color: var(--accent-color);
+            }
+        }
+    }
+
     @include media('mobile') {
         align-items: center;
         max-width: 100%;
@@ -74,31 +109,31 @@
         }
 
         @include hover {
-            .relax-card__thumb {
-                img {
-                    transform: scale(1.15);
-                }
-            }
+            // .relax-card__thumb {
+            //     img {
+            //         transform: scale(1.15);
+            //     }
+            // }
 
-            .ico {
-                &:first-of-type {
-                    width: 32px;
-                    transform: translateX(0px) rotate(180deg);
-                    @include media('mobile') {
-                        width: 20px;
-                    }
-                }
+            // .ico {
+            //     &:first-of-type {
+            //         width: 32px;
+            //         transform: translateX(0px) rotate(180deg);
+            //         @include media('mobile') {
+            //             width: 20px;
+            //         }
+            //     }
 
-                &:last-of-type {
-                    width: 0;
-                    transform: translateX(5px) rotate(180deg);
-                }
-            }
+            //     &:last-of-type {
+            //         width: 0;
+            //         transform: translateX(5px) rotate(180deg);
+            //     }
+            // }
 
-            .text {
-                margin-left: 8px;
-                margin-right: 0;
-            }
+            // .text {
+            //     margin-left: 8px;
+            //     margin-right: 0;
+            // }
         }
     }
 

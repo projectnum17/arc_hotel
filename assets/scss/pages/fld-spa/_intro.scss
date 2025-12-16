@@ -98,6 +98,7 @@
             flex: 1;
             width: 100%;
             border-radius: 88px;
+            overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
             @include media('mobile') {
                 font-size: 14px;
@@ -112,6 +113,13 @@
                 gap: 8px;
                 width: 100%;
                 font: inherit;
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                @include hover {
+                    background: rgba(255, 255, 255, 0.06);
+                }
                 @include media('mobile') {
                     padding: 12px 20px;
                 }

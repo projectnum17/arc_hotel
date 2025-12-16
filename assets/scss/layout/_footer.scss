@@ -158,8 +158,6 @@
 
     &__copy {
         padding-block: 18px;
-        max-width: 1720px;
-        margin: 0 auto;
         background: rgba(255, 255, 255, 0.04);
         @include media('mobile') {
             padding-block: 24px;
@@ -210,8 +208,8 @@
     &__title {
         font: 400 16px / 100% var(--ff-base);
         opacity: 0.6;
+        margin-bottom: 12px;
         @include media('mobile') {
-            margin-bottom: 12px;
             font-size: 14px;
             text-align: center;
         }

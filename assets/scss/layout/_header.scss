@@ -1,10 +1,6 @@
 @use '../base/media' as *;
 @use '../base/mixins' as *;
 
-body {
-    height: 300vh !important;
-}
-
 .header {
     padding-block: 24px 20px;
     z-index: 10;
@@ -50,6 +46,14 @@ body {
 
         .header__lang a {
             color: var(--dark-color);
+
+            @include hover {
+                color: var(--accent-color);
+
+                &::before {
+                    color: var(--dark-color);
+                }
+            }
         }
 
         .header__phone {
@@ -168,6 +172,14 @@ body {
         .header__lang {
             a {
                 color: var(--wht-color);
+
+                @include hover {
+                    color: var(--accent-color);
+
+                    &::before {
+                        color: var(--wht-color);
+                    }
+                }
             }
         }
     }

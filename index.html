@@ -126,6 +126,65 @@
             </div>
         </div>
     </div>
+    <div class="reserve-modal js-reserve-modal">
+        <div class="reserve-modal__inner">
+            <div class="reserve-modal__box reserve--success js-reserve-success">
+                <button class="reserve-modal__close js-success-close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.33457" y1="2.96144" x2="18.6587" y2="17.6598" stroke="#6AAFA3" />
+                        <line x1="1.66543" y1="17.6607" x2="17.9896" y2="2.96232" stroke="#6AAFA3" />
+                    </svg>
+                </button>
+                <div class="reserve-modal__content">
+                    <img width="272" height="340" src="./assets/img/concept.svg" alt="Thumbnail">
+                    <h2 class="reserve-modal__title">Ваша заявка прийнята!</h2>
+                    <p class="reserve-modal__subtitle">
+                        Ми вже отримали вашу заявку — незабаром з вами зв’яжеться наш спеціаліст, щоб допомогти з усіма
+                        питаннями.
+                    </p>
+                </div>
+            </div>
+            <div class="reserve-modal__box reserve--form js-reserve-form">
+                <button class="reserve-modal__close js-reserve-close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.33457" y1="2.96144" x2="18.6587" y2="17.6598" stroke="#6AAFA3" />
+                        <line x1="1.66543" y1="17.6607" x2="17.9896" y2="2.96232" stroke="#6AAFA3" />
+                    </svg>
+                </button>
+                <div class="reserve-modal__content">
+                    <div class="reserve-modal__thumb">
+                        <img width="776" height="448" src="./assets/img/reserve-pic.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="reserve-modal__data">
+                        <h2 class="reserve-modal__title">залиште ваші контактні данні</h2>
+                        <p class="reserve-modal__subtitle">
+                            Наш менеджер зв’яжеться з вами найближчим часом
+                        </p>
+                        <form class="reserve-modal__form">
+                            <div class="reserve-modal__field">
+                                <input placeholder="Ваше ім’я" type="text" name="reserveName" id="reserveName">
+                            </div>
+                            <div class="reserve-modal__field">
+                                <input placeholder="Номер телефону" type="tel" name="reservePhone" id="reservePhone">
+                            </div>
+                            <div class="reserve-modal__submit">
+                                <button class="link-accent" type="submit">
+                                    <span>відправити запит</span>
+                                </button>
+                                <p>
+                                    Натиснувши на кнопку, я погоджуюсь з обробкою персональних даних
+                                </p>
+                            </div>
+                        </form>
+                        <div class="reserve-modal__contact">
+                            <p>Або зателефонуйте нам</p>
+                            <a href="tel:+0800200880">0 800 200 880</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header header--drk js-header">
         <div class="container">
             <div class="header__controls">
@@ -215,7 +274,7 @@
                             stroke="#0C1C34" stroke-linejoin="round" />
                     </svg>
                 </a>
-                <a href="#!" class="header__reserv js-reserv">бронювати</a>
+                <button class="header__reserv js-reserv">бронювати</button>
             </div>
         </div>
     </header>
@@ -298,9 +357,9 @@
                 </div>
                 <div class="relax__content">
                     <div class="relax__col">
-                        <div class="relax-card js-animation--to-top">
+                        <a href="#!" class="relax-card js-animation--to-top">
                             <h3 class="relax-card__title">Wellness & SPA</h3>
-                            <a href="#!" class="link-more link-more--drk">
+                            <div class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -308,8 +367,8 @@
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
-                            </a>
-                            <a href="#!" class="relax-card__box relax-card__box--pink">
+                            </div>
+                            <div class="relax-card__box relax-card__box--pink">
                                 <div class="relax-card__thumb">
                                     <img width="558" height="620" src="./assets/img/relax_1.jpg" alt="Thumbnail">
                                     <div class="relax-card__content">
@@ -327,11 +386,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="relax-card js-animation--to-top">
+                            </div>
+                        </a>
+                        <a href="#!" class="relax-card js-animation--to-top">
                             <h3 class="relax-card__title">Арт-простір</h3>
-                            <a href="#!" class="link-more link-more--drk">
+                            <div class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -339,8 +398,8 @@
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
-                            </a>
-                            <a href="#!" class="relax-card__box relax-card__box--pink">
+                            </div>
+                            <div class="relax-card__box relax-card__box--pink">
                                 <div class="relax-card__thumb">
                                     <img width="558" height="620" src="./assets/img/relax_3.jpg" alt="Thumbnail">
                                     <div class="relax-card__content">
@@ -358,8 +417,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="relax__sticky">
                         <div class="relax__logo">
@@ -380,9 +439,9 @@
                         </div>
                     </div>
                     <div class="relax__col">
-                        <div class="relax-card js-animation--to-top">
+                        <a href="#!" class="relax-card js-animation--to-top">
                             <h3 class="relax-card__title">health boutique</h3>
-                            <a href="#!" class="link-more link-more--drk">
+                            <div class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -390,8 +449,8 @@
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
-                            </a>
-                            <a href="#!" class="relax-card__box relax-card__box--green">
+                            </div>
+                            <div class="relax-card__box relax-card__box--green">
                                 <div class="relax-card__thumb">
                                     <img width="558" height="620" src="./assets/img/relax_2.jpg" alt="Thumbnail">
                                     <div class="relax-card__content">
@@ -409,11 +468,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="relax-card js-animation--to-top">
+                            </div>
+                        </a>
+                        <a href="#!" class="relax-card js-animation--to-top">
                             <h3 class="relax-card__title">Конференц серіс</h3>
-                            <a href="#!" class="link-more link-more--drk">
+                            <div class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -421,8 +480,8 @@
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
-                            </a>
-                            <a href="#!" class="relax-card__box relax-card__box--green">
+                            </div>
+                            <div class="relax-card__box relax-card__box--green">
                                 <div class="relax-card__thumb">
                                     <img width="558" height="620" src="./assets/img/relax_4.jpg" alt="Thumbnail">
                                     <div class="relax-card__content">
@@ -440,8 +499,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -623,7 +682,7 @@
                 <div class="rooms-slider swiper js-rooms-slider js-animation--to-left">
                     <div class="rooms-slider__wrapper swiper-wrapper">
                         <div class="rooms-slider__slide swiper-slide">
-                            <div class="room-box">
+                            <a href="#!" class="room-box">
                                 <h3 class="room-box__title">
                                     класичний
                                 </h3>
@@ -647,19 +706,19 @@
                                     </div>
                                     <div class="room-box__reserv">
                                         <span class="room-box__price">від 5 500 грн / ніч</span>
-                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                        <div class="room-box__link link-accent link-accent--transparent">
                                             <span>Забронювати</span>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="room-box__thumb">
                                         <img width="580" height="568" src="./assets/img/appart_1.jpg" alt="Thumbnail">
                                         <span class="room-box__label">популярний вибір</span>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="rooms-slider__slide swiper-slide">
-                            <div class="room-box">
+                            <a href="#!" class="room-box">
                                 <h3 class="room-box__title">
                                     класичний з терасою
                                 </h3>
@@ -683,18 +742,18 @@
                                     </div>
                                     <div class="room-box__reserv">
                                         <span class="room-box__price">від 5 500 грн / ніч</span>
-                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                        <div class="room-box__link link-accent link-accent--transparent">
                                             <span>Забронювати</span>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="room-box__thumb">
                                         <img width="580" height="568" src="./assets/img/appart_2.jpg" alt="Thumbnail">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="rooms-slider__slide swiper-slide">
-                            <div class="room-box">
+                            <a href="#!" class="room-box">
                                 <h3 class="room-box__title">
                                     Суперіор
                                 </h3>
@@ -718,18 +777,18 @@
                                     </div>
                                     <div class="room-box__reserv">
                                         <span class="room-box__price">від 5 500 грн / ніч</span>
-                                        <a href="#!" class="room-box__link link-accent link-accent--transparent">
+                                        <div class="room-box__link link-accent link-accent--transparent">
                                             <span>Забронювати</span>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="room-box__thumb">
                                         <img width="580" height="568" src="./assets/img/appart_3.jpg" alt="Thumbnail">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="rooms-slider__slide swiper-slide">
-                            <div class="empty-box">
+                            <a href="#!" class="empty-box">
                                 <h3 class="empty-box__title">
                                     Не знаєте, який саме номер обрати?
                                 </h3>
@@ -738,15 +797,15 @@
                                         <p class="empty-box__descr">
                                             Залиште запит, і наш менеджер порадить найкращий номер саме для вас.
                                         </p>
-                                        <a href="#!" class="room-box__link link-accent">
+                                        <div class="room-box__link link-accent">
                                             <span>підібрати номер</span>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div class="empty-box__thumb">
                                         <img width="580" height="568" src="./assets/img/empty-room.jpg" alt="Thumbnail">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="rooms-slider__nav js-rooms-nav js-animation--to-top">
@@ -971,9 +1030,9 @@
                                 <p class="comfort__text">
                                     Гарантія найкращої ціни при за умови бронювання на сайті
                                 </p>
-                                <a href="#!" class="comfort__link link-accent">
+                                <button class="comfort__link link-accent js-reserv">
                                     <span>забронювати номер</span>
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="comfort__cards">
@@ -1032,7 +1091,7 @@
                                 У сучасному ритмі життя нам часто не вистачає часу на себе. Тривалі відпустки здаються
                                 недосяжною розкішшю, але це не означає, що варто відкладати своє самопочуття на потім.
                             </p>
-                            <a href="#!" class="link-more link-more--drk">
+                            <a href="#!" class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -1064,7 +1123,7 @@
                                 Лише за кілька днів ви зможете повністю переключитися, розслабитися та зарядитися новою
                                 енергією.
                             </p>
-                            <a href="#!" class="link-more link-more--drk">
+                            <a href="#!" class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -1098,7 +1157,7 @@
                                 Ми створюємо умови, в яких ваш івент відбудеться на найвищому рівні — легко, комфортно,
                                 професійно.
                             </p>
-                            <a href="#!" class="link-more link-more--drk">
+                            <a href="#!" class="link-more link-more--drk link-more--colored">
                                 <span class="ico">
                                     <img src="./assets/img/icons/star_1.svg" alt="Icon">
                                 </span>
@@ -1145,7 +1204,7 @@
         <section class="promo">
             <div class="container">
                 <h2 class="promo__title main-title js-animation--to-top">афіша подій archotel</h2>
-                <a href="#!" class="link-more link-more--drk js-animation--to-top">
+                <a href="#!" class="link-more link-more--drk link-more--colored js-animation--to-top">
                     <span class="ico">
                         <img src="./assets/img/icons/star_1.svg" alt="Icon">
                     </span>
@@ -1327,9 +1386,9 @@
                     </nav>
                 </div>
                 <div class="footer__row">
-                    <a href="#!" class="footer__reserv js-reserv">
+                    <button class="footer__reserv js-reserv">
                         <span>забронювати номер</span>
-                    </a>
+                    </button>
                     <a href="#!" class="footer__location">
                         <img width="32" height="32" src="./assets/img/icons/ico-pin_accent.svg" alt="">
                         <span>Аркадійська алея 1А, Одеса</span>

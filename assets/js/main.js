@@ -10,6 +10,7 @@ import servicesModal from './mods/servicesModal.js';
 import initIntersectionAnimations from './mods/initIntersectionAnimations.js';
 import selectHandler from './mods/selectHandler.js';
 import videoModalHandler from './mods/videoModalHandler.js';
+import formModal from './mods/formModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     mainLoader();
@@ -22,4 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initIntersectionAnimations();
     selectHandler();
     videoModalHandler();
+    formModal();
 });

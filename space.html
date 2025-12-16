@@ -15,6 +15,65 @@
 </head>
 
 <body>
+    <div class="reserve-modal js-reserve-modal">
+        <div class="reserve-modal__inner">
+            <div class="reserve-modal__box reserve--success js-reserve-success">
+                <button class="reserve-modal__close js-success-close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.33457" y1="2.96144" x2="18.6587" y2="17.6598" stroke="#6AAFA3" />
+                        <line x1="1.66543" y1="17.6607" x2="17.9896" y2="2.96232" stroke="#6AAFA3" />
+                    </svg>
+                </button>
+                <div class="reserve-modal__content">
+                    <img width="272" height="340" src="./assets/img/concept.svg" alt="Thumbnail">
+                    <h2 class="reserve-modal__title">Ваша заявка прийнята!</h2>
+                    <p class="reserve-modal__subtitle">
+                        Ми вже отримали вашу заявку — незабаром з вами зв’яжеться наш спеціаліст, щоб допомогти з усіма
+                        питаннями.
+                    </p>
+                </div>
+            </div>
+            <div class="reserve-modal__box reserve--form js-reserve-form">
+                <button class="reserve-modal__close js-reserve-close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="2.33457" y1="2.96144" x2="18.6587" y2="17.6598" stroke="#6AAFA3" />
+                        <line x1="1.66543" y1="17.6607" x2="17.9896" y2="2.96232" stroke="#6AAFA3" />
+                    </svg>
+                </button>
+                <div class="reserve-modal__content">
+                    <div class="reserve-modal__thumb">
+                        <img width="776" height="448" src="./assets/img/reserve-pic.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="reserve-modal__data">
+                        <h2 class="reserve-modal__title">залиште ваші контактні данні</h2>
+                        <p class="reserve-modal__subtitle">
+                            Наш менеджер зв’яжеться з вами найближчим часом
+                        </p>
+                        <form class="reserve-modal__form">
+                            <div class="reserve-modal__field">
+                                <input placeholder="Ваше ім’я" type="text" name="reserveName" id="reserveName">
+                            </div>
+                            <div class="reserve-modal__field">
+                                <input placeholder="Номер телефону" type="tel" name="reservePhone" id="reservePhone">
+                            </div>
+                            <div class="reserve-modal__submit">
+                                <button class="link-accent" type="submit">
+                                    <span>відправити запит</span>
+                                </button>
+                                <p>
+                                    Натиснувши на кнопку, я погоджуюсь з обробкою персональних даних
+                                </p>
+                            </div>
+                        </form>
+                        <div class="reserve-modal__contact">
+                            <p>Або зателефонуйте нам</p>
+                            <a href="tel:+0800200880">0 800 200 880</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="video-modal js-video-modal" id="videoModal">
         <div class="video-modal__inner">
             <div class="video-modal__wrapper js-video-modal__wrapper">
@@ -216,7 +275,7 @@
                             stroke="#0C1C34" stroke-linejoin="round" />
                     </svg>
                 </a>
-                <a href="#!" class="header__reserv js-reserv">бронювати</a>
+                <button class="header__reserv js-reserv">бронювати</button>
             </div>
         </div>
     </header>
@@ -773,9 +832,9 @@
                     </nav>
                 </div>
                 <div class="footer__row">
-                    <a href="#!" class="footer__reserv js-reserv">
+                    <button class="footer__reserv js-reserv">
                         <span>забронювати номер</span>
-                    </a>
+                    </button>
                     <a href="#!" class="footer__location">
                         <img width="32" height="32" src="./assets/img/icons/ico-pin_accent.svg" alt="">
                         <span>Аркадійська алея 1А, Одеса</span>
