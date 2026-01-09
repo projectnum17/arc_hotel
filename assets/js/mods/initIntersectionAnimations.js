@@ -51,7 +51,7 @@ const initIntersectionAnimations = () => {
     observerHandlerConfig('.js-logo-bg', 'is-visible', 0);
     observerHandlerConfig('.js-img-box', 'is-scale', 0.5);
     observerHandlerConfig('.js-logo-box', 'is-transform', 0.7);
-    observerHandlerConfig('.js-gallery-box', 'is-transform', 0.1);
+    observerHandlerConfig('.js-gallery-box', 'is-transform', .6);
     observerHandlerConfig('.js-animation--to-top', '_animated', 0);
     observerHandlerConfig('.js-animation--to-left', '_animated', 0.2);
     observerHandlerConfig('.js-animation--text', '_animated', 0);

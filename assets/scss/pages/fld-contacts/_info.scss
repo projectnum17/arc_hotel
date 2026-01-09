@@ -98,6 +98,22 @@ body:has(.main--contacts) {
         &__pic {
             max-width: 950px;
             width: 100%;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    180deg,
+                    #fffbf1 0%,
+                    rgba(255, 251, 241, 0.3) 30.99%,
+                    rgba(255, 251, 241, 0) 38.65%
+                );
+            }
+
             @include media('tablet') {
                 max-width: 100%;
                 height: 500px;

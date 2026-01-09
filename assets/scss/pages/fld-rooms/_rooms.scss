@@ -180,6 +180,9 @@
                 font-size: 12px;
                 padding: 5px 11px;
             }
+            @include hover {
+                border-color: var(--accent-color);
+            }
 
             &.is-active {
                 border-color: transparent;

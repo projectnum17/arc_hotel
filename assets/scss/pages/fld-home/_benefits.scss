@@ -129,7 +129,7 @@
         }
 
         &__text {
-            font: 400 18px / 140% var(--ff-base);
+            font: 400 16px / 140% var(--ff-base);
             margin-bottom: 32px;
             @include media('mobile') {
                 font-size: 14px;

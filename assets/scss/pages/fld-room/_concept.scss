@@ -73,9 +73,18 @@
                     height: 26px;
                 }
 
+                @include hover {
+                    border-color: var(--accent-color);
+                }
+
                 &.swiper-button-disabled {
-                    opacity: 0.6;
+                    // opacity: 0.6;
                     pointer-events: none;
+                    border-color: #dddddd;
+
+                    svg {
+                        color: #dddddd;
+                    }
                 }
 
                 svg {

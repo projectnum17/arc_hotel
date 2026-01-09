@@ -7,6 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    border-bottom: 1px solid transparent;
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include media('mobile') {
         padding-block: 14px;
@@ -28,6 +29,7 @@
     &.is-scroll {
         padding-block: 16px;
         background: var(--wht-color);
+        border-color: #ddd;
 
         @include media('mobile') {
             padding-block: 12px;
